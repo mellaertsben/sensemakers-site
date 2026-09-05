@@ -21,7 +21,8 @@ var CONTACT_EMAIL = "hello@sensemakers.be";
         links[i].target = '_blank';
         links[i].rel = 'noopener';
       } else if (links[i].href.indexOf('mailto:') === 0) {
-        links[i].href = 'mailto:' + CONTACT_EMAIL + '?subject=' + encodeURIComponent('Sensemakers — let’s talk');
+        var q = links[i].href.indexOf('?');
+        links[i].href = 'mailto:' + CONTACT_EMAIL + (q === -1 ? '' : links[i].href.slice(q));
       }
     }
   }
@@ -48,7 +49,7 @@ var CONTACT_EMAIL = "hello@sensemakers.be";
 
   // Gentle reveal on scroll (disabled automatically when the user prefers reduced motion)
   function reveal() {
-    var sel = '.section-head, .card, .step, .muscle, .artifact, .why-row, .stat, .test, .founder > div, .contact-grid > div';
+    var sel = '.section-head, .card, .step, .muscle, .artifact, .why-row, .stat, .test, .problem, .format, .formats-mini > div, .founder > div, .contact-grid > div';
     var targets = Array.prototype.slice.call(document.querySelectorAll(sel));
     if (!targets.length) return;
     for (var i = 0; i < targets.length; i++) targets[i].classList.add('reveal');

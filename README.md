@@ -1,12 +1,13 @@
 # sensemakers.be — website
 
-Static site, no build step, no framework, no tracking. Two pages (`index.html`, `readiness.html`), one stylesheet, one small script, self-hosted fonts. Anything in this folder is exactly what gets served.
+Static site, no build step, no framework, no tracking. Three pages (`index.html`, `academy.html`, `readiness.html`), one stylesheet, one small script, self-hosted fonts. Anything in this folder is exactly what gets served.
 
 ## Files
 
 | File | What it is |
 |---|---|
 | `index.html` | The site. One long page with anchored sections. |
+| `academy.html` | The Academy: curriculum (Direct / Judge / Own / Adopt) and the four formats. |
 | `readiness.html` | The 90-second "Where are you with AI?" check. |
 | `404.html` | Not-found page (GitHub Pages picks it up automatically). |
 | `styles.css` | All styling. Brand tokens are the CSS variables at the top: warm-white canvas `#FBFAF7`, ink `#111815`, pine `#0C5C3C`, pine tint `#E5F5EC`; Newsreader for display, Figtree for text. |
