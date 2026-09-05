@@ -36,7 +36,7 @@ Why this setup: it's free, has no server to maintain, gives you HTTPS automatica
 This folder is already a git repository with one commit. On your Mac, in Terminal:
 
 ```bash
-cd "/Users/benmellaerts/Desktop/Claude Cowork/Claude/Projects/Sensemakers/OUTPUTS/Website/sensemakers.be"
+cd path/to/sensemakers.be   # this folder
 gh repo create sensemakers-site --public --source=. --remote=origin --push
 ```
 
@@ -66,7 +66,7 @@ Combell → **My Combell → Domain names → sensemakers.be → DNS**. Remove a
 | AAAA | `@` | `2606:50c0:8001::153` |
 | AAAA | `@` | `2606:50c0:8002::153` |
 | AAAA | `@` | `2606:50c0:8003::153` |
-| CNAME | `www` | `mellaertsben.github.io.` |
+| CNAME | `www` | `<your-github-username>.github.io.` |
 
 Leave the MX records (email) alone. DNS usually propagates within an hour, sometimes longer.
 
@@ -94,7 +94,6 @@ If your Combell package includes web hosting, you can skip GitHub entirely: uplo
 
 ## Still to add when you have them
 
-- Your LinkedIn URL (the founder section and footer have room for it).
-- A photo for the founder section, if you want one.
+- A named founder/team section, when you want the site to point to people. It is deliberately anonymous for now.
 - Legal identification in the footer: Belgian law expects the company name, registered office and enterprise (BTW) number on a business website. A one-line addition to the footer once you decide which entity the site speaks for.
 - Analytics, if wanted: Plausible or Cloudflare Web Analytics are cookie-free and need no banner.
