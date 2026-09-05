@@ -9,9 +9,9 @@ Static site, no build step, no framework, no tracking. Two pages (`index.html`, 
 | `index.html` | The site. One long page with anchored sections. |
 | `readiness.html` | The 90-second "Where are you with AI?" check. |
 | `404.html` | Not-found page (GitHub Pages picks it up automatically). |
-| `styles.css` | All styling. Brand tokens are the CSS variables at the top. |
+| `styles.css` | All styling. Brand tokens are the CSS variables at the top: warm-white canvas `#FBFAF7`, ink `#111815`, pine `#0C5C3C`, pine tint `#E5F5EC`; Newsreader for display, Figtree for text. |
 | `site.js` | Mobile menu, reveal animation, footer year, **and the two config lines** (see below). |
-| `assets/` | Mark (`mark.svg`), favicons, Apple touch icon, `og.png` share image, `fonts/` (Fraunces + Inter, OFL licence). |
+| `assets/` | Mark (`mark.svg`), favicons, Apple touch icon, `og.png` share image, `fonts/` (Newsreader + Figtree, OFL licence). |
 | `CNAME` | Tells GitHub Pages the custom domain is `sensemakers.be`. Don't rename. |
 | `.nojekyll` | Tells GitHub Pages to serve files as-is. |
 | `robots.txt`, `sitemap.xml` | Search-engine housekeeping. |
