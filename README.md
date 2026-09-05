@@ -66,7 +66,7 @@ Combell → **My Combell → Domain names → sensemakers.be → DNS**. Remove a
 | AAAA | `@` | `2606:50c0:8001::153` |
 | AAAA | `@` | `2606:50c0:8002::153` |
 | AAAA | `@` | `2606:50c0:8003::153` |
-| CNAME | `www` | `<your-github-username>.github.io.` |
+| CNAME | `www` | `mellaertsben.github.io.` |
 
 Leave the MX records (email) alone. DNS usually propagates within an hour, sometimes longer.
 
