@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Readiness check — Sensemakers</title>
+<meta name="description" content="Five quick situations, 90 seconds, and a straight recommendation on where to start with AI in your work. No sign-up.">
+<link rel="canonical" href="https://sensemakers.be/readiness.html">
+<meta name="theme-color" content="#1F0A0D">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Sensemakers">
+<meta property="og:title" content="Where are you with AI, really? — a 90-second check">
+<meta property="og:description" content="Five situations, one straight recommendation. No sign-up.">
+<meta property="og:url" content="https://sensemakers.be/readiness.html">
+<meta property="og:image" content="https://sensemakers.be/assets/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="assets/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="assets/favicon-256.png" sizes="256x256" type="image/png">
+<link rel="icon" href="assets/mark.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a class="brand" href="index.html" aria-label="Sensemakers home">
+      <svg class="mark" viewBox="0 0 512 512" aria-hidden="true"><path fill="#E7DCCB" d="M256 75 L256 0 A256 256 0 0 0 0 256 L75 256 A181 181 0 0 0 256 75 Z"/><path fill="#E4431E" d="M256 75 L256 0 A256 256 0 0 1 512 256 L437 256 A181 181 0 0 1 256 75 Z"/><path fill="#E4431E" d="M256 437 L256 512 A256 256 0 0 1 0 256 L75 256 A181 181 0 0 1 256 437 Z"/><path fill="#E7DCCB" d="M256 437 L256 512 A256 256 0 0 0 512 256 L437 256 A181 181 0 0 0 256 437 Z"/></svg>
+      <span class="wordmark">Sense<span class="m">makers</span></span>
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="index.html#approach">Approach</a>
+      <a href="index.html#offers">What you get</a>
+      <a href="index.html#who">Who it's for</a>
+      <a href="index.html#why">Why us</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="btn btn-primary js-book" href="mailto:hello@sensemakers.be?subject=Sensemakers%20%E2%80%94%20let%27s%20talk">Book a call</a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-mobile" aria-label="Open menu"><span></span></button>
+    </div>
+  </div>
+  <nav id="nav-mobile" class="nav-mobile" aria-label="Mobile">
+    <a href="index.html#approach">Approach</a>
+    <a href="index.html#offers">What you get</a>
+    <a href="index.html#who">Who it's for</a>
+    <a href="index.html#why">Why us</a>
+    <a href="index.html#contact">Contact</a>
+  </nav>
+</header>
+
+<main id="main">
+<section class="hero band-ink" style="padding-bottom:64px">
+  <div class="container">
+    <div class="kicker">Readiness check</div>
+    <h1>Where are you with AI, really?</h1>
+    <p class="lead">Five quick situations. Pick the one that rings true each time, and we'll point you to the right starting place. No wrong answers, and nothing to sign up for.</p>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="quiz-wrap">
+      <div class="quiz-card">
+
+        <div id="intro" class="fade">
+          <h2 style="font-size:28px">Ninety seconds, one straight answer.</h2>
+          <div class="intro-facts"><span>5 situations</span><span>~90 seconds</span><span>A real recommendation at the end</span></div>
+          <button class="btn btn-primary" id="startbtn" type="button">Start</button>
+        </div>
+
+        <div id="quiz" class="hidden">
+          <div class="progress"><div class="progress-bar" id="bar"></div></div>
+          <div class="q-count" id="qcount"></div>
+          <div class="q-text" id="qtext"></div>
+          <div class="options" id="options"></div>
+          <div class="q-nav"><button class="back" id="backbtn" type="button">← Back</button></div>
+        </div>
+
+        <div id="result" class="hidden">
+          <div class="kicker">What we're hearing</div>
+          <h2 id="situLabel" style="font-size:28px;margin-bottom:12px"></h2>
+          <p class="sub" id="situText"></p>
+          <div class="rec">
+            <div class="eyebrow" style="margin-bottom:8px">The move for you</div>
+            <h3 id="recHead"></h3>
+            <p id="recText"></p>
+            <div class="actions">
+              <a class="btn btn-primary js-book" href="mailto:hello@sensemakers.be?subject=Sensemakers%20%E2%80%94%20let%27s%20talk">Book a call</a>
+              <a class="btn btn-ghost" id="recLink" href="index.html#offers">See what that involves</a>
+            </div>
+          </div>
+          <p class="note hidden" id="buildNote"></p>
+          <p class="note" style="border-color:var(--terra-lt)">Want this in writing, with a tailored next step? <a class="inline-link" id="mailAnswers" href="mailto:hello@sensemakers.be">Email us your answers</a> and we'll reply personally.</p>
+          <button class="restart" id="restartbtn" type="button">↺ Start over</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="f-grid">
+      <div>
+        <a class="brand" href="index.html" aria-label="Sensemakers home">
+          <svg class="mark" viewBox="0 0 512 512" aria-hidden="true"><path fill="#E7DCCB" d="M256 75 L256 0 A256 256 0 0 0 0 256 L75 256 A181 181 0 0 0 256 75 Z"/><path fill="#E4431E" d="M256 75 L256 0 A256 256 0 0 1 512 256 L437 256 A181 181 0 0 1 256 75 Z"/><path fill="#E4431E" d="M256 437 L256 512 A256 256 0 0 1 0 256 L75 256 A181 181 0 0 1 256 437 Z"/><path fill="#E7DCCB" d="M256 437 L256 512 A256 256 0 0 0 512 256 L437 256 A181 181 0 0 0 256 437 Z"/></svg>
+          <span class="wordmark">Sense<span class="m">makers</span></span>
+        </a>
+        <p class="f-tag">The human capability behind your AI transformation.</p>
+      </div>
+      <div class="f-links">
+        <div class="f-col"><h4>Explore</h4><a href="index.html#approach">Approach</a><a href="index.html#offers">What you get</a><a href="index.html#who">Who it's for</a><a href="index.html#why">Why us</a></div>
+        <div class="f-col"><h4>Start</h4><a class="js-book" href="mailto:hello@sensemakers.be?subject=Sensemakers%20%E2%80%94%20let%27s%20talk">Book a call</a><a href="mailto:hello@sensemakers.be">hello@sensemakers.be</a></div>
+      </div>
+    </div>
+    <div class="f-bottom"><span>© <span id="year">2026</span> Sensemakers</span><span>Independent · Belgium &amp; the Netherlands</span></div>
+  </div>
+</footer>
+
+<script src="site.js"></script>
+<script>
+(function () {
+  // each option: [label, category]
+  var questions = [
+    { q: "Which sounds most like where you are?", o: [
+      ["We keep talking about AI but haven't really started.", "start"],
+      ["We've rolled out tools, but not much has actually changed.", "capability"],
+      ["We've built a few workflows or agents already.", "own"],
+      ["AI is spreading across teams on its own.", "own"]
+    ]},
+    { q: "Which frustration is most familiar?", o: [
+      ["We tried some tooling but it didn't land.", "capability"],
+      ["We don't know where to start, but feel we must do something.", "start"],
+      ["We built workflows but they didn't get adopted.", "capability"],
+      ["We get impressive demos but can't tell what's real.", "start"],
+      ["Agents are multiplying and no one clearly owns them.", "own"]
+    ]},
+    { q: "What's leadership most uneasy about?", o: [
+      ["We can't show it's actually delivering value.", "redesign"],
+      ["Costs are creeping and nobody watches the total.", "own"],
+      ["We're not even aligned on how far to go.", "start"],
+      ["People trust AI output without really checking it.", "capability"]
+    ]},
+    { q: "If you could fix one thing first?", o: [
+      ["One specific workflow that's slow, costly, or risky.", "redesign"],
+      ["A clear plan and priorities.", "start"],
+      ["Who owns what, now AI is everywhere.", "own"],
+      ["Our people's ability to work with AI well.", "capability"]
+    ]},
+    { q: "How would you want a partner to help?", o: [
+      ["Show us where to start.", "start"],
+      ["Redesign one real workflow with us.", "redesign"],
+      ["Get our operating model and ownership right.", "own"],
+      ["Build our team's capability.", "capability"],
+      ["Honestly, just build it for us.", "build"]
+    ]}
+  ];
+
+  var results = {
+    start: { label: "You need a clear place to start.", text: "There's energy and pressure, but no obvious first move, so the risk is doing a bit of everything and proving nothing. The fix is choosing where AI actually changes the work, and what to leave alone.", recHead: "Start with the AI Work Redesign Scan", recText: "In two to three weeks: where to start, what not to automate, the gaps to close, and a 90-day plan.", link: "index.html#offers", linkLabel: "See what the Scan involves" },
+    redesign: { label: "You've got a workflow worth fixing.", text: "You can point at where cost, time, or risk lives. That's the ideal place to redesign the work around AI, rather than sprinkle tools on top of it.", recHead: "An AI Work Redesign Sprint on that workflow", recText: "Redesigned end to end, built with your team, measured against a baseline, and owned by your team in four to six weeks.", link: "index.html#offers", linkLabel: "See what you get" },
+    own: { label: "AI is spreading faster than your operating model.", text: "Tools and agents are multiplying across teams, but ownership, accountability, and cost haven't caught up. Left alone, that becomes shadow AI: if everyone owns it, no one does.", recHead: "Get the operating model and ownership right", recText: "Who owns which agent, the decision rights, and the cost in view. Usually a Scan first, then a Programme once a first redesign proves out.", link: "index.html#approach", linkLabel: "See the approach" },
+    capability: { label: "The tools are in, but they haven't landed.", text: "You've rolled out AI, but the work didn't really change and adoption stalled. That's rarely a tooling problem: the people and the workflow weren't redesigned around it.", recHead: "Build the capability, inside a redesign", recText: "We build your team's ability to direct, judge, own, and adopt AI, delivered inside a workflow redesign so it actually sticks.", link: "index.html#capability", linkLabel: "See the four muscles" },
+    build: { label: "You mainly want it built.", text: "You're clear on what you want and you'd like someone to build it. We can, and we build it with your team. The question we'll ask is who owns and runs it afterwards, because that is what decides whether it gets used.", recHead: "A Sprint, with ownership designed in", recText: "We design the workflow, build the agents with your team, and hand over the register, the playbooks, and the metrics. If you'd rather have it built and handed over with no ownership on your side, tell us and we'll be straight about fit.", link: "index.html#why", linkLabel: "How we're different" }
+  };
+
+  var idx = 0;
+  var answers = new Array(questions.length).fill(null);
+  var $ = function (id) { return document.getElementById(id); };
+
+  function startQuiz() { $('intro').classList.add('hidden'); $('quiz').classList.remove('hidden'); idx = 0; render(); }
+  function render() {
+    var total = questions.length;
+    $('bar').style.width = (idx / total * 100) + '%';
+    $('qcount').textContent = 'Situation ' + (idx + 1) + ' of ' + total;
+    var qt = $('qtext'); qt.textContent = questions[idx].q; qt.classList.remove('fade'); void qt.offsetWidth; qt.classList.add('fade');
+    var box = $('options'); box.innerHTML = '';
+    questions[idx].o.forEach(function (opt) {
+      var b = document.createElement('button'); b.className = 'option'; b.type = 'button'; b.textContent = opt[0];
+      b.onclick = function () { answers[idx] = opt[1]; next(); };
+      box.appendChild(b);
+    });
+    $('backbtn').style.visibility = idx === 0 ? 'hidden' : 'visible';
+  }
+  function next() { if (idx < questions.length - 1) { idx++; render(); } else { showResult(); } }
+  function goBack() { if (idx > 0) { idx--; render(); } }
+
+  function showResult() {
+    $('bar').style.width = '100%';
+    $('quiz').classList.add('hidden');
+    var res = $('result'); res.classList.remove('hidden'); res.classList.add('fade');
+    var tally = {}; answers.forEach(function (c) { if (c) { tally[c] = (tally[c] || 0) + 1; } });
+    var order = ['build', 'redesign', 'own', 'capability', 'start'];
+    var best = null, bestN = -1;
+    order.forEach(function (c) { if ((tally[c] || 0) > bestN) { bestN = tally[c] || 0; best = c; } });
+    // "build" only wins outright when it is the clear top pick; otherwise it becomes a note
+    if (best === 'build' && bestN < 2) {
+      var alt = null, altN = -1;
+      ['redesign', 'own', 'capability', 'start'].forEach(function (c) { if ((tally[c] || 0) > altN) { altN = tally[c] || 0; alt = c; } });
+      if (alt && altN > 0) best = alt;
+    }
+    var r = results[best];
+    $('situLabel').textContent = r.label;
+    $('situText').textContent = r.text;
+    $('recHead').textContent = r.recHead;
+    $('recText').textContent = r.recText;
+    var link = $('recLink'); link.href = r.link; link.textContent = r.linkLabel;
+    var n = $('buildNote');
+    if (best !== 'build' && answers.indexOf('build') !== -1) {
+      n.classList.remove('hidden');
+      n.textContent = "You also mentioned you'd like it built for you. We can. We build with your team and hand it over, so the one thing we'll ask is who owns it afterwards.";
+    } else { n.classList.add('hidden'); }
+    // mail link with the answers in the body
+    var lines = questions.map(function (q, i) {
+      var sel = q.o.filter(function (o) { return o[1] === answers[i]; })[0];
+      return (i + 1) + '. ' + q.q + ' -> ' + (sel ? sel[0] : '');
+    }).join('\n');
+    var body = 'My readiness-check answers:\n\n' + lines + '\n\nYour read: ' + r.label + '\n\n(Anything you want to add about your situation:)\n';
+    $('mailAnswers').href = 'mailto:' + (window.CONTACT_EMAIL || 'hello@sensemakers.be') + '?subject=' + encodeURIComponent('Sensemakers readiness check') + '&body=' + encodeURIComponent(body);
+    res.scrollIntoView({ block: 'start', behavior: 'smooth' });
+  }
+  function restart() {
+    idx = 0; for (var i = 0; i < answers.length; i++) answers[i] = null;
+    $('result').classList.add('hidden'); $('intro').classList.remove('hidden'); $('buildNote').classList.add('hidden');
+  }
+
+  $('startbtn').addEventListener('click', startQuiz);
+  $('backbtn').addEventListener('click', goBack);
+  $('restartbtn').addEventListener('click', restart);
+})();
+</script>
+</body>
+</html>
