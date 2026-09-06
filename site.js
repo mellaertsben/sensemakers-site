@@ -120,12 +120,27 @@ var CONTACT_EMAIL = "hello@sensemakers.be";
     els.forEach(function (el) { io.observe(el); });
   }
 
+  // Compounding curve: draw the lines when the figure scrolls into view
+  function curve() {
+    var fig = document.querySelector('[data-curve]');
+    if (!fig) return;
+    var lines = fig.querySelectorAll('.line');
+    for (var i = 0; i < lines.length; i++) {
+      try { lines[i].style.setProperty('--len', Math.ceil(lines[i].getTotalLength()) + 2); } catch (e) {}
+    }
+    if (!('IntersectionObserver' in window)) { fig.classList.add('drawn'); return; }
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) { if (e.isIntersecting) { fig.classList.add('drawn'); io.disconnect(); } });
+    }, { threshold: 0.35 });
+    io.observe(fig);
+  }
+
   // Footer year
   function year() {
     var y = document.getElementById('year');
     if (y) y.textContent = String(new Date().getFullYear());
   }
 
-  function init() { wireBooking(); wireMenu(); wireStages(); reveal(); counters(); year(); }
+  function init() { wireBooking(); wireMenu(); wireStages(); reveal(); counters(); curve(); year(); }
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init); else init();
 })();

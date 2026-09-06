@@ -246,6 +246,47 @@
       <h2>Built to compound.</h2>
       <p class="sub">Three principles behind every engagement, whether we are looking at one team or the whole organisation.</p>
     </div>
+
+    <figure class="curve" data-curve>
+      <svg viewBox="0 0 1000 400" role="img" aria-labelledby="curve-title curve-desc" preserveAspectRatio="xMidYMid meet">
+        <title id="curve-title">Capability you own, over time: compounding versus project by project</title>
+        <desc id="curve-desc">Two lines over time. A grey line rises with each project and falls back when it ends, and drops at every shock. A green line rises faster with each step, dips briefly at each shock, then climbs more steeply than before.</desc>
+        <!-- axes -->
+        <line x1="80" y1="340" x2="960" y2="340" class="axis"/>
+        <line x1="80" y1="40" x2="80" y2="340" class="axis"/>
+        <text x="80" y="372" class="ax">Time →</text>
+        <text x="88" y="32" class="ax">Capability you own ↑</text>
+        <!-- shocks -->
+        <g class="shock">
+          <line x1="382" y1="60" x2="382" y2="340"/>
+          <text x="382" y="54" text-anchor="middle">Shock: a new model changes the game</text>
+        </g>
+        <g class="shock">
+          <line x1="662" y1="60" x2="662" y2="340"/>
+          <text x="662" y="54" text-anchor="middle">Shock: reorg, new vendor</text>
+        </g>
+        <!-- project by project -->
+        <path class="line bolt" d="M80 332 C95.0 325.0 141.7 292.3 170 290 C198.3 287.7 223.3 319.3 250 318 C276.7 316.7 310.0 285.3 330 282 C350.0 278.7 359.7 291.0 370 298 C380.3 305.0 377.0 325.3 392 324 C407.0 322.7 435.3 290.3 460 290 C484.7 289.7 515.0 321.7 540 322 C565.0 322.3 591.7 294.7 610 292 C628.3 289.3 639.7 299.3 650 306 C660.3 312.7 657.0 333.0 672 332 C687.0 331.0 715.3 300.7 740 300 C764.7 299.3 793.3 328.0 820 328 C846.7 328.0 876.7 299.7 900 300 C923.3 300.3 950.0 325.0 960 330"/>
+        <!-- compounding -->
+        <path class="line comp" d="M80 332 C100.0 329.7 163.3 324.0 200 318 C236.7 312.0 271.7 303.7 300 296 C328.3 288.3 354.7 273.7 370 272 C385.3 270.3 382.0 286.7 392 286 C402.0 285.3 408.7 276.3 430 268 C451.3 259.7 491.7 246.3 520 236 C548.3 225.7 578.3 215.0 600 206 C621.7 197.0 638.0 183.0 650 182 C662.0 181.0 660.3 202.0 672 200 C683.7 198.0 698.7 182.0 720 170 C741.3 158.0 773.3 141.3 800 128 C826.7 114.7 853.3 102.7 880 90 C906.7 77.3 946.7 58.3 960 52"/>
+        <!-- markers on the compounding line -->
+        <g class="mark m1"><circle cx="300" cy="296" r="13"/><text x="300" y="301" text-anchor="middle">1</text></g>
+        <g class="mark m2"><circle cx="520" cy="236" r="13"/><text x="520" y="241" text-anchor="middle">2</text></g>
+        <g class="mark m3"><circle cx="800" cy="128" r="13"/><text x="800" y="133" text-anchor="middle">3</text></g>
+        <!-- end labels -->
+        <text x="952" y="40" class="end comp-label" text-anchor="end">Compounding</text>
+        <text x="952" y="366" class="end bolt-label" text-anchor="end">Project by project</text>
+      </svg>
+      <figcaption>
+        <div class="curve-legend">
+          <div><span class="k">1</span><span class="txt"><b>Templates stay.</b> The second team starts from the first team's work, not from zero.</span></div>
+          <div><span class="k">2</span><span class="txt"><b>Owners are named.</b> Every tool and agent has someone who runs it, so nothing decays when the project ends.</span></div>
+          <div><span class="k">3</span><span class="txt"><b>Skills are in the team.</b> The organisation judges, directs and adapts without waiting for anyone.</span></div>
+        </div>
+        <p class="curve-note">The dips are the shocks every organisation gets: a new model, a reorg, a vendor pivot. Project-by-project AI loses ground each time. A compounding organisation dips, learns, and climbs back steeper than before. That is what antifragile means here.</p>
+      </figcaption>
+    </figure>
+
     <div class="grid g3">
       <div class="card tint">
         <div class="tag">Compounding, by design</div>

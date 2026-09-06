@@ -164,6 +164,39 @@ html.js .stage-panel{animation:fade .3s ease}
 .value h3::before{content:"";display:block;width:28px;height:3px;background:var(--pine);border-radius:2px;margin-bottom:16px}
 .value p{font-size:14px;color:var(--muted)}
 
+/* compounding curve */
+.curve{margin:0 0 28px;background:var(--white);border:1px solid var(--hair-2);border-radius:var(--radius);padding:28px 28px 22px;box-shadow:0 14px 40px rgba(17,24,21,.05)}
+.curve svg{width:100%;height:auto;display:block;overflow:visible}
+.curve .axis{stroke:var(--hair);stroke-width:1}
+.curve .ax{font-family:var(--sans);font-size:13px;fill:var(--muted);letter-spacing:.02em}
+.curve .shock line{stroke:var(--faint);stroke-width:1;stroke-dasharray:3 5}
+.curve .shock text{font-family:var(--sans);font-size:12.5px;fill:var(--muted);letter-spacing:.02em}
+.curve .line{fill:none;stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
+.curve .bolt{stroke:#B9BFBB;stroke-width:2.5}
+.curve .comp{stroke:var(--pine)}
+.curve .mark circle{fill:var(--pine);stroke:var(--white);stroke-width:3}
+.curve .mark text{font-family:var(--sans);font-size:13px;font-weight:700;fill:var(--white)}
+.curve .end{font-family:var(--serif);font-size:18px;fill:var(--ink)}
+.curve .comp-label{fill:var(--pine)}
+.curve .bolt-label{fill:var(--muted)}
+.curve figcaption{margin-top:18px;border-top:1px solid var(--hair-2);padding-top:18px}
+.curve-legend{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.curve-legend div{font-size:14.5px;color:var(--muted);line-height:1.5;display:grid;grid-template-columns:26px 1fr;gap:10px;align-items:start}
+.curve-legend b{color:var(--ink);font-weight:600}
+.curve-legend .k{display:inline-flex;align-items:center;justify-content:center;width:24px;height:24px;border-radius:50%;background:var(--pine);color:var(--white);font-size:12px;font-weight:700;margin-top:2px}
+.curve-note{margin-top:16px;font-size:14.5px;color:var(--muted);max-width:78ch}
+@media (prefers-reduced-motion:no-preference){
+  html.js .curve .line{stroke-dasharray:var(--len,2400);stroke-dashoffset:var(--len,2400);transition:stroke-dashoffset 2.2s cubic-bezier(.4,0,.2,1)}
+  html.js .curve .bolt{transition-duration:1.8s}
+  html.js .curve.drawn .line{stroke-dashoffset:0}
+  html.js .curve .mark,html.js .curve .end,html.js .curve .shock{opacity:0;transition:opacity .5s ease}
+  html.js .curve.drawn .shock{opacity:1;transition-delay:.4s}
+  html.js .curve.drawn .m1{opacity:1;transition-delay:.9s}
+  html.js .curve.drawn .m2{opacity:1;transition-delay:1.4s}
+  html.js .curve.drawn .m3{opacity:1;transition-delay:1.9s}
+  html.js .curve.drawn .end{opacity:1;transition-delay:2.2s}
+}
+
 /* ---------- grids & cards ---------- */
 .grid{display:grid;gap:20px}
 .g2{grid-template-columns:repeat(2,1fr)}
@@ -390,6 +423,13 @@ footer .f-bottom{border-top:1px solid var(--hair-2);margin-top:40px;padding-top:
   .stage-panel{grid-template-columns:1fr;gap:26px;padding:24px 20px 28px}
   .stage-quotes blockquote{font-size:20px}
   .values-grid{grid-template-columns:1fr}
+  .curve{padding:16px 12px 14px}
+  .curve .ax{font-size:22px}
+  .curve .shock text{display:none}
+  .curve .end{font-size:26px}
+  .curve .mark circle{r:18}
+  .curve .mark text{font-size:17px}
+  .curve-legend{grid-template-columns:1fr}
   .value{border-right:0;border-bottom:1px solid var(--hair-2);padding:20px 0}
   .value+.value{padding-left:0}
   .value:last-child{border-bottom:0}
