@@ -72,6 +72,35 @@ var CONTACT_EMAIL = "hello@sensemakers.be";
     targets.forEach(function (el) { io.observe(el); });
   }
 
+  // Dropdown menus in the header (hover with intent on desktop, click/keyboard everywhere)
+  function wireMenus() {
+    var items = Array.prototype.slice.call(document.querySelectorAll('.has-menu'));
+    if (!items.length) return;
+    var timers = [];
+    function open(i) { items.forEach(function (it, j) { var on = j === i; it.classList.toggle('open', on); it.querySelector('.nav-link').setAttribute('aria-expanded', on ? 'true' : 'false'); }); }
+    function closeAll() { open(-1); }
+    items.forEach(function (it, i) {
+      var btn = it.querySelector('.nav-link');
+      btn.addEventListener('click', function (e) { e.preventDefault(); it.classList.contains('open') ? closeAll() : open(i); });
+      it.addEventListener('mouseenter', function () { clearTimeout(timers[i]); timers[i] = setTimeout(function () { open(i); }, 70); });
+      it.addEventListener('mouseleave', function () { clearTimeout(timers[i]); timers[i] = setTimeout(function () { if (it.classList.contains('open')) closeAll(); }, 160); });
+      it.addEventListener('keydown', function (e) { if (e.key === 'Escape') { closeAll(); btn.focus(); } });
+      it.addEventListener('focusout', function (e) { if (!it.contains(e.relatedTarget)) closeAll(); });
+    });
+    document.addEventListener('click', function (e) { if (!e.target.closest('.has-menu')) closeAll(); });
+    // menu links that pre-select a stage in "Start where it hurts"
+    var stageLinks = document.querySelectorAll('a[data-stage]');
+    for (var k = 0; k < stageLinks.length; k++) {
+      stageLinks[k].addEventListener('click', function (e) {
+        var root = document.querySelector('[data-stages]');
+        if (!root || !root.selectStage) return; // other page: let the link navigate
+        e.preventDefault(); closeAll();
+        root.selectStage(parseInt(this.getAttribute('data-stage'), 10) - 1);
+        root.scrollIntoView({ block: 'start', behavior: 'smooth' });
+      });
+    }
+  }
+
   // Stage tabs ("Start where it hurts")
   function wireStages() {
     var root = document.querySelector('[data-stages]');
@@ -92,6 +121,7 @@ var CONTACT_EMAIL = "hello@sensemakers.be";
         e.preventDefault(); select(n); tabs[n].focus();
       });
     });
+    root.selectStage = select;
     select(0);
   }
 
@@ -141,6 +171,6 @@ var CONTACT_EMAIL = "hello@sensemakers.be";
     if (y) y.textContent = String(new Date().getFullYear());
   }
 
-  function init() { wireBooking(); wireMenu(); wireStages(); reveal(); counters(); curve(); year(); }
+  function init() { wireBooking(); wireMenu(); wireMenus(); wireStages(); reveal(); counters(); curve(); year(); }
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init); else init();
 })();
