@@ -49,10 +49,17 @@ var CONTACT_EMAIL = "hello@sensemakers.be";
 
   // Gentle reveal on scroll (disabled automatically when the user prefers reduced motion)
   function reveal() {
-    var sel = '.section-head, .card, .step, .muscle, .artifact, .why-row, .stat, .test, .problem, .format, .formats-mini > div, .founder > div, .contact-grid > div';
+    var sel = '.section-head, .card, .step, .muscle, .stages, .problem, .stat, .value, .format, .formats-mini > div, .founder > div, .contact-grid > div';
     var targets = Array.prototype.slice.call(document.querySelectorAll(sel));
     if (!targets.length) return;
-    for (var i = 0; i < targets.length; i++) targets[i].classList.add('reveal');
+    for (var i = 0; i < targets.length; i++) {
+      targets[i].classList.add('reveal');
+      var parent = targets[i].parentNode;
+      if (parent && parent.children.length > 1 && parent.children.length <= 8) {
+        var idx = Array.prototype.indexOf.call(parent.children, targets[i]);
+        targets[i].style.setProperty('--stagger', (idx * 0.07) + 's');
+      }
+    }
     if (!('IntersectionObserver' in window)) {
       for (var j = 0; j < targets.length; j++) targets[j].classList.add('in');
       return;
@@ -65,12 +72,60 @@ var CONTACT_EMAIL = "hello@sensemakers.be";
     targets.forEach(function (el) { io.observe(el); });
   }
 
+  // Stage tabs ("Start where it hurts")
+  function wireStages() {
+    var root = document.querySelector('[data-stages]');
+    if (!root) return;
+    var tabs = Array.prototype.slice.call(root.querySelectorAll('.stage-tab'));
+    var panels = Array.prototype.slice.call(root.querySelectorAll('.stage-panel'));
+    function select(i) {
+      tabs.forEach(function (t, j) { t.setAttribute('aria-selected', j === i ? 'true' : 'false'); t.tabIndex = j === i ? 0 : -1; });
+      panels.forEach(function (p, j) { p.hidden = j !== i; });
+    }
+    tabs.forEach(function (t, i) {
+      t.addEventListener('click', function () { select(i); });
+      t.addEventListener('keydown', function (e) {
+        var n = i;
+        if (e.key === 'ArrowRight' || e.key === 'ArrowDown') n = (i + 1) % tabs.length;
+        else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') n = (i - 1 + tabs.length) % tabs.length;
+        else return;
+        e.preventDefault(); select(n); tabs[n].focus();
+      });
+    });
+    select(0);
+  }
+
+  // Count-up numbers in the stats
+  function counters() {
+    var els = Array.prototype.slice.call(document.querySelectorAll('[data-count]'));
+    if (!els.length) return;
+    var reduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    function run(el) {
+      var target = parseFloat(el.getAttribute('data-count'));
+      var pre = el.getAttribute('data-prefix') || '', suf = el.getAttribute('data-suffix') || '';
+      if (reduced) { el.textContent = pre + target + suf; return; }
+      var start = null, dur = 900;
+      function frame(ts) {
+        if (!start) start = ts;
+        var p = Math.min(1, (ts - start) / dur), eased = 1 - Math.pow(1 - p, 3);
+        el.textContent = pre + Math.round(target * eased) + suf;
+        if (p < 1) requestAnimationFrame(frame);
+      }
+      requestAnimationFrame(frame);
+    }
+    if (!('IntersectionObserver' in window)) { els.forEach(run); return; }
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) { if (e.isIntersecting) { run(e.target); io.unobserve(e.target); } });
+    }, { threshold: 0.6 });
+    els.forEach(function (el) { io.observe(el); });
+  }
+
   // Footer year
   function year() {
     var y = document.getElementById('year');
     if (y) y.textContent = String(new Date().getFullYear());
   }
 
-  function init() { wireBooking(); wireMenu(); reveal(); year(); }
+  function init() { wireBooking(); wireMenu(); wireStages(); reveal(); counters(); year(); }
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init); else init();
 })();
