@@ -1,12 +1,15 @@
 # sensemakers.be — website
 
-Static site, no build step, no framework, no tracking. Three pages (`index.html`, `academy.html`, `readiness.html`), one stylesheet, one small script, self-hosted fonts. Anything in this folder is exactly what gets served.
+Static site, no build step, no framework, no tracking. Six pages (`index.html`, `offers.html`, `scan.html`, `audit.html`, `academy.html`, `readiness.html`), one stylesheet, one small script, self-hosted fonts. Anything in this folder is exactly what gets served.
 
 ## Files
 
 | File | What it is |
 |---|---|
 | `index.html` | The site. One long page with anchored sections. |
+| `offers.html` | The offers: how they fit together, the Programme (`#programme`) and the Sprint (`#sprint`), how we price, who you get. |
+| `scan.html` | The AI Transformation Scan: who it's for, what happens, what you keep. Request-information CTA, no prices. |
+| `audit.html` | The AI Spend & Ownership Audit: same structure. |
 | `academy.html` | The Academy: curriculum (Direct / Judge / Own / Adopt) and the four formats. |
 | `readiness.html` | The 90-second "Where are you with AI?" check. |
 | `404.html` | Not-found page (GitHub Pages picks it up automatically). |
