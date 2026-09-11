@@ -10,7 +10,7 @@ Static site, no build step, no framework, no tracking. Six pages (`index.html`, 
 | `offers.html` | The offers: how they fit together, the Programme (`#programme`) and the Sprint (`#sprint`), how we price, who you get. |
 | `scan.html` | The AI Transformation Scan: who it's for, what happens, what you keep. Request-information CTA, no prices. |
 | `audit.html` | The AI Spend & Ownership Audit: same structure. |
-| `academy.html` | The Academy: curriculum (Direct / Judge / Own / Adopt) and the four formats. |
+| `academy.html` | The Academy: three layers (Lead / Work / Keep up) and six formats, including the Frontier watch subscription (working title). |
 | `readiness.html` | The 90-second "Where are you with AI?" check. |
 | `404.html` | Not-found page (GitHub Pages picks it up automatically). |
 | `styles.css` | All styling. Brand tokens are the CSS variables at the top: warm-white canvas `#FBFAF7`, ink `#111815`, pine `#0C5C3C`, pine tint `#E5F5EC`; Newsreader for display, Figtree for text. |
@@ -98,6 +98,8 @@ If your Combell package includes web hosting, you can skip GitHub entirely: uplo
 
 ## Still to add when you have them
 
+- The Calendly link: paste it into `BOOKING_URL` at the top of `site.js` and every "Book a call" button switches over.
+- A final name for the Academy subscription: "Frontier watch" is a working title (it appears in `index.html`, `academy.html` and the header menu of every page).
 - A named founder/team section, when you want the site to point to people. It is deliberately anonymous for now.
 - Legal identification in the footer: Belgian law expects the company name, registered office and enterprise (BTW) number on a business website. A one-line addition to the footer once you decide which entity the site speaks for.
 - Analytics, if wanted: Plausible or Cloudflare Web Analytics are cookie-free and need no banner.
