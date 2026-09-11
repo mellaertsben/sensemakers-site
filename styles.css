@@ -103,8 +103,28 @@ p+p{margin-top:12px}
 /* ---------- sections & bands ---------- */
 section{padding:96px 0}
 .section-tight{padding:64px 0}
-.band{background:var(--tint-2)}
-.band-tint{background:var(--tint)}
+.band{background:var(--white);border-top:1px solid var(--hair-2);border-bottom:1px solid var(--hair-2)}
+.band+.band{border-top:0}
+/* feature band: deep pine with a faint atmosphere glow; everything inside flips to canvas */
+.band-tint{background-color:var(--pine-dk);background-image:radial-gradient(70% 90% at 12% 10%,rgba(156,199,176,.22),transparent 62%),radial-gradient(55% 75% at 88% 90%,rgba(174,215,245,.14),transparent 60%);color:var(--canvas)}
+.band-tint h1,.band-tint h2,.band-tint h3,.band-tint h4{color:var(--canvas)}
+.band-tint h2 em{color:#9CC7B0}
+.band-tint .kicker{color:#9CC7B0}
+.band-tint .eyebrow{color:rgba(251,250,247,.6)}
+.band-tint .sub,.band-tint p{color:rgba(251,250,247,.78)}
+.band-tint .card,.band-tint .layers > div{background:rgba(255,255,255,.07);border-color:rgba(255,255,255,.14)}
+.band-tint .card .tag{color:rgba(251,250,247,.6)}
+.band-tint .card p,.band-tint .layers span{color:rgba(251,250,247,.75)}
+.band-tint .layers b{color:var(--canvas)}
+.band-tint .ico{background:rgba(255,255,255,.12);color:var(--canvas)}
+.band-tint .btn-primary{background:var(--canvas);color:var(--pine-dk)}
+.band-tint .btn-primary:hover{background:var(--white)}
+.band-tint .btn-ghost{color:var(--canvas);border-color:rgba(251,250,247,.35)}
+.band-tint .btn-ghost:hover{border-color:var(--canvas)}
+.band-tint .inline-link{color:#9CC7B0;border-color:rgba(156,199,176,.4)}
+.band-tint .note{color:rgba(251,250,247,.75);border-color:rgba(156,199,176,.5)}
+.band-tint .note.accent{border-color:#9CC7B0}
+.band-tint .section-head .sub{color:rgba(251,250,247,.78)}
 .hairline-top{border-top:1px solid var(--hair-2)}
 
 /* ---------- atmosphere (painterly panels) ---------- */
@@ -121,6 +141,7 @@ section{padding:96px 0}
 .hero{padding:88px 0 72px}
 .hero-grid{display:grid;grid-template-columns:1.05fr 1fr;gap:56px;align-items:center}
 .hero h1{max-width:16ch}
+.hero h1.hero-h1{font-size:clamp(36px,4.5vw,58px);max-width:19ch}
 .hero .lead{margin-top:24px}
 .hero .tagline{font-family:var(--serif);font-size:clamp(22px,2.4vw,28px);line-height:1.3;color:var(--ink);max-width:22ch;font-weight:400;letter-spacing:-.01em}
 .hero-cta{margin-top:34px;display:flex;gap:12px;flex-wrap:wrap}
@@ -217,66 +238,6 @@ section{padding:96px 0}
 .value h3{font-size:21px;margin-bottom:8px}
 .value p{font-size:14px;color:var(--muted)}
 
-/* compounding curve */
-.curve{margin:0 0 28px;background:var(--white);border:1px solid var(--hair-2);border-radius:var(--radius);padding:28px 28px 22px;box-shadow:0 14px 40px rgba(17,24,21,.05)}
-.curve svg{width:100%;height:auto;display:block;overflow:visible}
-.curve .axis{stroke:var(--hair);stroke-width:1}
-.curve .ax{font-family:var(--sans);font-size:13px;fill:var(--muted);letter-spacing:.02em}
-.curve .shock line{stroke:var(--faint);stroke-width:1;stroke-dasharray:3 5}
-.curve .shock text{font-family:var(--sans);font-size:12.5px;fill:var(--muted);letter-spacing:.02em}
-.curve .line{fill:none;stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
-.curve .bolt{stroke:#B9BFBB;stroke-width:2.5}
-.curve .comp{stroke:var(--pine)}
-.curve .mark{cursor:pointer}
-.curve .mark circle{fill:var(--pine);stroke:var(--white);stroke-width:3;transition:r .2s ease}
-.curve .mark text{font-family:var(--sans);font-size:13px;font-weight:700;fill:var(--white);pointer-events:none}
-.curve .mark .halo{fill:none;stroke:var(--pine);stroke-width:1.5;opacity:0;transition:opacity .2s ease,r .25s ease}
-.curve .mark.on circle:not(.halo){r:15}
-.curve .mark.on .halo{opacity:.7;r:24}
-.curve .end{font-family:var(--serif);font-size:18px;fill:var(--ink)}
-.curve .comp-label{fill:var(--pine)}
-.curve .bolt-label{fill:var(--muted)}
-.curve .shock .hit{fill:transparent;cursor:help}
-.curve .shock-note{opacity:0;transition:opacity .2s ease;pointer-events:none}
-.curve .shock-note rect{fill:var(--white);stroke:var(--hair);rx:8}
-.curve .shock-note text{font-family:var(--sans);font-size:12.5px;fill:var(--ink)}
-.curve .shock-note .g{fill:var(--pine);font-weight:600}
-.curve .shock-note .b{fill:var(--muted)}
-.curve .shock:hover .shock-note,.curve .shock.on .shock-note{opacity:1}
-.curve .gap{opacity:0;transition:opacity .5s ease}
-.curve .gap line{stroke:var(--pine);stroke-width:1.5;stroke-dasharray:4 4}
-.curve .gap text{font-family:var(--serif);font-size:15px;fill:var(--pine);font-style:italic}
-.curve.drawn .gap{opacity:1;transition-delay:2.4s}
-.curve .probe{opacity:0;transition:opacity .15s ease;pointer-events:none}
-.curve .probe .guide{stroke:var(--ink);stroke-width:1;stroke-dasharray:2 4;opacity:.5}
-.curve .probe .p-comp{fill:var(--pine);stroke:var(--white);stroke-width:2.5}
-.curve .probe .p-bolt{fill:#9AA19D;stroke:var(--white);stroke-width:2.5}
-.curve .probe .span{stroke:var(--pine);stroke-width:2;opacity:.55}
-.curve .probe text{font-family:var(--serif);font-style:italic;font-size:15px;fill:var(--pine);transition:opacity .15s ease}
-.curve .probe .lbl{fill:var(--white);stroke:var(--hair);rx:6}
-.curve.probing .probe{opacity:1}
-.curve.probing .gap{opacity:0;transition-delay:0s}
-.curve figcaption{margin-top:18px;border-top:1px solid var(--hair-2);padding-top:18px}
-.curve-legend{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
-.curve-legend div{font-size:14.5px;color:var(--muted);line-height:1.5;display:grid;grid-template-columns:26px 1fr;gap:10px;align-items:start;padding:8px 10px;margin:-8px -10px;border-radius:10px;transition:background .2s ease;cursor:default}
-.curve-legend div.on{background:var(--tint)}
-.curve-legend b{color:var(--ink);font-weight:600}
-.curve-legend .k{display:inline-flex;align-items:center;justify-content:center;width:24px;height:24px;border-radius:50%;background:var(--pine);color:var(--white);font-size:12px;font-weight:700;margin-top:2px}
-.curve-note{margin-top:16px;font-size:14.5px;color:var(--muted);max-width:78ch}
-.curve-hint{margin-top:10px;font-size:12.5px;color:var(--faint)}
-@media (hover:none){.curve-hint{display:none}}
-@media (prefers-reduced-motion:no-preference){
-  html.js .curve .line{stroke-dasharray:var(--len,2400);stroke-dashoffset:var(--len,2400);transition:stroke-dashoffset 2.2s cubic-bezier(.4,0,.2,1)}
-  html.js .curve .bolt{transition-duration:1.8s}
-  html.js .curve.drawn .line{stroke-dashoffset:0}
-  html.js .curve .mark,html.js .curve .end,html.js .curve .shock{opacity:0;transition:opacity .5s ease}
-  html.js .curve.drawn .shock{opacity:1;transition-delay:.4s}
-  html.js .curve.drawn .m1{opacity:1;transition-delay:.9s}
-  html.js .curve.drawn .m2{opacity:1;transition-delay:1.4s}
-  html.js .curve.drawn .m3{opacity:1;transition-delay:1.9s}
-  html.js .curve.drawn .end{opacity:1;transition-delay:2.2s}
-}
-
 /* ---------- grids & cards ---------- */
 .grid{display:grid;gap:20px}
 .g2{grid-template-columns:repeat(2,1fr)}
@@ -286,7 +247,7 @@ section{padding:96px 0}
 .card h3{margin-bottom:10px}
 .card p{font-size:15px;color:var(--muted)}
 .card .tag{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:700;margin-bottom:10px}
-.card.tint{background:var(--tint);border-color:transparent}
+.card.tint{background:var(--white);border-color:var(--hair-2)}
 .card.feature{border:2px solid var(--pine);position:relative}
 .card.feature .flag{position:absolute;top:-12px;left:24px;background:var(--pine);color:var(--white);font-size:11px;letter-spacing:.12em;text-transform:uppercase;font-weight:700;padding:4px 10px;border-radius:20px}
 
@@ -305,24 +266,27 @@ section{padding:96px 0}
 .stats--stack .stat p{margin-top:0;max-width:none}
 .stats--stack .stat .num{font-size:46px}
 
-/* ---------- threads (what we do): cards that open ---------- */
-.thread{background:var(--white);border:1px solid var(--hair-2);border-radius:var(--radius);padding:0;transition:border-color .2s ease,transform .2s ease,box-shadow .2s ease;align-self:start}
-.thread summary{list-style:none;cursor:pointer;padding:26px 28px 24px;display:grid;grid-template-columns:44px 1fr 30px;gap:4px 16px;align-items:start}
+/* ---------- threads (what we do): five rows, each opens ---------- */
+.threads{border-top:1px solid var(--hair)}
+.thread{border-bottom:1px solid var(--hair);transition:background .15s ease}
+.thread summary{list-style:none;cursor:pointer;padding:26px 8px 26px 0;display:grid;grid-template-columns:44px 300px 1fr 30px;gap:0 28px;align-items:center}
 .thread summary::-webkit-details-marker{display:none}
 .thread summary::marker{content:""}
-.thread .tag{grid-column:2;margin:8px 0 8px;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:700}
-.thread h3{grid-column:2/4;margin:0 0 8px}
-.thread .lede{grid-column:2/4;font-size:15px;color:var(--muted)}
-.thread .ico{grid-row:1/4}
-.thread .more{grid-column:3;grid-row:1;display:inline-flex;align-items:center;justify-content:center;width:30px;height:30px;border-radius:50%;border:1px solid var(--hair);color:var(--muted);transition:transform .25s ease,border-color .2s ease,color .2s ease,background .2s ease}
+.thread .head{display:flex;flex-direction:column;gap:6px}
+.thread .tag{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:700}
+.thread h3{margin:0;font-size:24px}
+.thread .lede{font-size:15px;color:var(--muted);max-width:52ch}
+.thread .more{display:inline-flex;align-items:center;justify-content:center;width:30px;height:30px;border-radius:50%;border:1px solid var(--hair);color:var(--muted);transition:transform .25s ease,border-color .2s ease,color .2s ease,background .2s ease}
 .thread .more svg{width:12px;height:12px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
-.thread:hover{border-color:rgba(12,92,60,.35);transform:translateY(-2px);box-shadow:0 16px 44px rgba(17,24,21,.07)}
-.thread:hover .more{border-color:var(--pine);color:var(--pine);background:var(--tint-2)}
-.thread[open]{border-color:rgba(12,92,60,.45)}
+.thread:hover{background:rgba(17,24,21,.025)}
+.thread:hover .more{border-color:var(--pine);color:var(--pine)}
+.thread:hover .ico{background:var(--pine);color:var(--white)}
+.thread .ico{transition:background .2s ease,color .2s ease}
 .thread[open] .more{transform:rotate(180deg);background:var(--pine);border-color:var(--pine);color:var(--white)}
-.thread .drawer{padding:0 28px 26px 88px;font-size:15px;color:var(--muted)}
+.thread .drawer{display:grid;grid-template-columns:44px 300px 1fr 30px;gap:0 28px;padding:0 8px 28px 0}
+.thread .drawer .in{grid-column:3;font-size:15px;color:var(--muted)}
 .thread .drawer .eyebrow{margin-bottom:8px}
-.thread .drawer ul{list-style:none;margin:0 0 18px;padding:0}
+.thread .drawer ul{list-style:none;margin:0 0 18px;padding:0;max-width:60ch}
 .thread .drawer li{padding:6px 0 6px 18px;position:relative;border-top:1px solid var(--hair-2)}
 .thread .drawer li:first-child{border-top:0}
 .thread .drawer li::before{content:"";position:absolute;left:0;top:14px;width:7px;height:7px;border-radius:50%;background:var(--pine)}
@@ -330,17 +294,14 @@ section{padding:96px 0}
 .thread .starts .eyebrow{flex-basis:100%;margin-bottom:2px}
 .thread .starts .btn{padding:9px 14px;font-size:14px}
 @media (prefers-reduced-motion:no-preference){
-  .thread:hover .ico::before{animation:ring 1.4s ease-out infinite}
-  .thread:hover .ico::after{animation:ring 1.4s ease-out .5s infinite}
   .thread[open] .drawer{animation:fade .35s ease}
 }
-@keyframes ring{0%{opacity:.55;transform:scale(1)}100%{opacity:0;transform:scale(1.9)}}
 
 /* ---------- academy teaser + layers ---------- */
 .academy-teaser{display:grid;grid-template-columns:1.1fr 1fr;gap:56px;align-items:center}
 .layers{display:grid;gap:12px}
-.layers > div{display:grid;grid-template-columns:44px 1fr;gap:16px;align-items:start;background:var(--white);border-radius:14px;padding:18px 20px;border:1px solid var(--hair-2)}
-.layers b{font-family:var(--serif);font-weight:500;font-size:20px;display:block;letter-spacing:-.01em}
+.layers > div{display:grid;grid-template-columns:40px 1fr;gap:16px;align-items:center;background:var(--white);border-radius:14px;padding:18px 20px;border:1px solid var(--hair-2)}
+.layers b{font-family:var(--serif);font-weight:500;font-size:20px;display:block;letter-spacing:-.01em;line-height:1.2}
 .layers span{font-size:13.5px;color:var(--muted);display:block;margin-top:3px;line-height:1.5}
 .layers .ico{width:40px;height:40px}
 .layers .ico svg{width:20px;height:20px}
@@ -493,8 +454,8 @@ footer .f-bottom{border-top:1px solid var(--hair-2);margin-top:40px;padding-top:
   .stop .t{font-size:21px}
   .stop .d{font-size:12.5px}
   .journey-panel{grid-template-columns:1fr;gap:30px}
-  .thread summary{padding:22px 22px 20px;gap:14px 14px}
-  .thread .drawer{padding:0 22px 22px 80px}
+  .thread summary{grid-template-columns:44px 240px 1fr 30px;gap:0 20px}
+  .thread .drawer{grid-template-columns:44px 240px 1fr 30px;gap:0 20px}
   .hero-card{margin:20px;padding:20px}
   .map li{grid-template-columns:170px 1fr}
   .steps{grid-template-columns:repeat(2,1fr)}
@@ -542,20 +503,16 @@ footer .f-bottom{border-top:1px solid var(--hair-2);margin-top:40px;padding-top:
   .voice .bubble{font-size:18px;padding:12px 16px}
   .voice{grid-template-columns:38px 1fr;gap:10px}
   .voice .avatar{width:38px;height:38px}
-  .thread summary{grid-template-columns:40px 1fr auto;padding:20px 18px 18px}
+  .thread summary{grid-template-columns:40px 1fr 30px;gap:10px 14px;padding:20px 0;align-items:start}
   .thread .ico{width:40px;height:40px}
-  .thread .drawer{padding:0 18px 20px 18px}
+  .thread .head{grid-column:2}
+  .thread .lede{grid-column:2/4;max-width:none}
+  .thread .more{grid-column:3;grid-row:1;margin-top:4px}
+  .thread .drawer{display:block;padding:0 0 22px 54px}
+  .thread h3{font-size:21px}
   .stats--stack .stat{grid-template-columns:1fr;gap:4px}
   .layers > div{grid-template-columns:40px 1fr;padding:16px}
   .values-grid{grid-template-columns:1fr}
-  .curve{padding:16px 12px 14px}
-  .curve .ax{font-size:22px}
-  .curve .shock text,.curve .shock-note,.curve .probe{display:none}
-  .curve .gap text{font-size:26px}
-  .curve .end{font-size:26px}
-  .curve .mark circle{r:18}
-  .curve .mark text{font-size:17px}
-  .curve-legend{grid-template-columns:1fr}
   .value{border-right:0;border-bottom:1px solid var(--hair-2);padding:20px 0}
   .value+.value{padding-left:0}
   .value:last-child{border-bottom:0}
