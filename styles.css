@@ -114,7 +114,7 @@ section{padding:96px 0}
 .band-tint .sub,.band-tint p{color:rgba(251,250,247,.78)}
 .band-tint .card,.band-tint .layers > div{background:rgba(255,255,255,.07);border-color:rgba(255,255,255,.14)}
 .band-tint .card .tag{color:rgba(251,250,247,.6)}
-.band-tint .card p,.band-tint .layers span{color:rgba(251,250,247,.75)}
+.band-tint .card p,.band-tint .layers > div > div > span{color:rgba(251,250,247,.75)}
 .band-tint .layers b{color:var(--canvas)}
 .band-tint .ico{background:rgba(255,255,255,.12);color:var(--canvas)}
 .band-tint .btn-primary{background:var(--canvas);color:var(--pine-dk)}
@@ -302,8 +302,8 @@ section{padding:96px 0}
 .layers{display:grid;gap:12px}
 .layers > div{display:grid;grid-template-columns:40px 1fr;gap:16px;align-items:center;background:var(--white);border-radius:14px;padding:18px 20px;border:1px solid var(--hair-2)}
 .layers b{font-family:var(--serif);font-weight:500;font-size:20px;display:block;letter-spacing:-.01em;line-height:1.2}
-.layers span{font-size:13.5px;color:var(--muted);display:block;margin-top:3px;line-height:1.5}
-.layers .ico{width:40px;height:40px}
+.layers > div > div > span{font-size:13.5px;color:var(--muted);display:block;margin-top:3px;line-height:1.5}
+.layers .ico{width:40px;height:40px;display:inline-flex}
 .layers .ico svg{width:20px;height:20px}
 
 /* academy page */
