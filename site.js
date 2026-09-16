@@ -50,7 +50,7 @@ var CONTACT_EMAIL = "hello@sensemakers.be";
 
   // Gentle reveal on scroll (disabled automatically when the user prefers reduced motion)
   function reveal() {
-    var sel = '.section-head, .card, .step, .thread, .layer, .format, .stat, .value, .layers > div, .founder > div, .contact-grid > div, .journey';
+    var sel = '.section-head, .card, .step, .thread, .layer, .format, .stat, .value, .layers > div, .layers > .layer-tab, .pcard, .ev, .founder > div, .contact-grid > div, .journey, .hero-wide-in';
     var targets = Array.prototype.slice.call(document.querySelectorAll(sel));
     if (!targets.length) return;
     for (var i = 0; i < targets.length; i++) {
@@ -184,6 +184,44 @@ var CONTACT_EMAIL = "hello@sensemakers.be";
     window.addEventListener('resize', function () { var i = at.indexOf(pos); measure(); pos = i >= 0 ? at[i] : pos; place(pos); });
   }
 
+
+  // Academy: the three layer tiles filter the format cards (click again, or "Show all", to reset)
+  function wireAcademyFilter() {
+    var tabs = Array.prototype.slice.call(document.querySelectorAll('.layer-tab[data-filter]'));
+    var cards = Array.prototype.slice.call(document.querySelectorAll('#pcards .pcard'));
+    if (!tabs.length || !cards.length) return;
+    var status = document.getElementById('filter-status');
+    var reset = document.getElementById('filter-reset');
+    var names = { 'lead': 'Lead', 'work': 'Work', 'keep-up': 'Keep up' };
+    var active = null;
+    function apply() {
+      var shown = 0;
+      cards.forEach(function (c) {
+        var on = !active || c.getAttribute('data-layer') === active;
+        if (on) {
+          shown++;
+          if (c.hidden) { c.hidden = false; c.classList.add('is-out'); void c.offsetWidth; }
+          c.classList.remove('is-out');
+        } else {
+          c.classList.add('is-out');
+          if (reduced) { c.hidden = true; }
+          else { setTimeout(function () { if (c.classList.contains('is-out')) c.hidden = true; }, 230); }
+        }
+      });
+      tabs.forEach(function (t) { t.setAttribute('aria-pressed', t.getAttribute('data-filter') === active ? 'true' : 'false'); });
+      if (status) status.textContent = active ? 'Showing ' + names[active] + ': ' + shown + ' of 8 formats' : 'Showing all eight formats';
+      if (reset) reset.hidden = !active;
+    }
+    tabs.forEach(function (t) {
+      t.addEventListener('click', function () {
+        var f = t.getAttribute('data-filter');
+        active = (active === f) ? null : f;
+        apply();
+      });
+    });
+    if (reset) reset.addEventListener('click', function () { active = null; apply(); });
+  }
+
   // Threads (what we do): open the card a link points at, and animate the drawer
   function wireThreads() {
     var threads = Array.prototype.slice.call(document.querySelectorAll('details.thread'));
@@ -236,6 +274,6 @@ var CONTACT_EMAIL = "hello@sensemakers.be";
     if (y) y.textContent = String(new Date().getFullYear());
   }
 
-  function init() { wireBooking(); wireMenu(); wireMenus(); wireJourney(); wireThreads(); reveal(); counters(); year(); }
+  function init() { wireBooking(); wireMenu(); wireMenus(); wireJourney(); wireThreads(); wireAcademyFilter(); reveal(); counters(); year(); }
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init); else init();
 })();

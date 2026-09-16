@@ -6,7 +6,7 @@ Static site, no build step, no framework, no tracking. Seven pages (`index.html`
 
 | File | What it is |
 |---|---|
-| `index.html` | The homepage: hero, Start where it hurts, Why now, the Academy block (eight product cards + lab principle), Guidance, How it fits together, the Frontier Watch band, values, contact. |
+| `index.html` | The homepage: one wide hero card (add the class `hero-wide--dark` to `.hero-wide` for the deep-pine variant), Why now (the thesis, four voices, six evidence cards), the Academy block (three layer tiles that filter the eight format cards, lab principle with tool logos), Guidance, the Frontier Watch band, values, Meet the people (placeholder, no names yet), contact. |
 | `academy.html` | The Academy: three layers and eight formats, each with an anchor (`#briefing`, `#sprint`, `#foundations`, `#thinking`, `#tracks`, `#build-day`, `#frontier-watch`, `#champions`), the lab principle, two routes. |
 | `guidance.html` | Guidance: what we guide, the AI Transformation Programme (`#programme`), the Scan and the Audit, how we price, who you get. |
 | `frontier-watch.html` | The Frontier Watch landing page: why a radar, what you get, who it's for, how it starts. |
@@ -15,9 +15,9 @@ Static site, no build step, no framework, no tracking. Seven pages (`index.html`
 | `audit.html` | The AI Spend & Ownership Audit: same structure. |
 | `readiness.html` | The 90-second "Where are you with AI?" check. |
 | `404.html` | Not-found page (GitHub Pages picks it up automatically). |
-| `styles.css` | All styling. Brand tokens are the CSS variables at the top: warm-white canvas `#FBFAF7`, ink `#111815`, pine `#0C5C3C`, pine tint `#E5F5EC`; Newsreader for display, Figtree for text. |
+| `styles.css` | All styling. The "Aurora" system (16 Sep 2026): brand tokens are the CSS variables at the top — warm-white canvas `#FBFAF7`, ink `#111815`, pine `#0C5C3C` for actions, and four layer colours with meaning: gold = Lead, sky = Work, mint = Keep up, field = Guidance (each with a `-deep` text shade and a `-tint` background). Panels get their aurora from `.atmo::before` (variants `aurora--sky`, `aurora--gold`, `aurora--mint`); there is no SVG art any more. Type: Figtree for headlines and text, Newsreader italic for accents, quotes and numerals. |
 | `site.js` | Mobile menu, stage tabs, reveal animation, count-up numbers, the compounding-curve draw-on, footer year, **and the two config lines** (see below). |
-| `assets/` | Favicons (a letter S until the logo is ready), Apple touch icon, `og.png` share image, `fonts/` (Newsreader + Figtree, OFL licence). |
+| `assets/` | Favicons (a letter S until the logo is ready), Apple touch icon, `og.png` share image (aurora card, regenerated 16 Sep 2026), `fonts/` (Newsreader + Figtree, OFL licence), `logos/` (drop the vendor logo files here, see below). |
 | `CNAME` | Tells GitHub Pages the custom domain is `sensemakers.be`. Don't rename. |
 | `.nojekyll` | Tells GitHub Pages to serve files as-is. |
 | `robots.txt`, `sitemap.xml` | Search-engine housekeeping. |
@@ -102,6 +102,8 @@ If your Combell package includes web hosting, you can skip GitHub entirely: uplo
 
 - The Calendly link: paste it into `BOOKING_URL` at the top of `site.js` and every "Book a call" button switches over.
 - A final name for the subscription: "Frontier Watch" is a working title (it appears on every page, in the header, and has its own page `frontier-watch.html`).
+- Tool logos: drop the official files in `assets/logos/` as `claude.svg`, `microsoft-copilot.svg`, `chatgpt.svg`, `codex.svg`, `cursor.svg`, `claude-code.svg` (from each vendor's brand page, following their guidelines). Until a file exists, the pill shows the name only.
+- Meet the people: replace the three "Name to follow" cards with names, photos and bios when you're ready.
 - Product pages per Academy format (one template: who it's for, the promise, what happens, what you leave with, format, where it fits, CTA) once each format is built; today every format lives as an anchor on `academy.html`.
 - The header and footer are identical on every page; when you change them, change them everywhere (a small build script did this for the Sep 2026 restructure).
 - A named founder/team section, when you want the site to point to people. It is deliberately anonymous for now.

@@ -1,0 +1,1 @@
+Drop the official vendor logo files here: claude.svg, microsoft-copilot.svg, chatgpt.svg, codex.svg, cursor.svg, claude-code.svg. Get them from each vendor's brand page and follow their guidelines. Until a file exists the site shows the name only.
