@@ -520,3 +520,35 @@ footer .f-bottom{border-top:1px solid var(--hair-2);margin-top:40px;padding-top:
 @media (max-width:480px){
   .reg th:nth-child(3),.reg td:nth-child(3){display:none}
 }
+
+/* ---------- academy-first (Sep 2026): product cards, lab strip, layer row ---------- */
+.nav-item:last-of-type .menu{left:0;right:auto}
+.layers--row{grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:20px}
+.pcards{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.pcard{display:flex;flex-direction:column;gap:10px;background:var(--white);border:1px solid var(--hair-2);border-radius:var(--radius);padding:24px 22px;transition:border-color .15s ease,transform .1s ease,box-shadow .15s ease}
+.pcard:hover{border-color:rgba(12,92,60,.35);transform:translateY(-2px);box-shadow:0 14px 40px rgba(17,24,21,.06)}
+.pcard .tag{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--pine);font-weight:700}
+.pcard h3{font-size:22px;line-height:1.2;margin:0}
+.pcard p{font-size:14.5px;color:var(--muted);flex:1}
+.pcard .go{color:var(--pine);font-weight:600;font-size:14px}
+.pcard .go::after{content:"\00a0→"}
+.lab{margin-top:20px;display:grid;grid-template-columns:1.2fr 1fr;gap:28px;align-items:center;padding:26px 30px;border:1px solid var(--hair);border-radius:var(--radius);background:var(--white)}
+.lab p{font-family:var(--serif);font-size:21px;line-height:1.3;letter-spacing:-.01em;color:var(--ink);margin-top:8px;max-width:30ch}
+.pills{display:flex;flex-wrap:wrap;gap:8px;justify-content:flex-end}
+.pills span{font-size:13.5px;font-weight:600;padding:8px 14px;border-radius:999px;background:var(--tint);color:var(--pine);white-space:nowrap}
+.format .note{margin-top:16px}
+@media (max-width:1000px){
+  .pcards{grid-template-columns:repeat(2,1fr)}
+  .layers--row{grid-template-columns:1fr;gap:10px}
+  .lab{grid-template-columns:1fr;gap:16px}
+  .pills{justify-content:flex-start}
+}
+@media (max-width:860px){
+  .pcards{grid-template-columns:1fr}
+  .lab{padding:22px}
+}
+@media (max-width:860px){
+  .journey-panel,.stop{min-width:0}
+  .journey-actions .btn{white-space:normal;text-align:left;line-height:1.3}
+}
+.reg.reg--wrap td{white-space:normal;vertical-align:top;padding-right:10px}

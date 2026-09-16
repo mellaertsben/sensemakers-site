@@ -1,16 +1,18 @@
 # sensemakers.be — website
 
-Static site, no build step, no framework, no tracking. Six pages (`index.html`, `offers.html`, `scan.html`, `audit.html`, `academy.html`, `readiness.html`), one stylesheet, one small script, self-hosted fonts. Anything in this folder is exactly what gets served.
+Static site, no build step, no framework, no tracking. Seven pages (`index.html`, `academy.html`, `guidance.html`, `frontier-watch.html`, `scan.html`, `audit.html`, `readiness.html`), one stylesheet, one small script, self-hosted fonts. Since 16 Sep 2026 the site is Academy-first: the Academy (eight formats in three layers) leads, Guidance (Programme, Scan, Audit) sits beside it, Frontier Watch is the hero product with its own page. Anything in this folder is exactly what gets served.
 
 ## Files
 
 | File | What it is |
 |---|---|
-| `index.html` | The site. One long page with anchored sections. |
-| `offers.html` | The offers: how they fit together, the Programme (`#programme`) and the Sprint (`#sprint`), how we price, who you get. |
+| `index.html` | The homepage: hero, Start where it hurts, Why now, the Academy block (eight product cards + lab principle), Guidance, How it fits together, the Frontier Watch band, values, contact. |
+| `academy.html` | The Academy: three layers and eight formats, each with an anchor (`#briefing`, `#sprint`, `#foundations`, `#thinking`, `#tracks`, `#build-day`, `#frontier-watch`, `#champions`), the lab principle, two routes. |
+| `guidance.html` | Guidance: what we guide, the AI Transformation Programme (`#programme`), the Scan and the Audit, how we price, who you get. |
+| `frontier-watch.html` | The Frontier Watch landing page: why a radar, what you get, who it's for, how it starts. |
+| `offers.html` | Kept only as a redirect to `guidance.html` (old links keep working). |
 | `scan.html` | The AI Transformation Scan: who it's for, what happens, what you keep. Request-information CTA, no prices. |
 | `audit.html` | The AI Spend & Ownership Audit: same structure. |
-| `academy.html` | The Academy: three layers (Lead / Work / Keep up) and six formats, including the Frontier watch subscription (working title). |
 | `readiness.html` | The 90-second "Where are you with AI?" check. |
 | `404.html` | Not-found page (GitHub Pages picks it up automatically). |
 | `styles.css` | All styling. Brand tokens are the CSS variables at the top: warm-white canvas `#FBFAF7`, ink `#111815`, pine `#0C5C3C`, pine tint `#E5F5EC`; Newsreader for display, Figtree for text. |
@@ -99,7 +101,9 @@ If your Combell package includes web hosting, you can skip GitHub entirely: uplo
 ## Still to add when you have them
 
 - The Calendly link: paste it into `BOOKING_URL` at the top of `site.js` and every "Book a call" button switches over.
-- A final name for the Academy subscription: "Frontier watch" is a working title (it appears in `index.html`, `academy.html` and the header menu of every page).
+- A final name for the subscription: "Frontier Watch" is a working title (it appears on every page, in the header, and has its own page `frontier-watch.html`).
+- Product pages per Academy format (one template: who it's for, the promise, what happens, what you leave with, format, where it fits, CTA) once each format is built; today every format lives as an anchor on `academy.html`.
+- The header and footer are identical on every page; when you change them, change them everywhere (a small build script did this for the Sep 2026 restructure).
 - A named founder/team section, when you want the site to point to people. It is deliberately anonymous for now.
 - Legal identification in the footer: Belgian law expects the company name, registered office and enterprise (BTW) number on a business website. A one-line addition to the footer once you decide which entity the site speaks for.
 - Analytics, if wanted: Plausible or Cloudflare Web Analytics are cookie-free and need no banner.
