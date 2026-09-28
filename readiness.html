@@ -13,11 +13,18 @@
 <meta property="og:description" content="Five situations, one straight recommendation. No sign-up.">
 <meta property="og:url" content="https://sensemakers.be/readiness.html">
 <meta property="og:image" content="https://sensemakers.be/assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Where are you with AI, really? — a 90-second check">
+<meta name="twitter:description" content="Five situations, one straight recommendation. No sign-up.">
+<meta name="twitter:image" content="https://sensemakers.be/assets/og.png">
 <link rel="icon" href="assets/favicon-32.png" sizes="32x32" type="image/png">
 <link rel="icon" href="assets/favicon-256.png" sizes="256x256" type="image/png">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="preload" href="assets/fonts/newsreader-latin-standard-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/figtree-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -25,72 +32,47 @@
 
 <header class="nav">
   <div class="nav-inner">
-    <a class="brand" href="index.html#top" aria-label="Sensemakers home"><span class="wordmark">Sensemakers</span></a>
+    <a class="brand" href="./" aria-label="Sensemakers home"><img class="logo" src="assets/logo/sensemakers-lockup.svg" alt="" width="154" height="32"></a>
     <nav class="nav-links" aria-label="Primary">
-      <div class="nav-item has-menu">
-        <button class="nav-link" aria-expanded="false" aria-haspopup="true" aria-controls="menu-academy">Academy<svg class="chev" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.5 4.5 6 8l3.5-3.5"/></svg></button>
-        <div class="menu" id="menu-academy">
-          <a class="menu-overview" href="academy.html"><span>The Academy · eight formats</span><i class="arr" aria-hidden="true">→</i></a>
-          <div class="menu-group">Lead</div>
-          <a class="menu-link c-lead" href="academy.html#briefing"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 12V8a6 6 0 0 1 12 0v4"/><rect x="3" y="11" width="3" height="5" rx="1"/><rect x="14" y="11" width="3" height="5" rx="1"/></svg><span>Executive Briefing · two hours</span><i class="arr" aria-hidden="true">→</i></a>
-          <a class="menu-link c-lead" href="academy.html#sprint"><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="6.5" r="3"/><path d="M4 17c.6-3.5 3-5.5 6-5.5s5.4 2 6 5.5"/></svg><span>Leadership Sprint · three half-days</span><i class="arr" aria-hidden="true">→</i></a>
-          <div class="menu-group">Work</div>
-          <a class="menu-link c-work" href="academy.html#foundations"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 6l7-3 7 3-7 3z"/><path d="M6 8v4c0 1.5 2 2.5 4 2.5s4-1 4-2.5V8"/><path d="M17 6v5"/></svg><span>AI Foundations · two half-days, everyone</span><i class="arr" aria-hidden="true">→</i></a>
-          <a class="menu-link c-work" href="academy.html#thinking"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 3v14M7 17h6M4 6h12"/><path d="M6 6l-2.5 6a2.5 2.5 0 0 0 5 0z"/><path d="M14 6l-2.5 6a2.5 2.5 0 0 0 5 0z"/></svg><span>Thinking with AI · judgment</span><i class="arr" aria-hidden="true">→</i></a>
-          <a class="menu-link c-work" href="academy.html#tracks"><svg viewBox="0 0 20 20" aria-hidden="true"><rect x="3" y="4" width="14" height="9" rx="1.5"/><path d="M2 16h16"/></svg><span>AI for your role · per team</span><i class="arr" aria-hidden="true">→</i></a>
-          <a class="menu-link c-work" href="academy.html#build-day"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M12.5 3.5a3.5 3.5 0 0 0-3.6 4.9L3 14.3V17h2.7l5.9-5.9a3.5 3.5 0 0 0 4.9-3.6l-2.3 2.3-2.1-.6-.6-2.1z"/></svg><span>AI Build Day · hackathon</span><i class="arr" aria-hidden="true">→</i></a>
-          <div class="menu-group">Keep up</div>
-          <a class="menu-link c-keep" href="frontier-watch.html"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M2 16l5-8 3.5 5L13 9l5 7z"/><circle cx="15" cy="4.5" r="1.5"/></svg><span>Frontier Watch · by subscription</span><i class="arr" aria-hidden="true">→</i></a>
-          <a class="menu-link c-keep" href="academy.html#champions"><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="7" cy="7" r="3"/><circle cx="14" cy="8" r="2.2"/><path d="M2.5 17c.5-3 2.5-4.5 4.5-4.5S11 14 11.5 17"/><path d="M12 16c.3-2 1.2-3.2 2.5-3.2s2.3 1.2 2.6 3.2"/></svg><span>AI Champions Programme</span><i class="arr" aria-hidden="true">→</i></a>
-        </div>
-      </div>
-      <div class="nav-item has-menu">
-        <button class="nav-link" aria-expanded="false" aria-haspopup="true" aria-controls="menu-guidance">Guidance<svg class="chev" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.5 4.5 6 8l3.5-3.5"/></svg></button>
-        <div class="menu" id="menu-guidance">
-          <a class="menu-overview" href="guidance.html"><span>Guidance · guided, not outsourced</span><i class="arr" aria-hidden="true">→</i></a>
-          <div class="menu-group">With you, over time</div>
-          <a class="menu-link c-guide" href="guidance.html#programme"><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="7"/><path d="M12.8 7.2l-1.6 4-4 1.6 1.6-4z"/></svg><span>AI Transformation Programme · a lead on your side</span><i class="arr" aria-hidden="true">→</i></a>
-          <div class="menu-group">Fixed formats</div>
-          <a class="menu-link c-guide" href="scan.html"><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="7"/><circle cx="10" cy="10" r="3"/><path d="M10 3v2M10 15v2M3 10h2M15 10h2"/></svg><span>AI Transformation Scan · 3 weeks</span><i class="arr" aria-hidden="true">→</i></a>
-          <a class="menu-link c-guide" href="audit.html"><svg viewBox="0 0 20 20" aria-hidden="true"><rect x="3" y="3" width="6" height="6" rx="1.5"/><rect x="11" y="3" width="6" height="6" rx="1.5"/><rect x="3" y="11" width="6" height="6" rx="1.5"/><rect x="11" y="11" width="6" height="6" rx="1.5"/></svg><span>AI Spend &amp; Ownership Audit · 2 weeks</span><i class="arr" aria-hidden="true">→</i></a>
-          <div class="menu-group">Start free</div>
-          <a class="menu-link" href="readiness.html"><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="7"/><path d="M10 6v4l3 2"/></svg><span>Readiness check · 90 seconds</span><i class="arr" aria-hidden="true">→</i></a>
-          <a class="menu-overview" href="index.html#why" style="margin-top:14px"><span>Why now</span><i class="arr" aria-hidden="true">→</i></a>
-        </div>
-      </div>
       <a class="nav-link" href="frontier-watch.html">Frontier Watch</a>
-      <a class="nav-link" href="index.html#contact">Contact</a>
+      <div class="nav-item has-menu">
+        <button class="nav-link" type="button" aria-expanded="false" aria-haspopup="true" aria-controls="menu-academy">Academy<svg class="chev" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.5 4.5 6 8l3.5-3.5"/></svg></button>
+        <div class="menu" id="menu-academy">
+          <a class="menu-overview" href="academy.html"><span>The Academy · five formats</span><i class="arr" aria-hidden="true">→</i></a>
+          <div class="menu-group">For everyone</div>
+          <a class="menu-link c-work" href="academy.html#foundations"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 6l7-3 7 3-7 3z"/><path d="M6 8v4c0 1.5 2 2.5 4 2.5s4-1 4-2.5V8"/><path d="M17 6v5"/></svg><span>AI Foundations · two half-days</span><i class="arr" aria-hidden="true">→</i></a>
+          <a class="menu-link c-work" href="academy.html#thinking"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 3v14M7 17h6M4 6h12"/><path d="M6 6l-2.5 6a2.5 2.5 0 0 0 5 0z"/><path d="M14 6l-2.5 6a2.5 2.5 0 0 0 5 0z"/></svg><span>Thinking with AI · one day</span><i class="arr" aria-hidden="true">→</i></a>
+          <div class="menu-group">For teams</div>
+          <a class="menu-link c-work" href="academy.html#tracks"><svg viewBox="0 0 20 20" aria-hidden="true"><rect x="3" y="4" width="14" height="9" rx="1.5"/><path d="M2 16h16"/></svg><span>AI for your role · per team</span><i class="arr" aria-hidden="true">→</i></a>
+          <a class="menu-link c-work" href="academy.html#build-day"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M12.5 3.5a3.5 3.5 0 0 0-3.6 4.9L3 14.3V17h2.7l5.9-5.9a3.5 3.5 0 0 0 4.9-3.6l-2.3 2.3-2.1-.6-.6-2.1z"/></svg><span>AI Build Day · from 2027</span><i class="arr" aria-hidden="true">→</i></a>
+          <div class="menu-group">For the organisation</div>
+          <a class="menu-link c-work" href="academy.html#champions"><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="7" cy="7" r="3"/><circle cx="14" cy="8" r="2.2"/><path d="M2.5 17c.5-3 2.5-4.5 4.5-4.5S11 14 11.5 17"/><path d="M12 16c.3-2 1.2-3.2 2.5-3.2s2.3 1.2 2.6 3.2"/></svg><span>AI Champions Programme · from 2027</span><i class="arr" aria-hidden="true">→</i></a>
+        </div>
+      </div>
+      <a class="nav-link" href="transformation.html">Transformation</a>
+      <a class="nav-link" href="about.html">About us</a>
     </nav>
     <div class="nav-cta">
       <a class="btn btn-primary js-book" href="mailto:hello@sensemakers.be?subject=Sensemakers%20%E2%80%94%20let%27s%20talk">Book a call</a>
-      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-mobile" aria-label="Open menu"><span></span></button>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-mobile" aria-label="Open menu"><span></span></button>
     </div>
   </div>
   <nav id="nav-mobile" class="nav-mobile" aria-label="Mobile">
-    <div class="m-group">Academy</div>
-    <a href="academy.html">The Academy</a>
-    <a href="academy.html#briefing">Executive Briefing</a>
-    <a href="academy.html#sprint">Leadership Sprint</a>
-    <a href="academy.html#foundations">AI Foundations</a>
-    <a href="academy.html#thinking">Thinking with AI</a>
-    <a href="academy.html#tracks">AI for your role</a>
-    <a href="academy.html#build-day">AI Build Day</a>
     <a href="frontier-watch.html">Frontier Watch</a>
-    <a href="academy.html#champions">AI Champions Programme</a>
-    <div class="m-group">Guidance</div>
-    <a href="guidance.html">Guidance</a>
-    <a href="guidance.html#programme">AI Transformation Programme</a>
-    <a href="scan.html">AI Transformation Scan</a>
-    <a href="audit.html">AI Spend &amp; Ownership Audit</a>
-    <div class="m-group">Start</div>
-    <a href="index.html#why">Why now</a>
+    <a href="academy.html">Academy</a>
+    <a class="m-sub" href="academy.html#foundations">AI Foundations</a>
+    <a class="m-sub" href="academy.html#thinking">Thinking with AI</a>
+    <a class="m-sub" href="academy.html#tracks">AI for your role</a>
+    <a class="m-sub" href="academy.html#build-day">AI Build Day</a>
+    <a class="m-sub" href="academy.html#champions">AI Champions Programme</a>
+    <a href="transformation.html">Transformation</a>
+    <a href="about.html">About us</a>
     <a href="readiness.html">Readiness check</a>
-    <a href="index.html#contact">Contact</a>
   </nav>
 </header>
 
 <main id="main">
-<section class="hero hero-dots" style="padding-bottom:24px">
+<section class="hero hero-dots hero--text hero--quiz">
   <div class="container">
     <div class="kicker">Readiness check</div>
     <h1>Where are you with AI, really?</h1>
@@ -115,6 +97,11 @@
           <div class="q-text" id="qtext"></div>
           <div class="options" id="options"></div>
           <div class="q-nav"><button class="back" id="backbtn" type="button">← Back</button></div>
+        </div>
+
+        <div id="loading" class="hidden quiz-loading" role="status">
+          <svg class="spin" viewBox="0 0 100 100" aria-hidden="true" focusable="false"><path class="s1" d="M 77.02 7.18 C 77.42 7.48 77.80 7.91 77.84 8.20 C 77.90 8.59 78.03 8.86 77.25 9.28 L 68.47 13.20 C 61.69 16.09 55.34 19.51 49.33 23.77 C 43.91 27.61 40.34 31.82 38.31 38.18 C 37.00 42.26 37.39 46.36 39.26 50.24 C 41.54 54.97 45.07 58.87 47.23 63.68 C 47.40 64.06 47.52 64.80 47.19 64.92 C 46.40 65.19 39.96 65.68 33.68 62.91 C 21.49 57.51 12.34 47.42 13.24 33.70 C 13.71 26.36 16.93 19.65 21.85 14.16 C 35.38 -0.94 60.48 -5.06 77.02 7.18 Z"/><path class="s2" d="M 22.48 92.41 C 22.08 92.10 21.71 91.66 21.68 91.38 C 21.62 90.99 21.50 90.71 22.29 90.31 L 31.14 86.55 C 37.96 83.77 44.38 80.47 50.46 76.33 C 55.96 72.58 59.59 68.44 61.74 62.11 C 63.12 58.06 62.81 53.95 61.01 50.03 C 58.81 45.26 55.35 41.31 53.29 36.46 C 53.12 36.07 53.01 35.33 53.34 35.22 C 54.13 34.96 60.59 34.58 66.82 37.47 C 78.91 43.08 87.87 53.34 86.73 67.04 C 86.12 74.37 82.79 81.02 77.77 86.42 C 63.97 101.28 38.80 104.95 22.48 92.41 Z"/></svg>
+          <div><b>Reading your answers…</b><span>Your result in a moment.</span></div>
         </div>
 
         <div id="result" class="hidden">
@@ -145,15 +132,18 @@
   <div class="container">
     <div class="f-grid">
       <div>
-        <a class="brand" href="index.html#top" aria-label="Sensemakers home"><span class="wordmark">Sensemakers</span></a>
+        <a class="brand" href="./" aria-label="Sensemakers home"><img class="logo logo--footer" src="assets/logo/sensemakers-lockup.svg" alt="" width="145" height="30"></a>
         <p class="f-tag">The human capability to lead your AI transformation.</p>
       </div>
       <div class="f-links">
-        <div class="f-col"><h4>Explore</h4><a href="index.html#why">Why now</a><a href="academy.html">Academy</a><a href="guidance.html">Guidance</a><a href="frontier-watch.html">Frontier Watch</a><a href="readiness.html">Readiness check</a></div>
-        <div class="f-col"><h4>Start</h4><a href="academy.html#briefing">Executive Briefing</a><a href="scan.html">The Scan</a><a href="audit.html">The Audit</a><a class="js-book" href="mailto:hello@sensemakers.be?subject=Sensemakers%20%E2%80%94%20let%27s%20talk">Book a call</a><a href="mailto:hello@sensemakers.be">hello@sensemakers.be</a></div>
+        <div class="f-col"><h4>Explore</h4><a href="frontier-watch.html">Frontier Watch</a><a href="academy.html">Academy</a><a href="transformation.html">Transformation</a><a href="about.html">About us</a><a href="readiness.html">Readiness check</a></div>
+        <div class="f-col"><h4>Start</h4><a href="frontier-watch.html#briefing">Executive Briefing</a><a href="academy.html#foundations">AI Foundations</a><a class="js-book" href="mailto:hello@sensemakers.be?subject=Sensemakers%20%E2%80%94%20let%27s%20talk">Book a call</a></div>
+        <div class="f-col"><h4>Contact</h4><a href="mailto:hello@sensemakers.be">hello@sensemakers.be</a><a href="#" data-linkedin hidden>LinkedIn</a></div>
       </div>
     </div>
-    <div class="f-bottom"><span>© <span id="year">2026</span> Sensemakers</span><span>Independent</span></div>
+    <div class="f-bottom">
+      <p class="f-legal"><span>© <span id="year">2026</span> Sensemakers</span><span data-legal hidden></span><a href="mailto:hello@sensemakers.be">hello@sensemakers.be</a><a href="privacy.html">Privacy</a></p>
+    </div>
   </div>
 </footer>
 
@@ -190,18 +180,18 @@
     { q: "How would you want a partner to help?", o: [
       ["Show us where to start.", "start"],
       ["Redesign one real workflow with us.", "redesign"],
-      ["Get our operating model and ownership right.", "own"],
+      ["Get ownership and costs under control.", "own"],
       ["Build our team's capability.", "capability"],
       ["Honestly, just build it for us.", "build"]
     ]}
   ];
 
   var results = {
-    start: { label: "You need a clear place to start.", text: "There's energy and pressure, but no obvious first move, so the risk is doing a bit of everything and proving nothing. The fix is choosing where AI actually changes the work, and what to leave alone.", recHead: "Start with a briefing, then a decision", recText: "Two hours with your leadership team on what AI means for your industry and your organisation, and the three decisions to take. Then, if you want the full picture, the Scan: where AI creates value for you, what to leave alone, and one team to start with.", link: "academy.html#briefing", linkLabel: "See the Executive Briefing" },
-    redesign: { label: "You've got a team or a workflow worth starting with.", text: "You can point at where cost, time, or risk lives. That's the ideal place to start: one team taken from decision to daily practice, rather than tools sprinkled on top.", recHead: "Start with that team", recText: "One team, its real workflows: a role track on its own tasks, or an AI Build Day where your own people prototype the fix in the tools you already have. Owners named, results measured against a baseline. Yours when we leave.", link: "academy.html#tracks", linkLabel: "See AI for your role" },
-    own: { label: "AI is spreading faster than your operating model.", text: "Tools and agents are multiplying across teams, but ownership, accountability, and cost haven't caught up. Left alone, that becomes shadow AI: if everyone owns it, no one does.", recHead: "Get ownership and cost in view", recText: "Every tool and agent on one register: owner, cost, kill switch. A usage policy people can name, and the literacy to follow it. The list that ends shadow AI.", link: "audit.html", linkLabel: "See the Audit" },
-    capability: { label: "The tools are in, but they haven't landed.", text: "You've rolled out AI, but the work didn't really change and adoption stalled. That's rarely a tooling problem: the people and the way of working never moved with it.", recHead: "Build the capability, on real work", recText: "The Academy builds your people's ability to work with AI on their own tasks, starting with Foundations for everyone, and your leaders' ability to set the ambition and the ownership. Adoption is measured, not attendance.", link: "academy.html", linkLabel: "See the Academy" },
-    build: { label: "You mainly want it built.", text: "You're clear on what you want and you'd like someone to build it. We don't build systems; we build the people who own them, and we make sure it's the right build. That is usually the difference between a system that gets used and one that doesn't.", recHead: "The right build, owned by you", recText: "An AI Build Day proves it with your own teams, in your own tools, and leaves every prototype with an owner. For the build at scale we bring a partner you can procure and steer them from your side of the table, inside the Programme.", link: "academy.html#build-day", linkLabel: "See the AI Build Day" }
+    start: { label: "You need a clear place to start.", text: "There's energy and pressure, but no obvious first move, so the risk is doing a bit of everything and proving nothing. The fix is choosing where AI actually changes the work, and what to leave alone.", recHead: "Start with an Executive Briefing", recText: "Two hours with your leadership team on what AI means for your industry and your organisation. You leave with your three decisions on one page. If you want a full plan after that, we help you make one your leadership owns.", link: "frontier-watch.html#briefing", linkLabel: "See the Executive Briefing" },
+    redesign: { label: "You've got a team or a workflow worth starting with.", text: "You can point at where cost, time or risk lives. That's the ideal place to start: one team taken from decision to daily practice, rather than tools sprinkled on top.", recHead: "Start with that team", recText: "AI for your role: one team, its real work, hands-on in its own tool, with a playbook that stays with the team. Then you measure what changed.", link: "academy.html#tracks", linkLabel: "See AI for your role" },
+    own: { label: "AI is spreading faster than anyone can keep track of.", text: "Tools and agents are multiplying across teams, but ownership and cost haven't caught up. Left alone, that becomes shadow AI: if everyone owns it, no one does.", recHead: "Get tools and spend under control", recText: "Every AI tool you pay for on one list, with an owner and a clear call on what to keep, merge or stop. Then a usage policy people can name, and the skills to follow it.", link: "transformation.html", linkLabel: "See how we help" },
+    capability: { label: "The tools are in, but they haven't landed.", text: "You've rolled out AI, but the work didn't really change and adoption stalled. That's rarely a tooling problem: the people and the way of working never moved with it.", recHead: "Teach your people to work with AI", recText: "Hands-on courses on your own tasks, in the tools you already use, starting with AI Foundations for everyone. Your leadership team can take the same courses in a closed session.", link: "academy.html", linkLabel: "See the Academy" },
+    build: { label: "You mainly want it built.", text: "You know what you want and you'd like someone to build it. Before anything gets built, make sure it's the right build and that someone in your organisation owns it.", recHead: "Pick the right build first", recText: "We help you choose the use cases worth doing, each with an owner and a first step, and help you run the project around them.", link: "transformation.html", linkLabel: "See how we help" }
   };
 
   var idx = 0;
@@ -225,9 +215,17 @@
   function next() { if (idx < questions.length - 1) { idx++; render(); } else { showResult(); } }
   function goBack() { if (idx > 0) { idx--; render(); } }
 
+  var reduceMotion = !!(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches);
   function showResult() {
     $('bar').style.width = '100%';
     $('quiz').classList.add('hidden');
+    var loading = $('loading');
+    if (loading && !reduceMotion) {
+      loading.classList.remove('hidden');
+      setTimeout(function () { loading.classList.add('hidden'); revealResult(); }, 1300);
+    } else { revealResult(); }
+  }
+  function revealResult() {
     var res = $('result'); res.classList.remove('hidden'); res.classList.add('fade');
     var tally = {}; answers.forEach(function (c) { if (c) { tally[c] = (tally[c] || 0) + 1; } });
     var order = ['build', 'redesign', 'own', 'capability', 'start'];
@@ -248,7 +246,7 @@
     var n = $('buildNote');
     if (best !== 'build' && answers.indexOf('build') !== -1) {
       n.classList.remove('hidden');
-      n.textContent = "You also mentioned you'd like it built for you. We don't build systems ourselves: we make sure it's the right build and that your people own it. An AI Build Day proves it with your own teams; for the build at scale we bring a partner and stay on your side.";
+      n.textContent = "You also mentioned you'd like it built for you. We don't build systems ourselves. We help you pick what's worth building, give each build an owner, and help run the project around it.";
     } else { n.classList.add('hidden'); }
     // mail link with the answers in the body
     var lines = questions.map(function (q, i) {
@@ -261,7 +259,7 @@
   }
   function restart() {
     idx = 0; for (var i = 0; i < answers.length; i++) answers[i] = null;
-    $('result').classList.add('hidden'); $('intro').classList.remove('hidden'); $('buildNote').classList.add('hidden');
+    $('result').classList.add('hidden'); if ($('loading')) $('loading').classList.add('hidden'); $('intro').classList.remove('hidden'); $('buildNote').classList.add('hidden');
   }
 
   $('startbtn').addEventListener('click', startQuiz);
