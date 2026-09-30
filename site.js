@@ -169,7 +169,7 @@ var ANALYTICS = "";
 
   // Gentle reveal on scroll (off when the visitor prefers reduced motion)
   function reveal() {
-    var sel = '.section-head, .card, .pcard, .step, .stat, .value, .tile, .fw-steps li, .group, .ex, .fcard, .artifact, .faq > div, .person-card, .contact-card, .hero-wide-in';
+    var sel = '.h-head, .h-blocks, .mate, .cta-dark, .section-head, .card, .pcard, .step, .stat, .value, .tile, .fw-steps li, .group, .ex, .fcard, .artifact, .faq > div, .person-card, .contact-card, .hero-wide-in';
     var targets = all(sel);
     if (!targets.length) return;
     targets.forEach(function (t) {
@@ -226,12 +226,44 @@ var ANALYTICS = "";
     frame();
   }
 
+  // Homepage (Round 12): situation paths, ticker loop, journey that draws with the scroll
+  function home() {
+    var chips = all('.h-chip');
+    if (chips.length) {
+      chips.forEach(function (c) {
+        c.addEventListener('click', function () {
+          chips.forEach(function (x) { var on = x === c; x.classList.toggle('on', on); x.setAttribute('aria-checked', on ? 'true' : 'false'); });
+          all('.h-p').forEach(function (p) { p.classList.toggle('on', p.getAttribute('data-path') === c.getAttribute('data-path')); });
+        });
+      });
+    }
+    all('.ticker-row').forEach(function (row) {
+      if (reduced) return;
+      Array.prototype.slice.call(row.children).forEach(function (li) { var c = li.cloneNode(true); c.setAttribute('aria-hidden', 'true'); row.appendChild(c); });
+    });
+    var j = document.querySelector('.journey');
+    if (j && !reduced && window.matchMedia('(min-width: 861px)').matches) {
+      var line = j.querySelector('.journey-line i'), stages = all('.journey .stage'), ticking = false;
+      j.classList.add('drawn');
+      function frame() {
+        ticking = false;
+        var r = j.getBoundingClientRect(), vh = window.innerHeight;
+        var p = Math.max(0, Math.min(1, (vh * 0.85 - r.top) / (r.height * 0.9)));
+        line.style.setProperty('--p', p.toFixed(3));
+        stages.forEach(function (s, i) { s.classList.toggle('lit', p >= i / (stages.length - 1) - 0.02); });
+      }
+      window.addEventListener('scroll', function () { if (!ticking) { ticking = true; requestAnimationFrame(frame); } }, { passive: true });
+      window.addEventListener('resize', frame);
+      frame();
+    }
+  }
+
   // Footer year
   function year() {
     var y = document.getElementById('year');
     if (y) y.textContent = String(new Date().getFullYear());
   }
 
-  function init() { wireBooking(); wireLinkedIn(); wireLegal(); analytics(); wireMenu(); wireMenus(); openFromHash(); reveal(); counters(); heroTurn(); year(); }
+  function init() { wireBooking(); wireLinkedIn(); wireLegal(); analytics(); wireMenu(); wireMenus(); openFromHash(); reveal(); counters(); heroTurn(); home(); year(); }
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init); else init();
 })();
