@@ -2,27 +2,25 @@
    System "Aurora" (Sep 2026): warm-white canvas, aurora colour panels, pine for actions,
    and four layer colours with meaning: gold = Lead · sky = Work · mint = Keep up · field = Guidance.
    Canvas #FBFAF7 · Ink #111815 · Pine #0C5C3C · Gold #F3D086 · Sky #AED7F5 · Mint #9CC7B0 · Field #C2CD77
-   Type: Figtree for headlines and text, Newsreader italic for accents, quotes and numerals.
-   Both fonts self-hosted, SIL Open Font License. All tokens live in :root below. */
+   Type: Work Sans for everything (Round 11, 30 Sep 2026). Self-hosted, SIL Open Font License.
+   Brand palette (Round 11): Evergreen #0C3B28 · Pine #0C5C3C · Mint #9CC7B0 ·
+   Frontier Watch = Tangerine #E8791E · Academy = Cerulean #2A86C9 · Transformation = Rose #D6456E. All tokens live in :root below. */
 
-@font-face{font-family:'Newsreader';font-style:normal;font-weight:200 800;font-display:swap;src:url(assets/fonts/newsreader-latin-standard-normal.woff2) format('woff2-variations'),url(assets/fonts/newsreader-latin-standard-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
-@font-face{font-family:'Newsreader';font-style:normal;font-weight:200 800;font-display:swap;src:url(assets/fonts/newsreader-latin-ext-standard-normal.woff2) format('woff2-variations'),url(assets/fonts/newsreader-latin-ext-standard-normal.woff2) format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
-@font-face{font-family:'Newsreader';font-style:italic;font-weight:200 800;font-display:swap;src:url(assets/fonts/newsreader-latin-standard-italic.woff2) format('woff2-variations'),url(assets/fonts/newsreader-latin-standard-italic.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
-@font-face{font-family:'Figtree';font-style:normal;font-weight:300 900;font-display:swap;src:url(assets/fonts/figtree-latin-wght-normal.woff2) format('woff2-variations'),url(assets/fonts/figtree-latin-wght-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
-@font-face{font-family:'Figtree';font-style:normal;font-weight:300 900;font-display:swap;src:url(assets/fonts/figtree-latin-ext-wght-normal.woff2) format('woff2-variations'),url(assets/fonts/figtree-latin-ext-wght-normal.woff2) format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:'Work Sans';font-style:normal;font-weight:100 900;font-display:swap;src:url(assets/fonts/work-sans-latin-wght-normal.woff2) format('woff2-variations'),url(assets/fonts/work-sans-latin-wght-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'Work Sans';font-style:normal;font-weight:100 900;font-display:swap;src:url(assets/fonts/work-sans-latin-ext-wght-normal.woff2) format('woff2-variations'),url(assets/fonts/work-sans-latin-ext-wght-normal.woff2) format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
 
 :root{
   --canvas:#FBFAF7; --ink:#111815; --muted:#5C6661; --faint:#8A928D;
-  --pine:#0C5C3C; --pine-dk:#0A4A31; --tint:#E5F5EC; --tint-2:#F1F7F2;
+  --pine:#0C5C3C; --pine-dk:#0C3B28; --evergreen:#0C3B28; --brand-mint:#9CC7B0; --tint:#E5F5EC; --tint-2:#F1F7F2;
   --white:#FFFFFF;
   --hair:rgba(17,24,21,.10); --hair-2:rgba(17,24,21,.06);
-  --sky:#AED7F5; --sky-deep:#245E8E; --sky-tint:#E3F1FC;
-  --gold:#F3D086; --gold-deep:#9A6B12; --gold-tint:#FBF1D6;
-  --mint:#9CC7B0; --mint-deep:#0C5C3C; --mint-tint:#E5F5EC;
-  --field:#C2CD77; --field-deep:#5E6E14; --field-tint:#EEF1D5;
+  --sky:#2A86C9; --sky-deep:#1B5B8A; --sky-tint:#E1F0FA;
+  --gold:#9CC7B0; --gold-deep:#0C5C3C; --gold-tint:#E5F5EC;
+  --mint:#E8791E; --mint-deep:#9A4B0C; --mint-tint:#FDEBDA;
+  --field:#D6456E; --field-deep:#98284A; --field-tint:#FAE2EA;
   --slate:#7FA3C4;
-  --serif:'Newsreader',Georgia,'Times New Roman',serif;
-  --sans:'Figtree',-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;
+  --serif:'Work Sans',-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;
+  --sans:'Work Sans',-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;
   --maxw:1160px; --radius:16px;
 }
 
@@ -754,3 +752,71 @@ footer .f-bottom{display:block}
 @media (max-width:380px){
   .logo{height:28px}
 }
+
+/* =====================================================================
+   Round 11 (30 Sep 2026): brand palette + Work Sans.
+   Evergreen #0C3B28 grounds the homepage hero and the dark bands; Mint #9CC7B0 is the
+   highlight on dark; each product carries one bright accent (bright for crescents and bars,
+   deep shade for text): Frontier Watch = Tangerine #E8791E / #9A4B0C (.c-keep, --mint*) ·
+   Academy = Cerulean #2A86C9 / #1B5B8A (.c-work, --sky*) · Transformation = Rose #D6456E /
+   #98284A (.c-guide, --field*) · About us = brand greens (.c-lead, --gold*).
+   ===================================================================== */
+
+/* type: one family; accents are colour, not italics */
+h1,h2{font-weight:600;letter-spacing:-.025em}
+h3{font-weight:600}
+h1 em,h2 em{font-family:var(--sans);font-style:normal;font-weight:inherit;letter-spacing:inherit}
+footer .f-tag{font-style:normal}
+.stat .num,.artifact .n,.expect .n{font-weight:600}
+.voice .bubble{font-size:18px;letter-spacing:-.005em}
+
+/* homepage hero on evergreen */
+.hero-home{background:var(--evergreen);border-color:transparent;color:var(--canvas)}
+.hero-home::before{background:radial-gradient(55% 65% at 0% 0%,rgba(156,199,176,.20),transparent 62%)}
+.hero-home .hero-h1,.hero-home .tiles-label{color:var(--canvas)}
+.hero-home .hero-h1 em{color:var(--brand-mint)}
+.hero-home .kicker{color:var(--brand-mint)}
+.hero-home .kicker::before{background:var(--brand-mint)}
+.hero-home .lead{color:rgba(251,250,247,.82);opacity:1}
+.hero-home .hero-note{color:rgba(251,250,247,.7)}
+.hero-home .inline-link{color:var(--brand-mint);border-color:rgba(156,199,176,.4)}
+.hero-home .hero-s{filter:none;opacity:.13}
+.hero-home .hero-s .s1,.hero-home .hero-s .s2{fill:var(--brand-mint)}
+.hero-home .tile{background:var(--white);border-color:transparent}
+
+/* dark bands: evergreen with a quiet mint glow; crescent takes the product colour */
+.band-tint{background-image:radial-gradient(60% 80% at 8% 0%,rgba(156,199,176,.16),transparent 62%),radial-gradient(50% 70% at 92% 100%,rgba(156,199,176,.10),transparent 62%)}
+.band-tint .kicker::before{background:var(--lb,var(--brand-mint))}
+.wmk .s1,.wmk .s2{fill:var(--brand-mint)}
+
+/* art panels in the product colours */
+.atmo::before{background:
+  radial-gradient(52% 60% at 6% 8%,rgba(42,134,201,.22),transparent 62%),
+  radial-gradient(44% 56% at 94% 12%,rgba(232,121,30,.20),transparent 62%),
+  radial-gradient(54% 62% at 82% 96%,rgba(214,69,110,.16),transparent 64%)}
+.atmo.aurora--mint::before{background:
+  radial-gradient(60% 66% at 8% 10%,rgba(232,121,30,.30),transparent 64%),
+  radial-gradient(50% 58% at 92% 88%,rgba(156,199,176,.45),transparent 64%)}
+.atmo.aurora--sky::before{background:
+  radial-gradient(62% 66% at 10% 10%,rgba(42,134,201,.28),transparent 64%),
+  radial-gradient(48% 56% at 92% 90%,rgba(156,199,176,.45),transparent 64%)}
+.atmo.aurora--field::before{background:
+  radial-gradient(60% 66% at 8% 10%,rgba(214,69,110,.24),transparent 64%),
+  radial-gradient(50% 58% at 92% 88%,rgba(156,199,176,.45),transparent 64%)}
+.atmo.aurora--gold::before{background:
+  radial-gradient(58% 64% at 8% 8%,rgba(156,199,176,.60),transparent 64%),
+  radial-gradient(52% 60% at 90% 92%,rgba(12,92,60,.14),transparent 64%)}
+.hero-dots::before{background:radial-gradient(40% 70% at 96% 20%,rgba(156,199,176,.45),transparent 62%),radial-gradient(34% 60% at 84% 100%,rgba(42,134,201,.14),transparent 62%)}
+
+/* people: voices, portraits and frames in the brand accents */
+.voice .avatar.a1{background:linear-gradient(135deg,#2A86C9,#1B5B8A)}
+.voice .avatar.a2{background:linear-gradient(135deg,#E8791E,#9A4B0C)}
+.voice .avatar.a3{background:linear-gradient(135deg,#D6456E,#98284A)}
+.voice .avatar.a4{background:linear-gradient(135deg,#9CC7B0,#0C5C3C)}
+.portrait{background:linear-gradient(135deg,#9CC7B0,#0C5C3C)}
+.pframe .accent{fill:#E8791E}
+.pframe--sky .accent{fill:#2A86C9}
+.pframe--mint .accent{fill:#D6456E}
+/* product kickers take the product's deep shade; on dark bands they stay mint */
+.c-keep .kicker,.c-work .kicker,.c-lead .kicker{color:var(--lc)}
+section.band-tint .kicker,.band-tint.c-guide .kicker{color:var(--brand-mint)}
