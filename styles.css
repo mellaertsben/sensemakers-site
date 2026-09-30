@@ -820,3 +820,26 @@ footer .f-tag{font-style:normal}
 /* product kickers take the product's deep shade; on dark bands they stay mint */
 .c-keep .kicker,.c-work .kicker,.c-lead .kicker{color:var(--lc)}
 section.band-tint .kicker,.band-tint.c-guide .kicker{color:var(--brand-mint)}
+
+/* Round 11b: the product colour carries through each product's section and page */
+h1 em,h2 em{color:var(--lc,var(--pine))}
+.inline-link{color:var(--lc,var(--pine));border-color:color-mix(in srgb,var(--lc,var(--pine)) 30%,transparent)}
+.inline-link:hover{border-color:var(--lc,var(--pine))}
+.stat .num,.artifact .n,.expect .n,.step .n{color:var(--lc,var(--pine))}
+.ico{background:var(--lt,var(--tint));color:var(--lc,var(--pine))}
+.pills span{background:var(--lt,var(--tint));color:var(--lc,var(--pine))}
+.note{border-left-color:var(--lt,var(--tint))}
+.c-keep .btn-primary,.c-work .btn-primary,.c-guide .btn-primary{background:var(--lc);color:var(--white)}
+.c-keep .btn-primary:hover,.c-work .btn-primary:hover,.c-guide .btn-primary:hover{background:var(--ink)}
+.c-keep .btn-ghost:hover,.c-work .btn-ghost:hover,.c-guide .btn-ghost:hover{border-color:var(--lc)}
+:focus-visible{outline-color:var(--lc,var(--pine))}
+
+/* Frontier Watch band on the homepage: deep tangerine instead of evergreen */
+.band-tint.c-keep{background-color:#7E3C0B;background-image:radial-gradient(60% 80% at 8% 0%,rgba(232,121,30,.35),transparent 62%),radial-gradient(50% 70% at 92% 100%,rgba(232,121,30,.25),transparent 62%)}
+.band-tint.c-keep h2 em,section.band-tint.c-keep .kicker,.band-tint.c-keep .inline-link{color:#FBC48E}
+.band-tint.c-keep .inline-link{border-color:rgba(251,196,142,.45)}
+.band-tint.c-keep .kicker::before{background:#FBC48E}
+.band-tint.c-keep .wmk .s1,.band-tint.c-keep .wmk .s2{fill:#FBC48E}
+.band-tint.c-keep .btn-primary{background:var(--canvas);color:#7E3C0B}
+.band-tint.c-keep .btn-primary:hover{background:var(--white)}
+.band-tint.c-keep .note{border-color:rgba(251,196,142,.5)}
