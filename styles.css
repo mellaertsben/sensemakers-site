@@ -1275,3 +1275,84 @@ html.js .journey.drawn .stage.c-lead.lit .stage-dot{background:var(--pine);borde
   .act{grid-template-columns:28px 1fr}.act .by{grid-column:2;justify-self:start}
   .trainers .mate{grid-template-columns:1fr}
 }
+
+/* =====================================================================
+   Round 13b (5 Oct 2026): menus in the product colours, clickable menu items,
+   the formats in one view, Transformation in rose, a stronger footer.
+   ===================================================================== */
+/* menu items: the label goes to the overview, the chevron opens the list */
+.has-menu{display:flex;align-items:center}
+.has-menu>.nav-link{padding-right:4px}
+.nav-chev{display:inline-flex;align-items:center;justify-content:center;width:24px;height:30px;border-radius:7px;color:var(--muted);transition:background .15s,color .15s}
+.nav-chev:hover,.has-menu.open>.nav-chev{color:var(--ink);background:var(--tint-2)}
+.nav-chev .chev{width:11px;height:11px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;transition:transform .2s ease;opacity:.75}
+.has-menu.open>.nav-chev .chev{transform:rotate(180deg)}
+.has-menu>.nav-link.active::after{margin-left:-7px}
+.nav--dark .nav-chev{color:rgba(251,250,247,.8)}
+.nav--dark .nav-chev:hover,.nav--dark .has-menu.open>.nav-chev{color:var(--canvas);background:rgba(255,255,255,.08)}
+/* the crescent under the page you're on, and the menus, in the product's colour */
+.nav-links .nav-link.active::after{background:var(--lb,var(--pine))}
+.nav-links .c-lead.active::after{background:var(--pine)}
+.nav--dark .nav-links .nav-link.active::after{background:var(--lb,var(--brand-mint))}
+.menu .menu-link{color:var(--lc,var(--pine))}
+.menu .menu-link svg{color:var(--lb,var(--pine))}
+.menu .menu-link:hover{background:var(--lt,var(--tint))}
+.menu .menu-overview:hover{border-color:var(--lb,var(--pine));background:var(--lt,var(--tint-2))}
+.menu .menu-overview .arr,.menu .menu-link .arr{color:var(--lc,var(--pine))}
+
+/* Academy: all five formats in one view on wide screens; a rail on smaller ones */
+@media (min-width:1101px){
+  .rail{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;overflow:visible;max-width:var(--maxw);margin:0 auto;padding:36px 28px 0}
+  .r-card{width:auto;height:420px;padding:24px 22px}
+  .r-card .n{font-size:84px}
+  .r-card h3{font-size:23px}
+  .r-card p{font-size:14.5px}
+  .r-card::before{width:240px;height:240px;right:-80px;top:-70px}
+  .r-end{grid-column:1/-1;width:auto;height:auto;flex-direction:row;align-items:center;justify-content:space-between;gap:20px;padding:20px 26px;margin-top:4px}
+  .r-end .eyebrow{margin:0}
+  .r-end b{font-size:22px}
+  .r-end p{margin:0}
+  .rail-sec .rail-nav,.rail-sec .rail-progress{display:none}
+}
+
+/* Transformation in rose: the featured path, phase outcomes and tiles stay in the product colour */
+.c-guide .feature-r{background:var(--li)}
+.c-guide .feature-r::before{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(60% 70% at 100% 0%,color-mix(in srgb,var(--lb) 45%,transparent),transparent 65%)}
+.c-guide .feature-r::after{background:rgba(255,255,255,.10)}
+.c-guide .phase-mini .m,.c-guide .outcome .m,.c-guide .outcome li::before{color:color-mix(in srgb,var(--lb) 40%,white)}
+.c-guide .outcome{background:var(--li)}
+.lv:nth-child(3){background:color-mix(in srgb,var(--lb) 55%,var(--li))}
+.lv:nth-child(4){background:var(--lc)}
+
+/* footer: a strong, dark close on every page */
+footer.f-strong{position:relative;overflow:hidden;isolation:isolate;background:var(--evergreen);color:rgba(251,250,247,.75);border-top:0;padding:72px 0 30px}
+footer.f-strong::before{content:"";position:absolute;z-index:-1;inset:0;background:radial-gradient(50% 70% at 0% 0%,rgba(156,199,176,.16),transparent 62%)}
+footer.f-strong::after{content:"";position:absolute;z-index:-1;width:520px;height:520px;right:-150px;bottom:-230px;background:rgba(156,199,176,.08);-webkit-mask:var(--cres) center/contain no-repeat;mask:var(--cres) center/contain no-repeat}
+.f-top{display:grid;grid-template-columns:1.3fr 1fr;gap:48px;align-items:end;padding-bottom:48px;border-bottom:1px solid rgba(251,250,247,.12)}
+.f-claim{font-size:clamp(28px,3.4vw,44px);line-height:1.08;letter-spacing:-.03em;font-weight:600;color:var(--canvas);margin-top:26px;max-width:18ch}
+.f-claim em{font-style:normal;color:var(--brand-mint)}
+.f-talk{justify-self:end;text-align:left}
+.f-k{display:block;font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:var(--brand-mint);margin-bottom:8px}
+.f-mail{display:inline-block;font-size:clamp(20px,2.2vw,26px);font-weight:600;color:var(--canvas);border-bottom:2px solid rgba(156,199,176,.5);transition:border-color .2s}
+.f-mail:hover{border-color:var(--brand-mint)}
+.f-btns{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}
+footer.f-strong .btn-primary{background:var(--canvas);color:var(--evergreen)}
+footer.f-strong .btn-primary:hover{background:var(--white)}
+footer.f-strong .btn-ghost{color:var(--canvas);border-color:rgba(251,250,247,.3)}
+footer.f-strong .btn-ghost:hover{border-color:var(--canvas)}
+.f-cols{display:grid;grid-template-columns:repeat(4,1fr);gap:32px;padding:40px 0}
+footer.f-strong .f-col h4{display:flex;align-items:center;gap:8px;font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;margin-bottom:14px}
+footer.f-strong .f-col h4::before{content:"";width:12px;height:12px;flex:none;background:var(--lb,var(--brand-mint));-webkit-mask:var(--cres) center/contain no-repeat;mask:var(--cres) center/contain no-repeat}
+footer.f-strong .f-col.c-lead h4::before{background:var(--brand-mint)}
+footer.f-strong .f-col h4 a{color:var(--canvas);margin:0;font-size:12px}
+footer.f-strong .f-col a{display:block;color:rgba(251,250,247,.72);font-size:14.5px;margin-bottom:9px;transition:color .15s}
+footer.f-strong .f-col a:hover{color:var(--canvas)}
+footer.f-strong .f-bottom{border-top:1px solid rgba(251,250,247,.12);margin-top:0;padding-top:18px}
+footer.f-strong .f-legal,footer.f-strong .f-legal a,footer.f-strong .f-legal > *::after{color:rgba(251,250,247,.5)}
+footer.f-strong .f-legal a:hover{color:var(--canvas)}
+@media (max-width:860px){
+  .f-top{grid-template-columns:1fr;gap:32px}
+  .f-talk{justify-self:start}
+  .f-cols{grid-template-columns:1fr 1fr;gap:28px}
+  footer.f-strong{padding-top:52px}
+}

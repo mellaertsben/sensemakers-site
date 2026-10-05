@@ -129,10 +129,11 @@ var ANALYTICS = "";
     var items = all('.has-menu');
     if (!items.length) return;
     var timers = [];
-    function open(i) { items.forEach(function (it, j) { var on = j === i; it.classList.toggle('open', on); it.querySelector('.nav-link').setAttribute('aria-expanded', on ? 'true' : 'false'); }); }
+    function open(i) { items.forEach(function (it, j) { var on = j === i; it.classList.toggle('open', on); (it.querySelector('.nav-chev') || it.querySelector('.nav-link')).setAttribute('aria-expanded', on ? 'true' : 'false'); }); }
     function closeAll() { open(-1); }
     items.forEach(function (it, i) {
-      var btn = it.querySelector('.nav-link');
+      // Round 13b: the label is a link to the overview; the chevron button opens the list
+      var btn = it.querySelector('.nav-chev') || it.querySelector('.nav-link');
       btn.addEventListener('click', function (e) { e.preventDefault(); it.classList.contains('open') ? closeAll() : open(i); });
       it.addEventListener('mouseenter', function () { clearTimeout(timers[i]); timers[i] = setTimeout(function () { open(i); }, 70); });
       it.addEventListener('mouseleave', function () { clearTimeout(timers[i]); timers[i] = setTimeout(function () { if (it.classList.contains('open')) closeAll(); }, 160); });
