@@ -14,10 +14,10 @@
   --pine:#0C5C3C; --pine-dk:#0C3B28; --evergreen:#0C3B28; --brand-mint:#9CC7B0; --tint:#E5F5EC; --tint-2:#F1F7F2;
   --white:#FFFFFF;
   --hair:rgba(17,24,21,.10); --hair-2:rgba(17,24,21,.06);
-  --sky:#2A86C9; --sky-deep:#1B5B8A; --sky-tint:#E1F0FA;
+  --sky:#2A86C9; --sky-deep:#1F72B3; --sky-tint:#E1F0FA;
   --gold:#9CC7B0; --gold-deep:#0C5C3C; --gold-tint:#E5F5EC;
   --mint:#E8791E; --mint-deep:#C25A0A; --mint-tint:#FDEBDA;
-  --field:#D6456E; --field-deep:#98284A; --field-tint:#FAE2EA;
+  --field:#D6456E; --field-deep:#C2365F; --field-tint:#FAE2EA;
   --slate:#7FA3C4;
   --serif:'Work Sans',-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;
   --sans:'Work Sans',-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;
@@ -758,8 +758,8 @@ footer .f-bottom{display:block}
    Evergreen #0C3B28 grounds the homepage hero and the dark bands; Mint #9CC7B0 is the
    highlight on dark; each product carries one bright accent (bright for crescents and bars,
    deep shade for text): Frontier Watch = Tangerine #E8791E / #C25A0A (.c-keep, --mint*) ·
-   Academy = Cerulean #2A86C9 / #1B5B8A (.c-work, --sky*) · Transformation = Rose #D6456E /
-   #98284A (.c-guide, --field*) · About us = brand greens (.c-lead, --gold*).
+   Academy = Cerulean #2A86C9 / #1F72B3 (.c-work, --sky*) · Transformation = Rose #D6456E /
+   #C2365F (.c-guide, --field*) · About us = brand greens (.c-lead, --gold*).
    ===================================================================== */
 
 /* type: one family; accents are colour, not italics */
@@ -809,9 +809,9 @@ footer .f-tag{font-style:normal}
 .hero-dots::before{background:radial-gradient(40% 70% at 96% 20%,rgba(156,199,176,.45),transparent 62%),radial-gradient(34% 60% at 84% 100%,rgba(42,134,201,.14),transparent 62%)}
 
 /* people: voices, portraits and frames in the brand accents */
-.voice .avatar.a1{background:linear-gradient(135deg,#2A86C9,#1B5B8A)}
+.voice .avatar.a1{background:linear-gradient(135deg,#2A86C9,#1F72B3)}
 .voice .avatar.a2{background:linear-gradient(135deg,#E8791E,#C25A0A)}
-.voice .avatar.a3{background:linear-gradient(135deg,#D6456E,#98284A)}
+.voice .avatar.a3{background:linear-gradient(135deg,#D6456E,#C2365F)}
 .voice .avatar.a4{background:linear-gradient(135deg,#9CC7B0,#0C5C3C)}
 .portrait{background:linear-gradient(135deg,#9CC7B0,#0C5C3C)}
 .pframe .accent{fill:#E8791E}
@@ -936,7 +936,7 @@ html:not(.js) .h-p+.h-p{margin-top:24px}
 .h-block li::before{content:"";position:absolute;left:0;top:8px;width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.85)}
 .h-block-go{margin-top:auto;padding-top:24px;align-self:flex-start}
 .h-block-go{display:inline-flex;background:var(--white);padding:11px 18px;border-radius:10px;font-weight:600;font-size:14px;margin-top:auto}
-.hb-fw .h-block-go{color:#C25A0A}.hb-ac .h-block-go{color:#1B5B8A}.hb-tr .h-block-go{color:#98284A}
+.hb-fw .h-block-go{color:#C25A0A}.hb-ac .h-block-go{color:#1F72B3}.hb-tr .h-block-go{color:#C2365F}
 .h-block:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
 @media (hover:hover) and (min-width:861px){
   .h-blocks:hover .h-block{flex:.9}
@@ -957,7 +957,7 @@ html:not(.js) .h-p+.h-p{margin-top:24px}
 .stage p{font-size:15px;color:var(--muted);line-height:1.5}
 .stage-tags{display:flex;gap:6px;flex-wrap:wrap;margin-top:14px}
 .stage-tags span{font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:5px 10px;border-radius:999px;background:var(--lt);color:var(--lc)}
-.stage-tags .t-fw{background:#FDEBDA;color:#C25A0A}.stage-tags .t-ac{background:#E1F0FA;color:#1B5B8A}
+.stage-tags .t-fw{background:#FDEBDA;color:#C25A0A}.stage-tags .t-ac{background:#E1F0FA;color:#1F72B3}
 html.js .journey.drawn .journey-line i{transform:scaleX(var(--p,0))}
 html.js .journey.drawn .stage{opacity:.4}
 html.js .journey.drawn .stage .stage-dot{background:var(--white);border-color:var(--hair);color:var(--muted)}
@@ -1036,8 +1036,8 @@ html.js .journey.drawn .stage.c-lead.lit .stage-dot{background:var(--pine);borde
      with an "at a glance" box, outcomes, a clickable programme and "what you leave with"
    Colours come from the product context (--lc deep · --lt tint · --lb bright · --li ink).
    ===================================================================== */
-.c-work{--li:#123E5E}
-.c-guide{--li:#5E1A33}
+.c-work{--li:#1F72B3}
+.c-guide{--li:#C2365F}
 .c-keep{--li:#C25A0A}
 
 /* hero title rising in, line by line */
@@ -1434,3 +1434,7 @@ body:has(main.c-keep) .nav-cta .btn-primary:hover,body:has(main.c-work) .nav-cta
 body:has(main.c-keep) .nav .logo{content:url(assets/logo/sensemakers-lockup-frontier-watch.svg)}
 body:has(main.c-work) .nav .logo{content:url(assets/logo/sensemakers-lockup-academy.svg)}
 body:has(main.c-guide) .nav .logo{content:url(assets/logo/sensemakers-lockup-transformation.svg)}
+/* Round 14d: Academy and Transformation brightened like Frontier Watch (no navy, no wine): dark boxes in the product colour */
+.c-work .outcome{background:#2479BA}
+.c-guide .outcome,.c-guide .feature-r{background:#C93D66}
+.c-work .p-sub::before,.c-guide .p-sub::before{background:radial-gradient(50% 60% at 0% 0%,rgba(255,255,255,.16),transparent 62%)}
