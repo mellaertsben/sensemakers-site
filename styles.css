@@ -1473,3 +1473,7 @@ body:has(main.c-guide) .nav .logo{content:url(assets/logo/sensemakers-lockup-tra
 .mv-p{border-top:1px solid rgba(255,255,255,.12)}
 .mv-p span{display:flex;align-items:center;gap:7px;color:var(--brand-mint)}
 .mv-p span::before{content:"";width:10px;height:10px;flex:none;background:var(--lb);-webkit-mask:var(--cres) center/contain no-repeat;mask:var(--cres) center/contain no-repeat}
+/* Journey: dots and line in brand green; only the product labels carry the product colours */
+.journey-line i{background:var(--pine)}
+.stage-dot,html.js .journey.drawn .stage.lit .stage-dot{background:var(--pine);border-color:var(--pine)}
+html.js .journey.drawn .stage.lit .stage-dot{box-shadow:0 0 0 6px var(--tint)}
