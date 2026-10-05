@@ -143,7 +143,7 @@ var ANALYTICS = "";
     all('.menu a').forEach(function (a) { a.addEventListener('click', function () { closeAll(); }); });
   }
 
-  // "Read more": open the one a link points at (academy.html#foundations opens Foundations)
+  // "Read more": open the <details> a link points at (page.html#id opens it)
   function openFromHash() {
     function go() {
       var id = decodeURIComponent((location.hash || '').slice(1));
@@ -169,7 +169,7 @@ var ANALYTICS = "";
 
   // Gentle reveal on scroll (off when the visitor prefers reduced motion)
   function reveal() {
-    var sel = '.h-head, .h-blocks, .mate, .cta-dark, .section-head, .card, .pcard, .step, .stat, .value, .tile, .fw-steps li, .group, .ex, .fcard, .artifact, .faq > div, .person-card, .contact-card, .hero-wide-in';
+    var sel = '.p-stat, .p-item, .oc, .lv, .split-role, .h-head, .h-blocks, .mate, .cta-dark, .section-head, .card, .pcard, .step, .stat, .value, .tile, .fw-steps li, .group, .ex, .fcard, .artifact, .faq > div, .person-card, .contact-card, .hero-wide-in';
     var targets = all(sel);
     if (!targets.length) return;
     targets.forEach(function (t) {
@@ -258,12 +258,100 @@ var ANALYTICS = "";
     }
   }
 
+
+  // Round 13: live demo window. Scenes live in a <script type="application/json"> inside .demo.
+  // Each scene: { label, u (question), a (answer, may hold <mark>), who (optional name above the answer),
+  // f (the flag at the end), ok (true: a green "next step" flag instead of an orange warning) }
+  function demos() {
+    all('.demo').forEach(function (d) {
+      var data = d.querySelector('script[type="application/json"]');
+      var body = d.querySelector('.demo-body'), label = d.querySelector('.demo-label'), steps = all('.demo-steps i').filter(function (i) { return d.contains(i); });
+      if (!data || !body) return;
+      var scenes = JSON.parse(data.textContent), n = 0, timer, visible = false;
+      function el(cls, html) { var e = document.createElement('div'); e.className = cls; if (html) e.innerHTML = html; body.appendChild(e); return e; }
+      function bubbleA(s) { return (s.who ? '<span class="who">' + s.who + '</span>' : '') + s.a; }
+      function still(s) { body.innerHTML = ''; el('msg u', s.u); el('msg a', bubbleA(s)); el('flag' + (s.ok ? ' ok' : ''), s.f); }
+      function type(e, html, done) {
+        var i = 0;
+        (function step() {
+          i += 2;
+          if (i >= html.length) { e.innerHTML = html; done(); return; }
+          if (html.charAt(i - 1) === '<' || html.charAt(i - 2) === '<') { var close = html.indexOf('>', i); if (close > -1) i = close + 1; }
+          e.innerHTML = html.slice(0, i).replace(/<[^>]*$/, '') + '<span class="caret"></span>';
+          timer = setTimeout(step, 22);
+        })();
+      }
+      function play() {
+        clearTimeout(timer);
+        var s = scenes[n];
+        if (label) label.textContent = s.label || '';
+        steps.forEach(function (x, i) { x.classList.toggle('on', i <= n); });
+        if (reduced) { still(s); return; }
+        if (!visible) { timer = setTimeout(play, 600); return; }
+        body.innerHTML = '';
+        type(el('msg u'), s.u, function () {
+          timer = setTimeout(function () {
+            type(el('msg a'), bubbleA(s), function () {
+              timer = setTimeout(function () {
+                el('flag' + (s.ok ? ' ok' : ''), s.f);
+                timer = setTimeout(function () { n = (n + 1) % scenes.length; play(); }, 3400);
+              }, 500);
+            });
+          }, 400);
+        });
+      }
+      if ('IntersectionObserver' in window) {
+        new IntersectionObserver(function (es) { visible = es[0].isIntersecting; }, { threshold: 0.3 }).observe(d);
+      } else { visible = true; }
+      if (reduced) {
+        steps.forEach(function (x, i) { x.style.cursor = 'pointer'; x.addEventListener('click', function () { n = i; play(); }); });
+      }
+      play();
+    });
+  }
+
+  // Round 13: sideways rail with arrows and a progress bar
+  function rails() {
+    all('.rail').forEach(function (r) {
+      var sec = r.closest('section') || document;
+      var prev = sec.querySelector('[data-rail="prev"]'), next = sec.querySelector('[data-rail="next"]'), bar = sec.querySelector('.rail-progress i');
+      function step() { var c = r.querySelector('.r-card'); return c ? c.getBoundingClientRect().width + 18 : 340; }
+      if (prev) prev.addEventListener('click', function () { r.scrollBy({ left: -step(), behavior: reduced ? 'auto' : 'smooth' }); });
+      if (next) next.addEventListener('click', function () { r.scrollBy({ left: step(), behavior: reduced ? 'auto' : 'smooth' }); });
+      function prog() { if (!bar) return; var m = r.scrollWidth - r.clientWidth; var share = r.clientWidth / r.scrollWidth; bar.style.width = (100 * Math.min(1, share + (1 - share) * (m > 0 ? r.scrollLeft / m : 1))).toFixed(1) + '%'; }
+      r.addEventListener('scroll', prog, { passive: true }); window.addEventListener('resize', prog); prog();
+    });
+  }
+
+  // Round 13: programme modules open on click; phase tabs; marquee loop
+  function subpages() {
+    all('.mod').forEach(function (m) {
+      m.setAttribute('tabindex', '0'); m.setAttribute('role', 'button');
+      function t() { m.classList.toggle('open'); m.setAttribute('aria-expanded', m.classList.contains('open') ? 'true' : 'false'); }
+      m.setAttribute('aria-expanded', m.classList.contains('open') ? 'true' : 'false');
+      m.addEventListener('click', t);
+      m.addEventListener('keydown', function (e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); t(); } });
+    });
+    all('.tl-tabs').forEach(function (tabs) {
+      var wrap = tabs.parentNode, btns = all('.tl-tab').filter(function (b) { return tabs.contains(b); });
+      btns.forEach(function (b) {
+        b.addEventListener('click', function () {
+          btns.forEach(function (x) { var on = x === b; x.classList.toggle('on', on); x.setAttribute('aria-selected', on ? 'true' : 'false'); });
+          all('.tl-pane').filter(function (p) { return wrap.contains(p); }).forEach(function (p) { p.classList.toggle('on', p.getAttribute('data-p') === b.getAttribute('data-p')); });
+        });
+      });
+    });
+    all('.marquee ul').forEach(function (ul) {
+      Array.prototype.slice.call(ul.children).forEach(function (li) { var c = li.cloneNode(true); c.setAttribute('aria-hidden', 'true'); ul.appendChild(c); });
+    });
+  }
+
   // Footer year
   function year() {
     var y = document.getElementById('year');
     if (y) y.textContent = String(new Date().getFullYear());
   }
 
-  function init() { wireBooking(); wireLinkedIn(); wireLegal(); analytics(); wireMenu(); wireMenus(); openFromHash(); reveal(); counters(); heroTurn(); home(); year(); }
+  function init() { wireBooking(); wireLinkedIn(); wireLegal(); analytics(); wireMenu(); wireMenus(); openFromHash(); reveal(); counters(); heroTurn(); home(); demos(); rails(); subpages(); year(); }
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init); else init();
 })();
