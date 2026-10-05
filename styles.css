@@ -16,7 +16,7 @@
   --hair:rgba(17,24,21,.10); --hair-2:rgba(17,24,21,.06);
   --sky:#2A86C9; --sky-deep:#1B5B8A; --sky-tint:#E1F0FA;
   --gold:#9CC7B0; --gold-deep:#0C5C3C; --gold-tint:#E5F5EC;
-  --mint:#E8791E; --mint-deep:#9A4B0C; --mint-tint:#FDEBDA;
+  --mint:#E8791E; --mint-deep:#C25A0A; --mint-tint:#FDEBDA;
   --field:#D6456E; --field-deep:#98284A; --field-tint:#FAE2EA;
   --slate:#7FA3C4;
   --serif:'Work Sans',-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;
@@ -757,7 +757,7 @@ footer .f-bottom{display:block}
    Round 11 (30 Sep 2026): brand palette + Work Sans.
    Evergreen #0C3B28 grounds the homepage hero and the dark bands; Mint #9CC7B0 is the
    highlight on dark; each product carries one bright accent (bright for crescents and bars,
-   deep shade for text): Frontier Watch = Tangerine #E8791E / #9A4B0C (.c-keep, --mint*) ·
+   deep shade for text): Frontier Watch = Tangerine #E8791E / #C25A0A (.c-keep, --mint*) ·
    Academy = Cerulean #2A86C9 / #1B5B8A (.c-work, --sky*) · Transformation = Rose #D6456E /
    #98284A (.c-guide, --field*) · About us = brand greens (.c-lead, --gold*).
    ===================================================================== */
@@ -810,7 +810,7 @@ footer .f-tag{font-style:normal}
 
 /* people: voices, portraits and frames in the brand accents */
 .voice .avatar.a1{background:linear-gradient(135deg,#2A86C9,#1B5B8A)}
-.voice .avatar.a2{background:linear-gradient(135deg,#E8791E,#9A4B0C)}
+.voice .avatar.a2{background:linear-gradient(135deg,#E8791E,#C25A0A)}
 .voice .avatar.a3{background:linear-gradient(135deg,#D6456E,#98284A)}
 .voice .avatar.a4{background:linear-gradient(135deg,#9CC7B0,#0C5C3C)}
 .portrait{background:linear-gradient(135deg,#9CC7B0,#0C5C3C)}
@@ -835,12 +835,12 @@ h1 em,h2 em{color:var(--lc,var(--pine))}
 :focus-visible{outline-color:var(--lc,var(--pine))}
 
 /* Frontier Watch band on the homepage: deep tangerine instead of evergreen */
-.band-tint.c-keep{background-color:#7E3C0B;background-image:radial-gradient(60% 80% at 8% 0%,rgba(232,121,30,.35),transparent 62%),radial-gradient(50% 70% at 92% 100%,rgba(232,121,30,.25),transparent 62%)}
+.band-tint.c-keep{background-color:#C25A0A;background-image:radial-gradient(60% 80% at 8% 0%,rgba(232,121,30,.35),transparent 62%),radial-gradient(50% 70% at 92% 100%,rgba(232,121,30,.25),transparent 62%)}
 .band-tint.c-keep h2 em,section.band-tint.c-keep .kicker,.band-tint.c-keep .inline-link{color:#FBC48E}
 .band-tint.c-keep .inline-link{border-color:rgba(251,196,142,.45)}
 .band-tint.c-keep .kicker::before{background:#FBC48E}
 .band-tint.c-keep .wmk .s1,.band-tint.c-keep .wmk .s2{fill:#FBC48E}
-.band-tint.c-keep .btn-primary{background:var(--canvas);color:#7E3C0B}
+.band-tint.c-keep .btn-primary{background:var(--canvas);color:#C25A0A}
 .band-tint.c-keep .btn-primary:hover{background:var(--white)}
 .band-tint.c-keep .note{border-color:rgba(251,196,142,.5)}
 
@@ -910,7 +910,7 @@ html:not(.js) .h-p+.h-p{margin-top:24px}
 
 /* on our radar ticker */
 .ticker{display:flex;align-items:stretch;background:#0A3122;color:var(--canvas);overflow:hidden;border-top:1px solid rgba(156,199,176,.14)}
-.ticker-lab{flex:none;display:flex;align-items:center;gap:8px;padding:0 20px;background:#B85A10;color:var(--white);font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;white-space:nowrap}
+.ticker-lab{flex:none;display:flex;align-items:center;gap:8px;padding:0 20px;background:#D9690F;color:var(--white);font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;white-space:nowrap}
 .ticker-lab i{width:8px;height:8px;border-radius:50%;background:var(--white);animation:t-pulse 1.6s ease-in-out infinite}
 @keyframes t-pulse{50%{opacity:.3}}
 .ticker-win{flex:1;overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 40px);mask-image:linear-gradient(90deg,transparent,#000 40px)}
@@ -936,7 +936,7 @@ html:not(.js) .h-p+.h-p{margin-top:24px}
 .h-block li::before{content:"";position:absolute;left:0;top:8px;width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.85)}
 .h-block-go{margin-top:auto;padding-top:24px;align-self:flex-start}
 .h-block-go{display:inline-flex;background:var(--white);padding:11px 18px;border-radius:10px;font-weight:600;font-size:14px;margin-top:auto}
-.hb-fw .h-block-go{color:#9A4B0C}.hb-ac .h-block-go{color:#1B5B8A}.hb-tr .h-block-go{color:#98284A}
+.hb-fw .h-block-go{color:#C25A0A}.hb-ac .h-block-go{color:#1B5B8A}.hb-tr .h-block-go{color:#98284A}
 .h-block:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
 @media (hover:hover) and (min-width:861px){
   .h-blocks:hover .h-block{flex:.9}
@@ -957,7 +957,7 @@ html:not(.js) .h-p+.h-p{margin-top:24px}
 .stage p{font-size:15px;color:var(--muted);line-height:1.5}
 .stage-tags{display:flex;gap:6px;flex-wrap:wrap;margin-top:14px}
 .stage-tags span{font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:5px 10px;border-radius:999px;background:var(--lt);color:var(--lc)}
-.stage-tags .t-fw{background:#FDEBDA;color:#9A4B0C}.stage-tags .t-ac{background:#E1F0FA;color:#1B5B8A}
+.stage-tags .t-fw{background:#FDEBDA;color:#C25A0A}.stage-tags .t-ac{background:#E1F0FA;color:#1B5B8A}
 html.js .journey.drawn .journey-line i{transform:scaleX(var(--p,0))}
 html.js .journey.drawn .stage{opacity:.4}
 html.js .journey.drawn .stage .stage-dot{background:var(--white);border-color:var(--hair);color:var(--muted)}
@@ -1038,7 +1038,7 @@ html.js .journey.drawn .stage.c-lead.lit .stage-dot{background:var(--pine);borde
    ===================================================================== */
 .c-work{--li:#123E5E}
 .c-guide{--li:#5E1A33}
-.c-keep{--li:#6B3309}
+.c-keep{--li:#C25A0A}
 
 /* hero title rising in, line by line */
 .p-hero h1{font-size:clamp(40px,5vw,66px);line-height:.98;letter-spacing:-.045em;max-width:none}
@@ -1365,3 +1365,62 @@ footer.f-strong .f-legal a:hover{color:var(--canvas)}
 .nav-links .has-menu:hover>.nav-link{border-radius:9px 0 0 9px}
 .nav-links .nav-chev{height:40px;border-radius:0 9px 9px 0}
 .nav-links .has-menu.open>.nav-link{border-radius:9px 0 0 9px}
+
+/* =====================================================================
+   Round 14 (draft): Frontier Watch as a landing page
+   ===================================================================== */
+.voices--six{grid-template-columns:repeat(3,1fr);row-gap:22px;margin-top:26px}
+.fw-note .tl-pane.on{grid-template-columns:1.5fr 1fr}
+.doc{background:var(--canvas);border:1px solid var(--hair-2);border-radius:14px;padding:24px 26px}
+.doc-k{display:block;font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:var(--lc);margin-bottom:12px}
+.doc-list{list-style:none;display:grid;gap:12px}
+.doc-list li{font-size:15.5px;color:var(--muted);padding-left:16px;border-left:3px solid var(--lt)}
+.doc-list b{color:var(--ink);font-weight:600}
+.c-keep .outcome{background:var(--li)}
+.c-keep .outcome .m,.c-keep .outcome li::before{color:#FBC48E}
+.fw-flow{list-style:none;display:grid;grid-template-columns:repeat(4,1fr);gap:14px;position:relative}
+.fw-flow::before{content:"";position:absolute;left:6%;right:6%;top:25px;height:2px;background:linear-gradient(90deg,var(--lt),var(--lb),var(--lt))}
+.fw-flow li{position:relative;background:var(--canvas);border:1px solid var(--hair-2);border-radius:18px;padding:22px;margin-top:6px}
+.fw-flow li.hl{background:var(--white);border-color:var(--lb);box-shadow:0 18px 40px rgba(154,75,12,.12)}
+.fw-flow .n{position:absolute;top:-4px;left:22px;width:40px;height:40px;border-radius:50%;background:var(--white);border:2px solid var(--lb);color:var(--lc);font-weight:700;display:flex;align-items:center;justify-content:center;transform:translateY(-14px)}
+.fw-flow li.hl .n{background:var(--lb);color:var(--white)}
+.fw-flow .when{display:block;margin-top:26px;font-size:12px;letter-spacing:.12em;text-transform:uppercase;font-weight:700;color:var(--lc)}
+.fw-flow h3{font-size:20px;margin:6px 0 6px}
+.fw-flow p{font-size:15px;color:var(--muted)}
+.fw-flow-note{margin-top:22px;font-size:15px;color:var(--muted)}
+.plans{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;align-items:stretch}
+.plan{display:flex;flex-direction:column;background:var(--canvas);border:1px solid var(--hair-2);border-radius:20px;padding:28px}
+.plan--hl{background:var(--white);border:2px solid var(--lb);box-shadow:0 24px 50px rgba(154,75,12,.12)}
+.plan-k{font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:var(--lc)}
+.plan h3{font-size:24px;margin:8px 0 4px}
+.plan-d{color:var(--muted);font-size:15.5px}
+.plan ul{list-style:none;display:grid;gap:9px;margin:18px 0 22px;font-size:15.5px}
+.plan li{padding-left:24px;position:relative}
+.plan li::before{content:"✓";position:absolute;left:0;top:0;color:var(--lb);font-weight:700}
+.plan-price{margin-top:auto;font-size:14px;font-weight:600;color:var(--muted);padding-top:14px;border-top:1px solid var(--hair-2);margin-bottom:16px}
+.plan .btn{justify-content:center}
+.forwho{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.forwho>div{border-radius:20px;padding:30px}
+.fw-yes{background:var(--lt)}
+.fw-no{background:var(--white);border:1px solid var(--hair-2)}
+.forwho ul{list-style:none;display:grid;gap:12px;margin-top:6px}
+.forwho li{padding-left:28px;position:relative;font-size:16.5px}
+.fw-yes li::before{content:"✓";position:absolute;left:0;color:var(--lc);font-weight:700}
+.fw-no li::before{content:"✕";position:absolute;left:0;color:var(--faint);font-weight:700}
+#plans .section-head,#sample .section-head{margin-bottom:28px}
+#sample .hero-cta,#questions .hero-cta{margin-top:30px}
+.sticky-cta{position:fixed;left:50%;bottom:18px;z-index:60;display:flex;align-items:center;gap:16px;background:var(--ink);color:var(--canvas);padding:10px 10px 10px 20px;border-radius:14px;box-shadow:0 18px 40px rgba(17,24,21,.25);font-size:14.5px;transform:translate(-50%,140%);opacity:0;transition:transform .35s cubic-bezier(.2,.8,.2,1),opacity .35s}
+.sticky-cta.show{transform:translate(-50%,0);opacity:1}
+.sticky-cta b{font-weight:600}
+.sticky-cta .btn{padding:9px 16px;background:var(--mint);color:var(--white)}
+.sticky-cta .btn:hover{background:var(--mint-deep)}
+@media (max-width:900px){
+  .voices--six,.fw-flow,.plans,.forwho,.fw-note .tl-pane.on{grid-template-columns:1fr}
+  .fw-flow::before{display:none}
+  .sticky-cta{left:16px;right:16px;transform:translateY(140%);justify-content:space-between}
+  .sticky-cta.show{transform:none}
+  .sticky-cta span{font-size:13px}
+}
+/* Round 14b: Frontier Watch in pure orange (no brown): deep shade #C25A0A, dark boxes in orange */
+.c-keep .outcome{background:#D9690F}
+.c-keep .outcome .m,.c-keep .outcome li::before{color:#FFE2C4}

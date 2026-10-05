@@ -347,12 +347,22 @@ var ANALYTICS = "";
     });
   }
 
+  // Round 14: a small sticky action bar once the hero has scrolled away (hidden again over the footer)
+  function stickyCta() {
+    var bar = document.querySelector('[data-sticky-cta]'), hero = document.querySelector('.p-hero'), foot = document.querySelector('footer');
+    if (!bar || !hero || !('IntersectionObserver' in window)) return;
+    var heroOut = false, footIn = false;
+    function set() { var on = heroOut && !footIn; bar.classList.toggle('show', on); bar.setAttribute('aria-hidden', on ? 'false' : 'true'); var a = bar.querySelector('a'); if (a) a.tabIndex = on ? 0 : -1; }
+    new IntersectionObserver(function (e) { heroOut = !e[0].isIntersecting; set(); }, { threshold: 0 }).observe(hero);
+    if (foot) new IntersectionObserver(function (e) { footIn = e[0].isIntersecting; set(); }, { threshold: 0 }).observe(foot);
+  }
+
   // Footer year
   function year() {
     var y = document.getElementById('year');
     if (y) y.textContent = String(new Date().getFullYear());
   }
 
-  function init() { wireBooking(); wireLinkedIn(); wireLegal(); analytics(); wireMenu(); wireMenus(); openFromHash(); reveal(); counters(); heroTurn(); home(); demos(); rails(); subpages(); year(); }
+  function init() { wireBooking(); wireLinkedIn(); wireLegal(); analytics(); wireMenu(); wireMenus(); openFromHash(); reveal(); counters(); heroTurn(); home(); demos(); rails(); subpages(); stickyCta(); year(); }
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init); else init();
 })();
