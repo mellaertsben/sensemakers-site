@@ -1448,3 +1448,28 @@ body:has(main.c-guide) .nav .logo{content:url(assets/logo/sensemakers-lockup-tra
 .marquee--logos li::before{display:none}
 .marquee--logos img{display:block;width:auto;max-width:none}
 .marquee--logos li span{font-size:18px;font-weight:600}
+
+/* About us: mission and vision on evergreen, the three pillars in the product colours */
+.mv{position:relative;overflow:hidden;isolation:isolate;background:var(--evergreen);color:var(--canvas);padding:88px 0}
+.mv::before{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(50% 70% at 0% 0%,rgba(156,199,176,.18),transparent 62%)}
+.mv::after{content:"";position:absolute;z-index:-1;width:480px;height:480px;right:-140px;top:-160px;background:rgba(156,199,176,.08);-webkit-mask:var(--cres) center/contain no-repeat;mask:var(--cres) center/contain no-repeat}
+.mv-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:64px;align-items:start}
+.mv .kicker{color:var(--brand-mint)}
+.mv .kicker::before{background:var(--brand-mint)}
+.mv-vision{font-size:clamp(30px,3.6vw,46px);line-height:1.08;letter-spacing:-.03em;font-weight:600;color:var(--canvas)}
+.mv-vision em{font-style:normal;color:var(--brand-mint)}
+.mv-mission{font-size:clamp(19px,1.9vw,23px);line-height:1.45;color:rgba(251,250,247,.85)}
+.mv-w{font-weight:600;color:var(--lb);border-bottom:2px solid color-mix(in srgb,var(--lb) 45%,transparent);transition:border-color .2s}
+.mv-w:hover{border-color:var(--lb)}
+.mv-pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:28px}
+.mv-p{display:flex;flex-direction:column;gap:2px;padding:16px 18px;border-radius:14px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-top:3px solid var(--lb);transition:background .2s,transform .2s}
+.mv-p:hover{background:rgba(255,255,255,.1);transform:translateY(-2px)}
+.mv-p span{font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:var(--lb)}
+.mv-p b{font-size:15.5px;font-weight:600;color:var(--canvas)}
+@media (max-width:860px){.mv{padding:60px 0}.mv-grid{grid-template-columns:1fr;gap:36px}.mv-pillars{grid-template-columns:1fr}}
+/* calmer: one accent (mint) in the band; product colour only as a small mark on each tile */
+.mv-w{color:var(--canvas);border-bottom-color:rgba(156,199,176,.5)}
+.mv-w:hover{border-color:var(--brand-mint)}
+.mv-p{border-top:1px solid rgba(255,255,255,.12)}
+.mv-p span{display:flex;align-items:center;gap:7px;color:var(--brand-mint)}
+.mv-p span::before{content:"";width:10px;height:10px;flex:none;background:var(--lb);-webkit-mask:var(--cres) center/contain no-repeat;mask:var(--cres) center/contain no-repeat}
