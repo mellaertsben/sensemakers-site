@@ -1356,3 +1356,12 @@ footer.f-strong .f-legal a:hover{color:var(--canvas)}
   .f-cols{grid-template-columns:1fr 1fr;gap:28px}
   footer.f-strong{padding-top:52px}
 }
+
+/* Round 13c: one light header everywhere; each menu item takes its product colour on hover and when active */
+.nav-links a.nav-link[class*="c-"]:hover,
+.nav-links .has-menu:hover>.nav-link,.nav-links .has-menu.open>.nav-link,
+.nav-links .has-menu:hover>.nav-chev,.nav-links .has-menu.open>.nav-chev{color:var(--lc);background:var(--lt)}
+.nav-links .nav-link.active{color:var(--lc)}
+.nav-links .has-menu:hover>.nav-link{border-radius:9px 0 0 9px}
+.nav-links .nav-chev{height:40px;border-radius:0 9px 9px 0}
+.nav-links .has-menu.open>.nav-link{border-radius:9px 0 0 9px}
