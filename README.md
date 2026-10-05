@@ -23,7 +23,7 @@ Since 5 Oct 2026 (Round 13) every Academy format and the AI Accelerator have the
 | `guidance.html`, `scan.html`, `audit.html`, `offers.html` | Old pages, kept only as redirects to `transformation.html` so old links keep working. |
 | `styles.css` | All styling. Brand tokens are the CSS variables at the top (`:root`). Each product keeps one colour: Frontier Watch = mint, Academy = sky, Transformation = field, About us = gold. New components since 28 Sep 2026 are in the last block of the file. |
 | `site.js` | The settings (see below), mobile menu, dropdown, "Read more" from links, reveal animation, count-up numbers, the slow turn of the hero S, footer year. |
-| `assets/` | `logo/` (the logo files, see below), favicons and app icons made from the S, `og.png` share image (5 Oct 2026: evergreen, single-colour logo, the three product colours), `fonts/` (Work Sans, OFL licence; the Newsreader and Figtree files are no longer used and can be deleted), `people/` (team photos go here), `logos/` (unused for now: the tools show as names). |
+| `assets/` | `logo/` (the logo files, see below), favicons and app icons made from the S, `og.png` share image (5 Oct 2026: evergreen, single-colour logo, the three product colours), `fonts/` (Work Sans, OFL licence; the Newsreader and Figtree files are no longer used and can be deleted), `people/` (team photos go here), `logos/` (the tool logos in the Academy's tools strip: Claude, Copilot, ChatGPT, Gemini, Cursor, Codex, Lovable; replace a file to update a logo). |
 | `CNAME` | Tells GitHub Pages the custom domain is `sensemakers.be`. Don't rename. |
 | `.nojekyll` | Tells GitHub Pages to serve files as-is. |
 | `robots.txt`, `sitemap.xml` | Search-engine housekeeping. |

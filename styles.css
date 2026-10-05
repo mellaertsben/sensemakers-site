@@ -1443,3 +1443,8 @@ body:has(main.c-guide) .nav .logo{content:url(assets/logo/sensemakers-lockup-tra
 .menu .menu-link svg{color:var(--muted)}
 .menu .menu-link:hover{background:var(--tint-2)}
 .menu .menu-overview:hover{border-color:var(--ink);background:var(--tint-2)}
+/* tools strip with the vendors' logos */
+.marquee--logos li{padding:14px 26px;height:64px}
+.marquee--logos li::before{display:none}
+.marquee--logos img{display:block;width:auto;max-width:none}
+.marquee--logos li span{font-size:18px;font-weight:600}
