@@ -1424,3 +1424,13 @@ footer.f-strong .f-legal a:hover{color:var(--canvas)}
 /* Round 14b: Frontier Watch in pure orange (no brown): deep shade #C25A0A, dark boxes in orange */
 .c-keep .outcome{background:#D9690F}
 .c-keep .outcome .m,.c-keep .outcome li::before{color:#FFE2C4}
+
+/* Round 14c: the header's main action takes the product colour on product pages (logo and footer stay brand green) */
+body:has(main.c-keep) .nav-cta .btn-primary{background:var(--mint-deep)}
+body:has(main.c-work) .nav-cta .btn-primary{background:var(--sky-deep)}
+body:has(main.c-guide) .nav-cta .btn-primary{background:var(--field-deep)}
+body:has(main.c-keep) .nav-cta .btn-primary:hover,body:has(main.c-work) .nav-cta .btn-primary:hover,body:has(main.c-guide) .nav-cta .btn-primary:hover{background:var(--ink)}
+/* the S in the header logo follows the product too (footer logo stays brand green) */
+body:has(main.c-keep) .nav .logo{content:url(assets/logo/sensemakers-lockup-frontier-watch.svg)}
+body:has(main.c-work) .nav .logo{content:url(assets/logo/sensemakers-lockup-academy.svg)}
+body:has(main.c-guide) .nav .logo{content:url(assets/logo/sensemakers-lockup-transformation.svg)}
