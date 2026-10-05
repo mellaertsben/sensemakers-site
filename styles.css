@@ -1438,3 +1438,8 @@ body:has(main.c-guide) .nav .logo{content:url(assets/logo/sensemakers-lockup-tra
 .c-work .outcome{background:#2479BA}
 .c-guide .outcome,.c-guide .feature-r{background:#C93D66}
 .c-work .p-sub::before,.c-guide .p-sub::before{background:radial-gradient(50% 60% at 0% 0%,rgba(255,255,255,.16),transparent 62%)}
+/* Round 14e: dropdown menus in plain ink (calmer); colour stays on the header item, logo and button */
+.menu .menu-link,.menu .menu-link svg,.menu .menu-overview .arr,.menu .menu-link .arr{color:var(--ink)}
+.menu .menu-link svg{color:var(--muted)}
+.menu .menu-link:hover{background:var(--tint-2)}
+.menu .menu-overview:hover{border-color:var(--ink);background:var(--tint-2)}
