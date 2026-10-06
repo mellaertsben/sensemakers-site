@@ -1,7 +1,7 @@
 # Gedeelde teksten: header en footer (Nederlands)
 home_label: Sensemakers home
 nav_primary: Hoofdmenu
-m_acad_over: Academy · vijf opleidingen
+m_acad_over: De Academy · vijf formats
 m_g_everyone: Voor iedereen
 m_found_d: twee halve dagen
 m_think_d: één dag
@@ -11,18 +11,18 @@ m_build_d: één dag
 m_g_org: Voor de organisatie
 m_champ_d: twee dagen + zes maanden
 m_tr_over: waar we helpen
-m_g_path: Een kant-en-klaar traject
+m_g_path: Een uitgestippeld traject
 m_acc_d: voor kmo's
 about_us: Over ons
 open_menu: Menu openen
 nav_mobile: Mobiel menu
 acc_full: AI Accelerator voor kmo's
 readiness: Readiness check
-show_pages: bekijk de pagina's
+show_pages: toon de pagina's
 subj_talk: Sensemakers — kennismaking
 book_call: Plan een gesprek
-f_claim: Jouw mensen aan het stuur van je <em>AI-transformatie.</em>
-f_talk: Neem contact op
+f_claim: Het menselijke vermogen om je <em>AI-transformatie te leiden.</em>
+f_talk: Praat met ons
 f_whatyouget: Wat je krijgt
 f_wherewehelp: Waar we helpen
 skip: Naar de inhoud

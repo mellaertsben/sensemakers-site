@@ -1,95 +1,94 @@
 # Teksten homepage (Nederlands). Eén regel per tekst: sleutel: tekst. HTML zoals <em> mag.
-meta_title: Sensemakers — Jouw mensen aan het stuur van je AI-transformatie
-og_title: Sensemakers — Jouw mensen aan het stuur van je AI-transformatie
-meta_desc: Frontier Watch houdt je directie op de hoogte van AI, de Academy leert je medewerkers ermee werken. En we helpen je de verandering zelf in goede banen te leiden.
-og_desc: Frontier Watch houdt je directie op de hoogte, de Academy leert je medewerkers werken met AI. En we helpen je de verandering in goede banen te leiden.
-hero_kicker: Voor leidinggevenden en hun teams
-hero_title: Jouw mensen aan het stuur van je <em>AI-transformatie.</em>
-hero_lede: We houden je directie op de hoogte, leren je medewerkers werken met AI en helpen je de verandering in goede banen te leiden.
+meta_title: Sensemakers — Het menselijke vermogen om je AI-transformatie te leiden
+meta_desc: Frontier Watch houdt je leiderschap mee met AI, en de Academy leert je mensen ermee werken. We helpen je ook de verandering zelf te leiden.
+og_desc: Frontier Watch houdt je leiderschap mee, en de Academy leert je mensen werken met AI. We helpen je ook de verandering zelf te leiden.
+hero_kicker: Voor leiders en hun teams
+hero_title: Het <em>menselijke vermogen</em> om je AI-transformatie te leiden.
+hero_lede: We houden je leiderschap mee, leren je mensen werken met AI en helpen je de verandering te leiden.
 hero_q: Waar staat je organisatie vandaag?
-chip_start: We beginnen er pas aan
-chip_stuck: De tools zijn er, maar er verandert weinig
-chip_pilots: Overal pilots, maar niets schaalt op
-chip_keepup: Het loopt goed, nu bijblijven
-path_start_intro: Sta je nog aan het begin? Dan starten de meeste organisaties zo:
-path_cta: Laten we dit bespreken →
-s_brief_t: Twee uur met je directie: wat er veranderd is, en je drie belangrijkste beslissingen.
+chip_start: We staan nog aan het begin
+chip_stuck: Tools uitgerold, weinig veranderd
+chip_pilots: Overal pilots, niets schaalt
+chip_keepup: Het werkt, nu moeten we bijblijven
+path_start_intro: Sta je nog aan het begin? Dan starten de meeste teams hier:
+path_cta: Bespreek dit traject →
+s_brief_t: Twee uur met je leiderschap: wat er veranderde, en je drie beslissingen.
 s_found_t: Twee halve dagen, zodat iedereen dezelfde basis heeft.
-s_usecases_b: De eerste toepassingen
-s_usecases_t: Kies de paar die echt iets opleveren, elk met een eigenaar.
+s_usecases_b: Eerste use cases
+s_usecases_t: Kies de paar die het waard zijn en geef elk een eigenaar.
 w_week1: Week 1
 w_month1: Maand 1
 w_month23: Maand 2–3
 w_month13: Maand 1–3
 w_month12: Maand 1–2
-w_everymonth: Maandelijks
-w_everyquarter: Per kwartaal
-w_onceayear: Jaarlijks
-path_stuck_intro: De tools zijn er, maar er verandert weinig? Dan begin je best hier:
-s_role_t1: Teams leren werken met AI op hun eigen taken, in hun eigen tools.
-s_adopt_b: AI die echt gebruikt wordt
-s_adopt_t: Een ambassadeur in elk team, en zicht op wie wat gebruikt.
+w_everymonth: Elke maand
+w_everyquarter: Elk kwartaal
+w_onceayear: Eén keer per jaar
+path_stuck_intro: Als de tools er zijn maar er weinig veranderd is:
+s_role_t1: Teams leren het op hun eigen taken, in hun eigen tools.
+s_adopt_b: Adoptie die blijft
+s_adopt_t: Champions in elk team, en zicht op wie wat echt gebruikt.
 s_monthly_b: Maandelijkse briefing
-s_monthly_t1: Je directie blijft mee, zodat de volgende keuze makkelijker wordt.
-path_pilots_intro: Overal pilots, maar niets schaalt op? Dan begin je best hier:
-s_plan_b: Een plan waar je directie achter staat
-s_plan_t: Welke pilots je behoudt, samenvoegt of stopzet, en wie ervoor verantwoordelijk is.
-s_spend_b: Grip op tools en kosten
-s_spend_t: Waarvoor je betaalt, wie wat beheert en wat je behoudt.
-s_role_t2: Teams die een toepassing behouden, leren die zelf beheren.
-path_keepup_intro: Het loopt goed en je wilt bijblijven? Dan kies je hiervoor:
-s_monthly_t2: Wat er veranderd is, en wat dat betekent voor jouw organisatie.
+s_monthly_t1: Het leiderschap blijft mee, zodat de volgende keuze makkelijker is.
+path_pilots_intro: Als er overal pilots lopen maar niets schaalt:
+s_plan_b: Een plan dat je leiderschap draagt
+s_plan_t: Welke pilots je houdt, samenvoegt of stopt, en wie er eigenaar van is.
+s_spend_b: Tools en kosten onder controle
+s_spend_t: Waarvoor je betaalt, wie het beheert en wat je houdt.
+s_role_t2: De teams die een use case houden, leren die zelf te draaien.
+path_keepup_intro: Als het werkt en je moet bijblijven:
+s_monthly_t2: Wat er veranderde, en wat het betekent voor jouw situatie.
 s_roadmap_b: Roadmap per kwartaal
-s_roadmap_t: Een sessie met je raad van bestuur en een bijgewerkte roadmap.
-s_refresh_b: Opgefriste opleidingen
-s_refresh_t: Bijgewerkt lesmateriaal voor wie de opleiding al volgde.
-hero_note: Nog niet zeker? <a href="readiness.html">Doe de check van 90 seconden →</a>
+s_roadmap_t: Een sessie met je directie en een bijgewerkte roadmap.
+s_refresh_b: Vernieuwd lesmateriaal
+s_refresh_t: Bijgewerkte opleidingen voor wie ze al volgde.
+hero_note: Twijfel je? <a href="readiness.html">Doe de readiness check van 90 seconden →</a>
 radar_label: Op onze radar deze maand
 radar: Op onze radar
-radar_1: <b>Leiderschap</b>Wie in de directie verantwoordelijk is voor AI, en wat er eerst beslist moet worden
-radar_2: <b>Regelgeving</b>AI Act artikel 4: wat 'voldoende AI-geletterdheid' concreet inhoudt
-radar_3: <b>Kosten</b>Hoe je AI-licenties en -kosten onder controle houdt
-radar_4: <b>Schaduw-AI</b>Tools die medewerkers gebruiken zonder dat iemand er zicht op heeft
-radar_5: <b>Vaardigheden</b>Waarom de meeste AI-opleidingen niet blijven hangen, en wat wel werkt
-radar_6: <b>Agents</b>Waar agents al nuttig zijn, en waar een mens de touwtjes in handen houdt
-ways_h: Drie manieren om te beginnen.
-ways_sub: De meeste organisaties starten met één ervan en breiden daarna uit.
-fw_k: je directie
-fw_h: AI verandert elke maand. Jouw beslissingen kunnen niet wachten.
-fw_p: We volgen AI op de voet en vertellen je directie wat telt, en wat je gerust mag negeren.
+radar_1: <b>Leiderschap</b>Wie in het directieteam eigenaar is van AI, en wat ze eerst beslissen
+radar_2: <b>Regels</b>AI Act artikel 4: wat "voldoende AI-geletterdheid" in de praktijk betekent
+radar_3: <b>Kosten</b>Prijzen van AI voor bedrijven, en hoe je licenties onder controle houdt
+radar_4: <b>Schaduw-AI</b>Tools die mensen gebruiken zonder dat iemand er eigenaar van is
+radar_5: <b>Vaardigheden</b>Waarom de meeste AI-opleidingen niet beklijven, en wat wel werkt
+radar_6: <b>Agents</b>Waar agents al helpen, en waar een mens aan het stuur blijft
+ways_h: Drie manieren om te starten.
+ways_sub: De meeste organisaties beginnen met één en groeien in de andere.
+fw_k: je leiderschap
+fw_h: AI verandert elke maand. Je beslissingen kunnen niet wachten.
+fw_p: We volgen AI voor jou en vertellen je leiderschap wat telt, en wat je mag negeren.
 fw_l1: Start met een Executive Briefing
-fw_l2: Elke maand een briefing en een korte nota
-fw_l3: Elk kwartaal een roadmapsessie
-ac_k: je medewerkers
-ac_h: Iedereen heeft AI. Maar weinigen halen er echt iets uit.
-ac_p: Praktische opleidingen op basis van jullie eigen werk, in de tools die je al gebruikt.
+fw_l2: Een maandelijkse briefing en nota
+fw_l3: Een roadmapsessie per kwartaal
+ac_k: je mensen
+ac_h: Iedereen heeft AI. Weinigen gebruiken het goed.
+ac_p: Praktijkgerichte opleidingen op je echte werk, in de tools die je al gebruikt.
 tr_k: de verandering
 tr_h: De tools zijn er. De verandering nog niet.
-tr_p: We helpen je de verandering te plannen, door te voeren en te verankeren, samen met je eigen team.
-tr_l2: Toepassingen die de moeite waard zijn
-tr_l3: Iemand die het samen met jou trekt
+tr_p: Hulp om de verandering te plannen, uit te voeren en te verankeren, samen met je eigen team.
+tr_l2: Use cases die het waard zijn
+tr_l3: Iemand die het mee trekt
 j_kicker: Hoe het meestal loopt
-j_title: We begeleiden je stap voor stap, in het tempo dat je organisatie aankan.
+j_title: We begeleiden je onderweg, op het tempo dat je organisatie aankan.
 j1_h: Begrijpen
-j1_p: De directie krijgt één helder beeld van wat AI voor jullie betekent, en maakt de eerste keuzes.
+j1_p: Het leiderschap deelt één beeld van wat AI voor jullie betekent, en maakt de eerste keuzes.
 j2_h: Leren
-j2_p: Iedereen krijgt de basis; teams leren het in hun eigen werk.
+j2_p: Iedereen krijgt de basis; teams leren het op hun eigen werk.
 j3_h: Veranderen
-j3_p: De eerste toepassingen krijgen een eigenaar, een plan en resultaat.
+j3_p: De eerste use cases krijgen een eigenaar, een plan en een resultaat.
 j4_h: Bijblijven
-j4_p: Je blijft mee en verbetert verder, zonder elke nieuwe release na te jagen.
-why_h: Niet de technologie houdt je tegen. <em>De organisatie wel.</em>
-stat1_p: van de organisaties ziet AI al terug in de winst, terwijl negen op de tien het gebruiken.
+j4_p: Je blijft mee en blijft verbeteren, zonder elke nieuwe release na te jagen.
+why_h: De technologie is niet langer de bottleneck. <em>De organisatie wel.</em>
+stat1_p: van de organisaties ziet enig effect van AI op de winst, terwijl negen op tien het al gebruiken.
 stat2_num: op 2
-stat2_p: Europese werknemers weet weinig over wat AI wel en niet kan, terwijl een kwart het al op het werk gebruikt.
-stat3_p: De AI Act vraagt werkgevers om ervoor te zorgen dat wie met AI werkt, voldoende AI-geletterd is.
+stat2_p: Europese werknemers weten weinig over wat AI wel en niet kan, terwijl een kwart het al op het werk gebruikt.
+stat3_p: De Europese AI Act vraagt werkgevers om de AI-geletterdheid te ondersteunen van wie AI op het werk gebruikt.
 stat3_src: EU AI Act, artikel 4
 team_kicker: Met wie je werkt
-team_h: Experts die zelf nog in de praktijk staan.
+team_h: Mensen uit de praktijk, die het werk nog zelf doen.
 team_btn: Over ons →
 ben_role: Strategie, adoptie en verandering
-ben_p: Van data-analist bij Telenet tot drijvende kracht achter de AI-adoptie bij zo'n 2.000 journalisten van Mediahuis.
-subj_start: Sensemakers — waar beginnen we?
-subj_adopt: Sensemakers — AI die echt gebruikt wordt
-subj_pilots: Sensemakers — van pilot naar opschaling
+ben_p: Van data-analist bij Telenet tot het leiden van AI-adoptie bij zo'n 2.000 journalisten van Mediahuis.
+subj_start: Sensemakers — waar beginnen
+subj_adopt: Sensemakers — adoptie
+subj_pilots: Sensemakers — van pilots naar schaal
 subj_fw: Sensemakers — Frontier Watch

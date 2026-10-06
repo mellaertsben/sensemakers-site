@@ -42,7 +42,7 @@ Since 6 Oct 2026 the site can be in English and Dutch. Pages that are converted 
 
 To change a text: edit the line in both text files, then run `python3 tools/build.py` and push. The build stops with a list if a text exists in one language but not the other, so a half-translated page never goes live. Never edit `index.html` or `nl/index.html` directly: they are rebuilt from `src/`.
 
-Converted: every page except `404.html` and the redirect stubs. Edit the text files, never the generated `.html` in the root or `nl/`. After any change run `python3 tools/build.py`. New pages need a `src/pages/` template and both text files; `sitemap.xml` lists the EN and NL URL of each page.
+Converted so far: the homepage. The other pages are still hand-written in English; Dutch links to them go to the English page until they are converted.
 
 ## The logo and the S
 

@@ -13,7 +13,7 @@ English pages are written to the site root, Dutch pages to nl/.
 The build stops if a text is missing in either language, so a half-translated
 page never goes live. Pages without a layout in src/pages stay hand-written (English only).
 """
-import os, re, sys, json, urllib.parse, html
+import os, re, sys, urllib.parse, html
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SRC = os.path.join(ROOT, 'src')
@@ -79,13 +79,6 @@ for page in pages:
                 if k not in t:
                     problems.append(f'{lang}: missing "{k}" ({page})'); return ''
                 return 'mailto:hello@sensemakers.be?subject=' + urllib.parse.quote(html.unescape(t[k]), safe='')
-            if key.startswith('js:'):
-                k = key[3:]
-                if k not in t:
-                    problems.append(f'{lang}: missing "{k}" ({page})'); return ''
-                return json.dumps(html.unescape(t[k]), ensure_ascii=False)[1:-1]
-            if key.startswith('raw:'):
-                key = key[4:]
             if key in fixed: return fixed[key]
             if key not in t:
                 problems.append(f'{lang}: missing "{key}" ({page})'); return ''
