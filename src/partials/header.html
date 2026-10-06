@@ -1,0 +1,50 @@
+<header class="nav">
+  <div class="nav-inner">
+    <a class="brand" href="./" aria-label="{{home_label}}"><img class="logo" src="{{root}}assets/logo/sensemakers-lockup-mono.svg" alt="" width="154" height="32"></a>
+    <nav class="nav-links" aria-label="{{nav_primary}}">
+      <a class="nav-link c-keep{{act_fw}}" href="frontier-watch.html"{{cur_fw}}>Frontier Watch</a>
+      <div class="nav-item has-menu c-work">
+        <a class="nav-link{{act_academy}}" href="academy.html"{{cur_academy}}>Academy</a><button class="nav-chev" type="button" aria-expanded="false" aria-haspopup="true" aria-controls="menu-academy" aria-label="Academy: {{show_pages}}"><svg class="chev" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.5 4.5 6 8l3.5-3.5"/></svg></button>
+        <div class="menu c-work" id="menu-academy">
+          <a class="menu-overview" href="academy.html"><span>{{m_acad_over}}</span><i class="arr" aria-hidden="true">→</i></a>
+          <div class="menu-group">{{m_g_everyone}}</div>
+          <a class="menu-link" href="ai-foundations.html"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 6l7-3 7 3-7 3z"/><path d="M6 8v4c0 1.5 2 2.5 4 2.5s4-1 4-2.5V8"/><path d="M17 6v5"/></svg><span>AI Foundations · {{m_found_d}}</span><i class="arr" aria-hidden="true">→</i></a>
+          <a class="menu-link" href="thinking-with-ai.html"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 3v14M7 17h6M4 6h12"/><path d="M6 6l-2.5 6a2.5 2.5 0 0 0 5 0z"/><path d="M14 6l-2.5 6a2.5 2.5 0 0 0 5 0z"/></svg><span>Thinking with AI · {{m_think_d}}</span><i class="arr" aria-hidden="true">→</i></a>
+          <div class="menu-group">{{m_g_teams}}</div>
+          <a class="menu-link" href="ai-for-your-role.html"><svg viewBox="0 0 20 20" aria-hidden="true"><rect x="3" y="4" width="14" height="9" rx="1.5"/><path d="M2 16h16"/></svg><span>AI for your role · {{m_role_d}}</span><i class="arr" aria-hidden="true">→</i></a>
+          <a class="menu-link" href="ai-build-day.html"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M12.5 3.5a3.5 3.5 0 0 0-3.6 4.9L3 14.3V17h2.7l5.9-5.9a3.5 3.5 0 0 0 4.9-3.6l-2.3 2.3-2.1-.6-.6-2.1z"/></svg><span>AI Build Day · {{m_build_d}}</span><i class="arr" aria-hidden="true">→</i></a>
+          <div class="menu-group">{{m_g_org}}</div>
+          <a class="menu-link" href="ai-champions.html"><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="7" cy="7" r="3"/><circle cx="14" cy="8" r="2.2"/><path d="M2.5 17c.5-3 2.5-4.5 4.5-4.5S11 14 11.5 17"/><path d="M12 16c.3-2 1.2-3.2 2.5-3.2s2.3 1.2 2.6 3.2"/></svg><span>AI Champions Programme · {{m_champ_d}}</span><i class="arr" aria-hidden="true">→</i></a>
+        </div>
+      </div>
+      <div class="nav-item has-menu c-guide">
+        <a class="nav-link{{act_tr}}" href="transformation.html"{{cur_tr}}>Transformation</a><button class="nav-chev" type="button" aria-expanded="false" aria-haspopup="true" aria-controls="menu-transformation" aria-label="Transformation: {{show_pages}}"><svg class="chev" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.5 4.5 6 8l3.5-3.5"/></svg></button>
+        <div class="menu c-guide" id="menu-transformation">
+          <a class="menu-overview" href="transformation.html"><span>Transformation · {{m_tr_over}}</span><i class="arr" aria-hidden="true">→</i></a>
+          <div class="menu-group">{{m_g_path}}</div>
+          <a class="menu-link" href="ai-accelerator.html"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M11 3c3 0 6 3 6 6l-5 5-6-6z"/><path d="M6 8l-3 1 2 2M12 14l-1 3-2-2"/><circle cx="12.5" cy="7.5" r="1.3"/></svg><span>AI Accelerator · {{m_acc_d}}</span><i class="arr" aria-hidden="true">→</i></a>
+        </div>
+      </div>
+      <a class="nav-link c-lead{{act_about}}" href="about.html"{{cur_about}}>{{about_us}}</a>
+    </nav>
+    <div class="nav-cta">
+      {{toggle}}
+      <a class="btn btn-primary js-book" href="{{mail:subj_talk}}">{{book_call}}</a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-mobile" aria-label="{{open_menu}}"><span></span></button>
+    </div>
+  </div>
+  <nav id="nav-mobile" class="nav-mobile" aria-label="{{nav_mobile}}">
+    <a href="frontier-watch.html">Frontier Watch</a>
+    <a href="academy.html">Academy</a>
+    <a class="m-sub" href="ai-foundations.html">AI Foundations</a>
+    <a class="m-sub" href="thinking-with-ai.html">Thinking with AI</a>
+    <a class="m-sub" href="ai-for-your-role.html">AI for your role</a>
+    <a class="m-sub" href="ai-build-day.html">AI Build Day</a>
+    <a class="m-sub" href="ai-champions.html">AI Champions Programme</a>
+    <a href="transformation.html">Transformation</a>
+    <a class="m-sub" href="ai-accelerator.html">{{acc_full}}</a>
+    <a href="about.html">{{about_us}}</a>
+    <a href="readiness.html">{{readiness}}</a>
+    <div class="m-lang">{{toggle}}</div>
+  </nav>
+</header>
