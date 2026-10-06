@@ -1,0 +1,93 @@
+# academy: English texts. One line per text: key: text. HTML like <em> or <a> is allowed.
+meta_title: Academy — Sensemakers
+meta_desc: Hands-on AI courses for every employee, every team and your leadership team, on your real work and in the tools you already use. Five formats, from AI Foundations to the AI Champions Programme.
+og_title: Sensemakers Academy — Everyone has AI now. Few use it well.
+og_desc: Hands-on courses for every employee, every team and your leadership team, on your real work and in the tools you already use.
+top_01: Sensemakers Academy
+top_02: Everyone has AI now.
+top_03: Few use it well.
+top_04: Hands-on courses for every employee, every team and your leadership team, on your real work and in the tools you already use.
+top_05: See the five formats &rarr;
+subj_01: Sensemakers — Academy
+top_06: Book a call
+top_07: On site or online, in-company.
+top_attr_01: A short example, playing on a loop
+top_08: Where it fails
+top_09: Which Belgian law sets the rules for working from home?
+top_10: Working from home is regulated by the <mark>Act of 3 March 2017 on telework</mark>, article 12&hellip;
+top_11: Sounds sure. Check the source: the reference may not exist.
+top_demo_01: [{"label": "Where it fails", "u": "Which Belgian law sets the rules for working from home?", "a": "Working from home is regulated by the <mark>Act of 3 March 2017 on telework</mark>, article 12…", "f": "Sounds sure. Check the source: the reference may not exist."}, {"label": "What never goes in", "u": "Summarise this customer complaint: [name, address, contract number…]", "a": "Here is a summary of the complaint by…", "f": "Personal data in a public tool. Your policy says: never."}, {"label": "Your own work", "u": "Draft three subject lines for our newsletter to SME clients.", "a": "1. Your year-end AI check · 2. Three tools worth keeping · 3. What changed this quarter", "f": "A good start. You rewrite it, you own it.", "ok": true}]
+top_12: What participants learn to spot, live in the course.
+top_13: 5
+top_14: formats, from half a day to six months
+top_15: 7
+top_16: tools we teach in, yours among them
+top_17: Real
+top_18: tasks from your own organisation
+top_19: Art. 4
+top_20: the AI literacy the EU AI Act asks of employers
+formats_01: The formats
+formats_02: Five ways to learn it.
+formats_03: Every course runs on real tasks from your organisation. Both courses for everyone also run as a closed session for one leadership team.
+formats_attr_01: Previous formats
+formats_04: &larr;
+formats_attr_02: Next formats
+formats_05: &rarr;
+formats_attr_03: The five formats
+formats_06: 01
+formats_07: For everyone
+formats_08: AI Foundations
+formats_09: How AI works, where it fails, what never goes in, and how to use it in your own tool.
+formats_10: Two half-days
+formats_11: &rarr;
+formats_12: 02
+formats_13: For everyone
+formats_14: Thinking with AI
+formats_15: Better decisions with AI, not faster mistakes, practised on your own decisions.
+formats_16: One day
+formats_17: &rarr;
+formats_18: 03
+formats_19: For teams
+formats_20: AI for your role
+formats_21: One team, its real work: where AI helps, where it doesn't, and who checks what.
+formats_22: Half a day to a day
+formats_23: &rarr;
+formats_24: 04
+formats_25: For teams
+formats_26: AI Build Day
+formats_27: A hackathon on your own problems: working prototypes without code, each with an owner.
+formats_28: One day
+formats_29: &rarr;
+formats_30: 05
+formats_31: For the organisation
+formats_32: AI Champions Programme
+formats_33: We train a few of your people to run the basics themselves, then meet them monthly for half a year.
+formats_34: Two days, then six months
+formats_35: &rarr;
+formats_36: To keep up after the training
+formats_37: Frontier Watch &rarr;
+formats_38: Keep up with what changes, every month.
+labs_01: Why it sticks
+labs_02: Not a course about AI. <em>A course in your work.</em>
+labs_03: Everything happens on your tasks, in your tools, under your rules.
+labs_04: 01
+labs_05: Your own tasks
+labs_06: Collected before the session, so nothing is hypothetical.
+labs_07: 02
+labs_08: Your own tool
+labs_09: Claude, Microsoft Copilot or ChatGPT; Codex, Cursor or Claude Code for engineering teams.
+labs_10: 03
+labs_11: Your own rules
+labs_12: What never goes in, and who checks what.
+labs_13: 04
+labs_14: Refreshed every quarter
+labs_15: The material moves with the tools, so it never goes stale.
+main_attr_01: Tools we teach in
+main_attr_02: Claude
+main_attr_03: Microsoft Copilot
+main_attr_04: ChatGPT
+main_attr_05: Gemini
+main_attr_06: Cursor
+main_attr_07: Codex
+main_01: Codex
+main_attr_08: Lovable

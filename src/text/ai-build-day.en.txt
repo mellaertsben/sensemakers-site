@@ -1,0 +1,94 @@
+# ai-build-day: English texts. One line per text: key: text. HTML like <em> or <a> is allowed.
+meta_title: AI Build Day — Sensemakers Academy
+meta_desc: A hackathon on your own problems. Teams build working prototypes without code, and every prototype leaves with an owner and a decision date.
+og_title: AI Build Day — Sensemakers Academy
+og_desc: A hackathon on your own problems: working prototypes without code, each with an owner.
+top_attr_01: Breadcrumb
+top_01: <a href="academy.html">Academy</a> &nbsp;/&nbsp; For teams &nbsp;/&nbsp; AI Build Day
+top_02: For teams &middot; format 4 of 5
+top_03: AI Build Day
+top_04: A hackathon on your own problems. Teams build working prototypes without code, and every prototype leaves with an owner and a decision date.
+top_05: Challenges, access and guardrails prepared weeks ahead
+top_06: A short builder course, then building with us as coaches
+top_07: A pitch to your leadership, and a decision within 30 days
+subj_01: Sensemakers — AI Build Day
+top_08: Request information
+top_09: See the programme &darr;
+top_attr_02: At a glance
+top_10: At a glance
+top_11: Audience
+top_12: Mixed teams from across the organisation
+top_13: Group size
+top_14: 20 to 40 people, in teams of four or five
+top_15: Duration
+top_16: One day, after a few weeks of preparation
+top_17: Format
+top_18: On site
+top_19: Start
+top_20: Available now
+top_21: Trainer
+top_22: From the Sensemakers team
+subj_02: Sensemakers — AI Build Day
+top_23: Request information
+outcomes_01: After this course, participants can
+outcomes_02: 1
+outcomes_03: Build a working prototype without code
+outcomes_04: 2
+outcomes_05: Scope a problem small enough to test in a day
+outcomes_06: 3
+outcomes_07: Pitch a prototype to leadership with a clear ask
+outcomes_08: 4
+outcomes_09: Own a next step: continue, hand over or stop
+programme_01: The programme
+programme_02: Click a module for more.
+programme_03: 01
+programme_04: Weeks before
+programme_05: Preparation
+programme_06: Challenges, access and guardrails, with your team.
+programme_07: 2&ndash;4 weeks
+programme_08: 02
+programme_09: Morning
+programme_10: Builder course
+programme_11: A short course to get every team building.
+programme_12: 60 min
+programme_13: 03
+programme_14: Day
+programme_15: Build, with coaches
+programme_16: Teams build; we coach.
+programme_17: 5 hours
+programme_18: 04
+programme_19: Late afternoon
+programme_20: Pitch to leadership
+programme_21: Every team shows what works.
+programme_22: 60 min
+programme_23: 05
+programme_24: Within 30 days
+programme_25: Decision
+programme_26: Continue, hand over or stop, for every prototype.
+programme_27: 30 days
+leave_01: What you leave with
+leave_02: 01
+leave_03: Working prototypes
+leave_04: 02
+leave_05: An owner per prototype
+leave_06: 03
+leave_07: A decision date for each
+trainer_01: Who you'll work with
+trainer_02: Your trainer.
+trainer_03: S
+trainer_04: The Sensemakers team
+trainer_05: Practitioners who still do the work
+trainer_06: Who leads your session depends on the track and the tools. Meet the people behind Sensemakers.
+more_01: The other formats
+more_02: For everyone
+more_03: AI Foundations
+more_04: Two half-days
+more_05: For everyone
+more_06: Thinking with AI
+more_07: One day
+more_08: For teams
+more_09: AI for your role
+more_10: Half a day to a day
+more_11: For the organisation
+more_12: AI Champions Programme
+more_13: Two days, then six months

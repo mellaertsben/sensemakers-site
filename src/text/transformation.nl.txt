@@ -1,0 +1,60 @@
+# transformation: Nederlandse teksten. One line per text: key: text. HTML like <em> or <a> is allowed.
+meta_title: Transformation — Sensemakers
+meta_desc: De tools zijn er. De verandering nog niet. We helpen je de verandering te plannen, door te voeren en te verankeren, samen met je eigen team.
+og_title: Transformation — De tools zijn er. De verandering nog niet.
+og_desc: We helpen je de verandering te plannen, door te voeren en te verankeren, samen met je eigen team.
+top_01: Transformation
+top_02: De tools zijn er.
+top_03: De verandering nog niet.
+top_04: We helpen je de verandering te plannen, door te voeren en te verankeren, samen met je eigen team.
+subj_01: Sensemakers — Transformation
+top_05: Plan een gesprek
+top_06: Doe de readiness check
+top_attr_01: Een kort voorbeeld dat blijft herhalen
+top_07: Niemand is eigenaar
+top_08: Iedereen heeft het over AI. Niemand neemt het op zich.
+top_09: <span class="who">Sensemakers</span>Dan beginnen we met een plan waar je directie achter staat: waar AI je werk moet veranderen, en wie waarvoor verantwoordelijk is.
+top_10: Eerste stap · Een plan waar je directie achter staat
+top_demo_01: [{"label": "Niemand is eigenaar", "u": "Iedereen heeft het over AI. Niemand neemt het op zich.", "who": "Sensemakers", "a": "Dan beginnen we met een plan waar je directie achter staat: waar AI je werk moet veranderen, en wie waarvoor verantwoordelijk is.", "f": "Eerste stap · Een plan waar je directie achter staat", "ok": true}, {"label": "Een wirwar aan tools", "u": "We betalen voor drie AI-tools en gebruiken er anderhalf.", "who": "Sensemakers", "a": "We zetten elke tool waarvoor je betaalt op een rij, met wie hem beheert en wat je houdt, samenvoegt of stopzet.", "f": "Eerste stap · Grip op tools en kosten", "ok": true}, {"label": "Pilots die vastlopen", "u": "We hebben overal pilots, maar niets schaalt op.", "who": "Sensemakers", "a": "We kiezen de paar toepassingen die echt iets opleveren en geven elk een eigenaar en een eerste stap.", "f": "Eerste stap · Toepassingen die de moeite waard zijn", "ok": true}]
+top_11: Wat we horen, en waar we zouden beginnen.
+help_01: Waar we kunnen helpen.
+help_02: Enkele voorbeelden. Meestal beginnen we met één ervan en groeit het van daaruit.
+help_03: Een plan waar je directie achter staat.
+help_04: Waar AI je werk moet veranderen, wat je beter laat zoals het is, en wie waarvoor verantwoordelijk is.
+help_05: Toepassingen die de moeite waard zijn.
+help_06: De paar plekken waar AI in je werk echt iets oplevert, elk met een eigenaar en een eerste stap.
+help_07: Iemand die het samen met jou trekt.
+help_08: Een transformatielead, één of twee dagen per week, tot je eigen mensen het kunnen overnemen.
+help_09: Grip op tools en kosten.
+help_10: Elke AI-tool waarvoor je betaalt, wie hem beheert, en wat je houdt, samenvoegt of stopzet.
+help_11: AI die echt gebruikt wordt.
+help_12: Een ambassadeur in elk team, en een eenvoudige manier om te zien wie wat echt gebruikt.
+help_13: Extra handen wanneer je ze nodig hebt.
+help_14: Mensen die we kennen en vertrouwen, voor programma- en projectmanagement, analyse en verandertrajecten.
+accelerator_01: Een kant-en-klaar traject
+accelerator_02: Voor kmo's die <em>iets willen dat werkt</em>, niet alleen een plan.
+accelerator_03: Transformation · voor kmo's
+accelerator_04: AI Accelerator
+accelerator_05: In ongeveer zes maanden van &ldquo;waar beginnen we?&rdquo; naar een eerste AI-toepassing die dagelijks gebruikt wordt. Wij leiden de roadmap en de verandering; een vertrouwde implementatiepartner bouwt.
+accelerator_06: Ongeveer zes maanden
+accelerator_07: Twee fases
+accelerator_08: Geen datateam nodig
+accelerator_09: Ontdek de Accelerator →
+accelerator_10: Sensemakers
+accelerator_11: Maand 1&ndash;3
+accelerator_12: Roadmap
+accelerator_13: Waar AI iets oplevert, welke tools, wie waarvoor verantwoordelijk is
+accelerator_14: Met een partner
+accelerator_15: Maand 4&ndash;6
+accelerator_16: Live
+accelerator_17: Een eerste toepassing in gebruik, en de mensen die ermee werken
+start_01: Hoe het begint.
+start_02: 1
+start_03: Een gesprek van 30 minuten.
+start_04: Je vertelt ons wat er speelt. Geen verkoopspraatje.
+start_05: 2
+start_06: Een kort voorstel.
+start_07: Wat we eerst zouden doen, hoe lang het duurt en wat het kost.
+start_08: 3
+start_09: We gaan van start.
+start_10: Meestal met het plan of de toepassingen, en daarna houden we het samen met jou in beweging.

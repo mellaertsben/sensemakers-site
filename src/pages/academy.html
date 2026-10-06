@@ -1,0 +1,89 @@
+<!--page theme=#FBFAF7 active=academy-->
+{{>head}}
+<script>(function(){var m={"#foundations": "ai-foundations.html", "#thinking": "thinking-with-ai.html", "#tracks": "ai-for-your-role.html", "#build-day": "ai-build-day.html", "#champions": "ai-champions.html", "#hands-on": "ai-foundations.html", "#workshop": "ai-for-your-role.html", "#programme": "ai-champions.html", "#briefing": "frontier-watch.html#briefing", "#lead": "frontier-watch.html#briefing", "#sprint": "transformation.html", "#cohort": "transformation.html", "#frontier-watch": "frontier-watch.html", "#subscription": "frontier-watch.html", "#keep-up": "frontier-watch.html"};var t=m[location.hash];if(t)location.replace(t);})();</script>
+</head>
+<body>
+<a class="skip" href="#main">{{skip}}</a>
+
+{{>header}}
+
+<main class="c-work" id="main">
+<!-- HERO: the title rises in; the demo plays three short scenes (edit them in the JSON below) -->
+<section class="hero p-hero" id="top">
+<div class="container">
+<div class="hero-grid">
+<div>
+<div class="kicker">{{top_01}}</div>
+<h1 class="rise"><span class="ln"><span>{{top_02}}</span></span><span class="ln"><span><em>{{top_03}}</em></span></span></h1>
+<p class="lead">{{top_04}}</p>
+<div class="hero-cta">
+<a class="btn btn-primary" href="#formats">{{top_05}}</a>
+<a class="btn btn-ghost js-book" href="{{mail:subj_01}}">{{top_06}}</a>
+</div>
+<p class="hero-note">{{top_07}}</p>
+</div>
+<div>
+<div aria-label="{{top_attr_01}}" class="demo">
+<div aria-hidden="true" class="demo-top"><i></i><i></i><i></i><span class="demo-label">{{top_08}}</span></div>
+<div aria-live="off" class="demo-body"><div class="msg u">{{top_09}}</div><div class="msg a">{{top_10}}</div><div class="flag">{{top_11}}</div></div>
+<div aria-hidden="true" class="demo-steps"><i></i><i></i><i></i></div>
+<script type="application/json">{{raw:top_demo_01}}</script>
+</div>
+<p class="demo-cap">{{top_12}}</p>
+</div>
+</div>
+<div class="p-stats">
+<div class="p-stat"><b data-count="5">{{top_13}}</b><span>{{top_14}}</span></div>
+<div class="p-stat"><b data-count="7">{{top_15}}</b><span>{{top_16}}</span></div>
+<div class="p-stat"><b>{{top_17}}</b><span>{{top_18}}</span></div>
+<div class="p-stat"><b>{{top_19}}</b><span>{{top_20}}</span></div>
+</div>
+</div>
+</section>
+<!-- THE FORMATS: a sideways rail; each card opens its own page -->
+<section class="band rail-sec" id="formats">
+<span id="layers"></span><span id="work"></span><span id="teams"></span><span id="organisation"></span>
+<div class="container rail-head">
+<div class="section-head" style="margin-bottom:0">
+<div class="kicker">{{formats_01}}</div>
+<h2>{{formats_02}}</h2>
+<p class="sub">{{formats_03}}</p>
+</div>
+<div class="rail-nav"><button aria-label="{{formats_attr_01}}" data-rail="prev" type="button">{{formats_04}}</button><button aria-label="{{formats_attr_02}}" data-rail="next" type="button">{{formats_05}}</button></div>
+</div>
+<div aria-label="{{formats_attr_03}}" class="rail" tabindex="0">
+<a class="r-card" href="ai-foundations.html" style="--rc:#2A86C9"><span aria-hidden="true" class="n">{{formats_06}}</span><span class="k">{{formats_07}}</span><h3>{{formats_08}}</h3><p>{{formats_09}}</p><span class="row"><span>{{formats_10}}</span><i aria-hidden="true">{{formats_11}}</i></span></a>
+<a class="r-card" href="thinking-with-ai.html" style="--rc:#2479BA"><span aria-hidden="true" class="n">{{formats_12}}</span><span class="k">{{formats_13}}</span><h3>{{formats_14}}</h3><p>{{formats_15}}</p><span class="row"><span>{{formats_16}}</span><i aria-hidden="true">{{formats_17}}</i></span></a>
+<a class="r-card" href="ai-for-your-role.html" style="--rc:#1F6DAB"><span aria-hidden="true" class="n">{{formats_18}}</span><span class="k">{{formats_19}}</span><h3>{{formats_20}}</h3><p>{{formats_21}}</p><span class="row"><span>{{formats_22}}</span><i aria-hidden="true">{{formats_23}}</i></span></a>
+<a class="r-card" href="ai-build-day.html" style="--rc:#1B649F"><span aria-hidden="true" class="n">{{formats_24}}</span><span class="k">{{formats_25}}</span><h3>{{formats_26}}</h3><p>{{formats_27}}</p><span class="row"><span>{{formats_28}}</span><i aria-hidden="true">{{formats_29}}</i></span></a>
+<a class="r-card" href="ai-champions.html" style="--rc:#185A90"><span aria-hidden="true" class="n">{{formats_30}}</span><span class="k">{{formats_31}}</span><h3>{{formats_32}}</h3><p>{{formats_33}}</p><span class="row"><span>{{formats_34}}</span><i aria-hidden="true">{{formats_35}}</i></span></a>
+<a class="r-end c-keep" href="frontier-watch.html"><span class="eyebrow">{{formats_36}}</span><b>{{formats_37}}</b><p>{{formats_38}}</p></a>
+</div>
+<div class="container"><div aria-hidden="true" class="rail-progress"><i></i></div></div>
+</section>
+<!-- WHY IT STICKS -->
+<section id="labs">
+<div class="container p-split">
+<div class="p-sticky">
+<div class="kicker">{{labs_01}}</div>
+<h2>{{labs_02}}</h2>
+<p class="sub">{{labs_03}}</p>
+</div>
+<div class="p-list">
+<div class="p-item"><div class="ic">{{labs_04}}</div><div><h3>{{labs_05}}</h3><p>{{labs_06}}</p></div></div>
+<div class="p-item"><div class="ic">{{labs_07}}</div><div><h3>{{labs_08}}</h3><p>{{labs_09}}</p></div></div>
+<div class="p-item"><div class="ic">{{labs_10}}</div><div><h3>{{labs_11}}</h3><p>{{labs_12}}</p></div></div>
+<div class="p-item"><div class="ic">{{labs_13}}</div><div><h3>{{labs_14}}</h3><p>{{labs_15}}</p></div></div>
+</div>
+</div>
+</section>
+<section aria-label="{{main_attr_01}}" class="section-tight" style="padding-top:0">
+<div class="marquee marquee--logos"><ul><li class="lg"><img alt="{{main_attr_02}}" height="22" loading="lazy" src="{{root}}assets/logos/claude.svg" width="103"></li><li class="lg"><img alt="{{main_attr_03}}" height="34" loading="lazy" src="{{root}}assets/logos/copilot.png" width="54"></li><li class="lg"><img alt="{{main_attr_04}}" height="24" loading="lazy" src="{{root}}assets/logos/chatgpt.png" width="101"></li><li class="lg"><img alt="{{main_attr_05}}" height="24" loading="lazy" src="{{root}}assets/logos/gemini.svg" width="106"></li><li class="lg"><img alt="{{main_attr_06}}" height="26" loading="lazy" src="{{root}}assets/logos/cursor.svg" width="103"></li><li class="lg"><img alt="{{main_attr_07}}" height="26" loading="lazy" src="{{root}}assets/logos/codex.png" width="26"><span>{{main_01}}</span></li><li class="lg"><img alt="{{main_attr_08}}" height="20" loading="lazy" src="{{root}}assets/logos/lovable.svg" width="118"></li></ul></div>
+</section>
+</main>
+
+{{>footer}}
+
+<script src="{{root}}site.js?v=19"></script>
+</body>
+</html>

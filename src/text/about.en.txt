@@ -1,0 +1,30 @@
+# about: English texts. One line per text: key: text. HTML like <em> or <a> is allowed.
+meta_title: About us — Sensemakers
+meta_desc: AI is ready. We help your organisation catch up. Meet the people behind Sensemakers and how we work.
+og_title: About Sensemakers — AI is ready. We help your organisation catch up.
+og_desc: Meet the people behind Sensemakers: practitioners who still do the work we teach.
+top_01: About us
+top_02: AI is ready. <em>We help your organisation catch up.</em>
+top_03: Sensemakers keeps leadership teams up to date with AI, teaches people to work with it, and helps run the change. We're practitioners who still do the work we teach.
+mission_01: Our vision
+mission_02: Organisations where people lead AI, <em>not the other way around.</em>
+mission_03: Our mission
+mission_04: We equip leaders and teams with the <a class="mv-w c-keep" href="frontier-watch.html">insight</a>, <a class="mv-w c-work" href="academy.html">skills</a> and <a class="mv-w c-guide" href="transformation.html">support</a> to get the most out of AI in a responsible way.
+mission_05: Insight
+mission_06: Frontier Watch &rarr;
+mission_07: Skills
+mission_08: Academy &rarr;
+mission_09: Support
+mission_10: Transformation &rarr;
+people_01: Who you'll work with.
+people_02: BM
+people_03: Ben Mellaerts
+people_04: Strategy, adoption and change
+people_05: Ben started as a data analyst at Telenet and moved into business analysis and AI adoption. At Mediahuis he drives the adoption of in-house generative AI tools among some 2,000 journalists across more than 30 brands, with hands-on sessions in five countries. He also hosts the DataTopics Unplugged podcast.
+how_01: How we work.
+how_02: Hands-on, in plain language.
+how_03: Hiking the Grand Canyon beats looking at a photo of it. We teach AI by doing it, on your own work, in plain words.
+how_04: Still doing the work.
+how_05: None of us teaches full-time. We all keep working on real AI projects, so what we teach comes from this month, not last year.
+how_06: Responsible by default.
+how_07: Every course and every plan asks what should stay a human call, what never goes into a tool, and who answers for the result.

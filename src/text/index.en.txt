@@ -1,5 +1,6 @@
 # Homepage texts (English). One line per text: key: text. HTML like <em> is allowed.
 meta_title: Sensemakers — Building the human capability to lead your AI transformation
+og_title: Sensemakers — Building the human capability to lead your AI transformation
 meta_desc: Frontier Watch keeps your leadership up to date with AI, and the Academy teaches your people to work with it. We also help you lead the change itself.
 og_desc: Frontier Watch keeps your leadership up to date, and the Academy teaches your people to work with AI. We also help you lead the change itself.
 hero_kicker: For leaders and their teams

@@ -78,10 +78,15 @@ var ANALYTICS = "";
       });
       slot.parentNode.removeChild(slot);
     });
-    var who = (own ? 'We are ' + L.company : 'Sensemakers is a trade name of ' + L.company) +
-      (L.office ? ', ' + L.office : '') +
-      (L.enterprise ? ', enterprise number ' + L.enterprise : '') +
-      '. We decide how your data is used.';
+    var who = nl
+      ? (own ? 'Wij zijn ' + L.company : 'Sensemakers is een handelsnaam van ' + L.company) +
+        (L.office ? ', ' + L.office : '') +
+        (L.enterprise ? ', ondernemingsnummer ' + L.enterprise : '') +
+        '. Wij bepalen hoe je gegevens gebruikt worden.'
+      : (own ? 'We are ' + L.company : 'Sensemakers is a trade name of ' + L.company) +
+        (L.office ? ', ' + L.office : '') +
+        (L.enterprise ? ', enterprise number ' + L.enterprise : '') +
+        '. We decide how your data is used.';
     all('[data-legal-who]').forEach(function (el) { el.textContent = who; });
   }
 

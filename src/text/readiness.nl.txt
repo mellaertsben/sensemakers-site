@@ -1,0 +1,82 @@
+# readiness: Nederlandse teksten. One line per text: key: text. HTML like <em> or <a> is allowed.
+meta_title: Readiness check — Sensemakers
+meta_desc: Vijf korte situaties, 90 seconden, en een eerlijk advies over waar je met AI in je werk best begint. Zonder inschrijving.
+og_title: Waar sta je echt met AI? — een check van 90 seconden
+og_desc: Vijf situaties, één eerlijk advies. Zonder inschrijving.
+main_01: Readiness check
+main_02: Waar sta je echt met AI?
+main_03: Vijf korte situaties. Kies telkens wat het meest herkenbaar is, en wij wijzen je het juiste startpunt aan. Er zijn geen foute antwoorden en je hoeft je nergens voor in te schrijven.
+main_04: Negentig seconden, één duidelijk antwoord.
+main_05: 5 situaties
+main_06: ~90 seconden
+main_07: Een concreet advies op het einde
+main_08: Starten
+main_09: &larr; Terug
+main_10: We bekijken je antwoorden&hellip;
+main_11: Je resultaat volgt zo meteen.
+main_12: Wat we horen
+main_13: Onze aanbeveling
+subj_01: Sensemakers — even praten
+main_14: Plan een gesprek
+main_15: Bekijk wat dat inhoudt
+main_16: Wil je dit op papier, met een volgende stap op maat? <a class="inline-link" href="mailto:hello@sensemakers.be" id="mailAnswers">Mail ons je antwoorden</a> en we antwoorden je persoonlijk.
+main_17: &olarr; Opnieuw beginnen
+quiz_01: Wat past het best bij waar jullie staan?
+quiz_02: We praten veel over AI, maar zijn nog niet echt begonnen.
+quiz_03: We hebben tools uitgerold, maar er is weinig echt veranderd.
+quiz_04: We hebben al een paar workflows of agents gebouwd.
+quiz_05: AI verspreidt zich vanzelf over de teams.
+quiz_06: Welke frustratie herken je het meest?
+quiz_07: We hebben tools geprobeerd, maar ze sloegen niet aan.
+quiz_08: We weten niet waar te beginnen, maar voelen dat we iets moeten doen.
+quiz_09: We hebben workflows gebouwd, maar niemand gebruikt ze.
+quiz_10: We zien indrukwekkende demo's, maar weten niet wat echt werkt.
+quiz_11: Er komen steeds meer agents bij en niemand is er duidelijk eigenaar van.
+quiz_12: Waar ligt de directie het meest wakker van?
+quiz_13: We kunnen niet aantonen dat het echt iets oplevert.
+quiz_14: De kosten sluipen omhoog en niemand houdt het totaal in de gaten.
+quiz_15: We zijn het zelfs niet eens over hoe ver we willen gaan.
+quiz_16: Mensen vertrouwen op wat AI zegt, zonder het echt na te kijken.
+quiz_17: Wat zou je als eerste willen oplossen?
+quiz_18: Eén concrete workflow die traag, duur of riskant is.
+quiz_19: Een duidelijk plan en duidelijke prioriteiten.
+quiz_20: Wie waarvoor verantwoordelijk is, nu AI overal opduikt.
+quiz_21: Hoe goed onze mensen met AI kunnen werken.
+quiz_22: Hoe zou een partner je het best helpen?
+quiz_23: Toon ons waar we moeten beginnen.
+quiz_24: Herwerk samen met ons één echte workflow.
+quiz_25: Krijg eigenaarschap en kosten onder controle.
+quiz_26: Bouw de vaardigheden van ons team op.
+quiz_27: Eerlijk gezegd: bouw het gewoon voor ons.
+quiz_28: Je hebt een duidelijk startpunt nodig.
+quiz_29: Er is energie en druk, maar geen voor de hand liggende eerste stap. Het risico is dat je van alles een beetje doet en niets bewijst. De oplossing: kiezen waar AI het werk echt verandert, en wat je beter laat liggen.
+quiz_30: Begin met een Executive Briefing
+quiz_31: Twee uur met je directie over wat AI betekent voor je sector en je organisatie. Je gaat naar huis met je drie beslissingen op één pagina. Wil je daarna een volledig plan, dan helpen we je er een te maken waar je directie achter staat.
+quiz_32: Bekijk de Executive Briefing
+quiz_33: Je hebt een team of een workflow om mee te starten.
+quiz_34: Je kunt aanwijzen waar de kosten, de tijd of het risico zitten. Dat is de ideale plek om te beginnen: één team dat van beslissing naar dagelijkse praktijk gaat, in plaats van tools die er gewoon bovenop komen.
+quiz_35: Begin met dat team
+quiz_36: AI for your role: één team, met zijn echte werk, praktisch in zijn eigen tool, en een playbook dat bij het team blijft. Daarna meet je wat er veranderd is.
+quiz_37: Bekijk AI for your role
+quiz_38: AI verspreidt zich sneller dan iemand kan bijhouden.
+quiz_39: Tools en agents duiken op in alle teams, maar eigenaarschap en kosten volgen niet. Laat je dat begaan, dan krijg je schaduw-AI: als iedereen eigenaar is, is niemand het.
+quiz_40: Krijg tools en uitgaven onder controle
+quiz_41: Elke AI-tool waarvoor je betaalt op één lijst, met een eigenaar en een duidelijke keuze: houden, samenvoegen of stoppen. Daarna een gebruiksbeleid dat mensen kennen, en de vaardigheden om het te volgen.
+quiz_42: Bekijk hoe we helpen
+quiz_43: De tools zijn er, maar ze zijn niet aangeslagen.
+quiz_44: Je hebt AI uitgerold, maar het werk is niet echt veranderd en het gebruik stokt. Dat ligt zelden aan de tools: de mensen en de manier van werken zijn gewoon niet mee veranderd.
+quiz_45: Leer je mensen werken met AI
+quiz_46: Praktische opleidingen op je eigen taken, in de tools die je al gebruikt, te beginnen met AI Foundations voor iedereen. Je directie kan dezelfde opleidingen volgen in een besloten sessie.
+quiz_47: Bekijk de Academy
+quiz_48: Je wilt het vooral laten bouwen.
+quiz_49: Je weet wat je wilt en zoekt iemand die het bouwt. Zorg wel eerst dat het de juiste toepassing is, en dat iemand in je organisatie er eigenaar van is.
+quiz_50: Kies eerst wat je bouwt
+quiz_51: We helpen je de toepassingen kiezen die de moeite waard zijn, elk met een eigenaar en een eerste stap, en we begeleiden het project eromheen.
+quiz_52: Bekijk hoe we helpen
+quiz_53: Je gaf ook aan dat je het liefst laat bouwen. Wij bouwen zelf geen systemen. We helpen je kiezen wat de moeite waard is, geven elke toepassing een eigenaar en begeleiden het project eromheen.
+quiz_54: Situatie
+quiz_of: van
+quiz_56: Mijn antwoorden op de readiness check:
+quiz_57: Jullie situatie:
+quiz_58: (Wat je nog wilt toevoegen over je situatie:)
+quiz_59: Readiness check Sensemakers

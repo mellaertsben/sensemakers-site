@@ -1,0 +1,183 @@
+<!--page theme=#FBFAF7 active=none-->
+{{>head}}
+</head>
+<body>
+<a class="skip" href="#main">{{skip}}</a>
+
+{{>header}}
+
+<main id="main">
+<section class="hero hero-dots hero--text hero--quiz">
+<div class="container">
+<div class="kicker">{{main_01}}</div>
+<h1>{{main_02}}</h1>
+<p class="lead">{{main_03}}</p>
+</div>
+</section>
+<section>
+<div class="container">
+<div class="quiz-wrap">
+<div class="quiz-card">
+<div class="fade" id="intro">
+<h2 style="font-size:30px">{{main_04}}</h2>
+<div class="intro-facts"><span>{{main_05}}</span><span>{{main_06}}</span><span>{{main_07}}</span></div>
+<button class="btn btn-primary" id="startbtn" type="button">{{main_08}}</button>
+</div>
+<div class="hidden" id="quiz">
+<div class="progress"><div class="progress-bar" id="bar"></div></div>
+<div class="q-count" id="qcount"></div>
+<div class="q-text" id="qtext"></div>
+<div class="options" id="options"></div>
+<div class="q-nav"><button class="back" id="backbtn" type="button">{{main_09}}</button></div>
+</div>
+<div class="hidden quiz-loading" id="loading" role="status">
+<svg aria-hidden="true" class="spin" focusable="false" viewbox="0 0 100 100"><path class="s1" d="M 77.02 7.18 C 77.42 7.48 77.80 7.91 77.84 8.20 C 77.90 8.59 78.03 8.86 77.25 9.28 L 68.47 13.20 C 61.69 16.09 55.34 19.51 49.33 23.77 C 43.91 27.61 40.34 31.82 38.31 38.18 C 37.00 42.26 37.39 46.36 39.26 50.24 C 41.54 54.97 45.07 58.87 47.23 63.68 C 47.40 64.06 47.52 64.80 47.19 64.92 C 46.40 65.19 39.96 65.68 33.68 62.91 C 21.49 57.51 12.34 47.42 13.24 33.70 C 13.71 26.36 16.93 19.65 21.85 14.16 C 35.38 -0.94 60.48 -5.06 77.02 7.18 Z"></path><path class="s2" d="M 22.48 92.41 C 22.08 92.10 21.71 91.66 21.68 91.38 C 21.62 90.99 21.50 90.71 22.29 90.31 L 31.14 86.55 C 37.96 83.77 44.38 80.47 50.46 76.33 C 55.96 72.58 59.59 68.44 61.74 62.11 C 63.12 58.06 62.81 53.95 61.01 50.03 C 58.81 45.26 55.35 41.31 53.29 36.46 C 53.12 36.07 53.01 35.33 53.34 35.22 C 54.13 34.96 60.59 34.58 66.82 37.47 C 78.91 43.08 87.87 53.34 86.73 67.04 C 86.12 74.37 82.79 81.02 77.77 86.42 C 63.97 101.28 38.80 104.95 22.48 92.41 Z"></path></svg>
+<div><b>{{main_10}}</b><span>{{main_11}}</span></div>
+</div>
+<div class="hidden" id="result">
+<div class="kicker">{{main_12}}</div>
+<h2 id="situLabel" style="font-size:30px;margin-bottom:12px"></h2>
+<p class="sub" id="situText"></p>
+<div class="rec">
+<div class="eyebrow" style="margin-bottom:8px">{{main_13}}</div>
+<h3 id="recHead"></h3>
+<p id="recText"></p>
+<div class="actions">
+<a class="btn btn-primary js-book" href="{{mail:subj_01}}">{{main_14}}</a>
+<a class="btn btn-ghost" href="academy.html" id="recLink">{{main_15}}</a>
+</div>
+</div>
+<p class="note hidden" id="buildNote"></p>
+<p class="note accent">{{main_16}}</p>
+<button class="restart" id="restartbtn" type="button">{{main_17}}</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+
+{{>footer}}
+
+<script src="{{root}}site.js?v=19"></script>
+<script>
+(function () {
+  // each option: [label, category]
+  var questions = [
+    { q: "{{js:quiz_01}}", o: [
+      ["{{js:quiz_02}}", "start"],
+      ["{{js:quiz_03}}", "capability"],
+      ["{{js:quiz_04}}", "own"],
+      ["{{js:quiz_05}}", "own"]
+    ]},
+    { q: "{{js:quiz_06}}", o: [
+      ["{{js:quiz_07}}", "capability"],
+      ["{{js:quiz_08}}", "start"],
+      ["{{js:quiz_09}}", "capability"],
+      ["{{js:quiz_10}}", "start"],
+      ["{{js:quiz_11}}", "own"]
+    ]},
+    { q: "{{js:quiz_12}}", o: [
+      ["{{js:quiz_13}}", "redesign"],
+      ["{{js:quiz_14}}", "own"],
+      ["{{js:quiz_15}}", "start"],
+      ["{{js:quiz_16}}", "capability"]
+    ]},
+    { q: "{{js:quiz_17}}", o: [
+      ["{{js:quiz_18}}", "redesign"],
+      ["{{js:quiz_19}}", "start"],
+      ["{{js:quiz_20}}", "own"],
+      ["{{js:quiz_21}}", "capability"]
+    ]},
+    { q: "{{js:quiz_22}}", o: [
+      ["{{js:quiz_23}}", "start"],
+      ["{{js:quiz_24}}", "redesign"],
+      ["{{js:quiz_25}}", "own"],
+      ["{{js:quiz_26}}", "capability"],
+      ["{{js:quiz_27}}", "build"]
+    ]}
+  ];
+
+  var results = {
+    start: { label: "{{js:quiz_28}}", text: "{{js:quiz_29}}", recHead: "{{js:quiz_30}}", recText: "{{js:quiz_31}}", link: "frontier-watch.html#briefing", linkLabel: "{{js:quiz_32}}" },
+    redesign: { label: "{{js:quiz_33}}", text: "{{js:quiz_34}}", recHead: "{{js:quiz_35}}", recText: "{{js:quiz_36}}", link: "ai-for-your-role.html", linkLabel: "{{js:quiz_37}}" },
+    own: { label: "{{js:quiz_38}}", text: "{{js:quiz_39}}", recHead: "{{js:quiz_40}}", recText: "{{js:quiz_41}}", link: "transformation.html", linkLabel: "{{js:quiz_42}}" },
+    capability: { label: "{{js:quiz_43}}", text: "{{js:quiz_44}}", recHead: "{{js:quiz_45}}", recText: "{{js:quiz_46}}", link: "academy.html", linkLabel: "{{js:quiz_47}}" },
+    build: { label: "{{js:quiz_48}}", text: "{{js:quiz_49}}", recHead: "{{js:quiz_50}}", recText: "{{js:quiz_51}}", link: "transformation.html", linkLabel: "{{js:quiz_52}}" }
+  };
+
+  var idx = 0;
+  var answers = new Array(questions.length).fill(null);
+  var $ = function (id) { return document.getElementById(id); };
+
+  function startQuiz() { $('intro').classList.add('hidden'); $('quiz').classList.remove('hidden'); idx = 0; render(); }
+  function render() {
+    var total = questions.length;
+    $('bar').style.width = (idx / total * 100) + '%';
+    $('qcount').textContent = '{{js:quiz_54}} ' + (idx + 1) + ' {{js:quiz_of}} ' + total;
+    var qt = $('qtext'); qt.textContent = questions[idx].q; qt.classList.remove('fade'); void qt.offsetWidth; qt.classList.add('fade');
+    var box = $('options'); box.innerHTML = '';
+    questions[idx].o.forEach(function (opt) {
+      var b = document.createElement('button'); b.className = 'option'; b.type = 'button'; b.textContent = opt[0];
+      b.onclick = function () { answers[idx] = opt[1]; next(); };
+      box.appendChild(b);
+    });
+    $('backbtn').style.visibility = idx === 0 ? 'hidden' : 'visible';
+  }
+  function next() { if (idx < questions.length - 1) { idx++; render(); } else { showResult(); } }
+  function goBack() { if (idx > 0) { idx--; render(); } }
+
+  var reduceMotion = !!(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches);
+  function showResult() {
+    $('bar').style.width = '100%';
+    $('quiz').classList.add('hidden');
+    var loading = $('loading');
+    if (loading && !reduceMotion) {
+      loading.classList.remove('hidden');
+      setTimeout(function () { loading.classList.add('hidden'); revealResult(); }, 1300);
+    } else { revealResult(); }
+  }
+  function revealResult() {
+    var res = $('result'); res.classList.remove('hidden'); res.classList.add('fade');
+    var tally = {}; answers.forEach(function (c) { if (c) { tally[c] = (tally[c] || 0) + 1; } });
+    var order = ['build', 'redesign', 'own', 'capability', 'start'];
+    var best = null, bestN = -1;
+    order.forEach(function (c) { if ((tally[c] || 0) > bestN) { bestN = tally[c] || 0; best = c; } });
+    // "build" only wins outright when it is the clear top pick; otherwise it becomes a note
+    if (best === 'build' && bestN < 2) {
+      var alt = null, altN = -1;
+      ['redesign', 'own', 'capability', 'start'].forEach(function (c) { if ((tally[c] || 0) > altN) { altN = tally[c] || 0; alt = c; } });
+      if (alt && altN > 0) best = alt;
+    }
+    var r = results[best];
+    $('situLabel').textContent = r.label;
+    $('situText').textContent = r.text;
+    $('recHead').textContent = r.recHead;
+    $('recText').textContent = r.recText;
+    var link = $('recLink'); link.href = r.link; link.textContent = r.linkLabel;
+    var n = $('buildNote');
+    if (best !== 'build' && answers.indexOf('build') !== -1) {
+      n.classList.remove('hidden');
+      n.textContent = "{{js:quiz_53}}";
+    } else { n.classList.add('hidden'); }
+    // mail link with the answers in the body
+    var lines = questions.map(function (q, i) {
+      var sel = q.o.filter(function (o) { return o[1] === answers[i]; })[0];
+      return (i + 1) + '. ' + q.q + ' -> ' + (sel ? sel[0] : '');
+    }).join('\n');
+    var body = '{{js:quiz_56}}\n\n' + lines + '\n\n{{js:quiz_57}} ' + r.label + '\n\n{{js:quiz_58}}\n';
+    $('mailAnswers').href = 'mailto:' + (window.CONTACT_EMAIL || 'hello@sensemakers.be') + '?subject=' + encodeURIComponent('{{js:quiz_59}}') + '&body=' + encodeURIComponent(body);
+    res.scrollIntoView({ block: 'start', behavior: 'smooth' });
+  }
+  function restart() {
+    idx = 0; for (var i = 0; i < answers.length; i++) answers[i] = null;
+    $('result').classList.add('hidden'); if ($('loading')) $('loading').classList.add('hidden'); $('intro').classList.remove('hidden'); $('buildNote').classList.add('hidden');
+  }
+
+  $('startbtn').addEventListener('click', startQuiz);
+  $('backbtn').addEventListener('click', goBack);
+  $('restartbtn').addEventListener('click', restart);
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,94 @@
+# thinking-with-ai: English texts. One line per text: key: text. HTML like <em> or <a> is allowed.
+meta_title: Thinking with AI — Sensemakers Academy
+meta_desc: AI moves thinking upstream, into the question, the framing and the evidence. One day to make better decisions with it, not faster mistakes.
+og_title: Thinking with AI — Sensemakers Academy
+og_desc: Better decisions with AI, not faster mistakes, practised on your own decisions.
+top_attr_01: Breadcrumb
+top_01: <a href="academy.html">Academy</a> &nbsp;/&nbsp; For everyone &nbsp;/&nbsp; Thinking with AI
+top_02: For everyone &middot; format 2 of 5
+top_03: Thinking with AI
+top_04: AI moves thinking upstream, into the question, the framing and the evidence. One day to make better decisions with it, not faster mistakes.
+top_05: A six-step decision process, with the right tool at each step
+top_06: Spot the new ways AI can mislead you
+top_07: Practise on decisions from your own work
+subj_01: Sensemakers — Thinking with AI
+top_08: Request information
+top_09: See the programme &darr;
+top_attr_02: At a glance
+top_10: At a glance
+top_11: Audience
+top_12: Anyone who makes or prepares decisions; also as a closed session for one leadership team
+top_13: Group size
+top_14: Up to 16 people
+top_15: Duration
+top_16: One day
+top_17: Format
+top_18: On site, in-company
+top_19: Start
+top_20: Available now
+top_21: Trainer
+top_22: Ben Mellaerts
+subj_02: Sensemakers — Thinking with AI
+top_23: Request information
+outcomes_01: After this course, participants can
+outcomes_02: 1
+outcomes_03: Frame a question so AI helps rather than steers
+outcomes_04: 2
+outcomes_05: Use a six-step decision process with the right tool at each step
+outcomes_06: 3
+outcomes_07: Recognise the traps: agreeing too easily, trusting the machine, handing over the thinking
+outcomes_08: 4
+outcomes_09: Check their own decisions with a personal scorecard
+programme_01: The programme
+programme_02: Click a module for more.
+programme_03: 01
+programme_04: Morning
+programme_05: Why AI moves thinking upstream
+programme_06: Where the real work now sits: the question, the frame, the evidence.
+programme_07: 45 min
+programme_08: 02
+programme_09: Morning
+programme_10: A six-step decision process
+programme_11: A simple process and the tools that fit each step.
+programme_12: 75 min
+programme_13: 03
+programme_14: Morning
+programme_15: The new traps
+programme_16: Agreeing too easily, trusting the machine, handing over the thinking.
+programme_17: 60 min
+programme_18: 04
+programme_19: Afternoon
+programme_20: Practice on your own decisions
+programme_21: Participants bring a live decision and work it through.
+programme_22: 120 min
+programme_23: 05
+programme_24: Afternoon
+programme_25: Scorecard and checklist
+programme_26: Turning the day into a habit for your own work.
+programme_27: 45 min
+leave_01: What you leave with
+leave_02: 01
+leave_03: A personal decision scorecard
+leave_04: 02
+leave_05: A checklist for your own work
+leave_06: 03
+leave_07: One live decision, worked through
+trainer_01: Who you'll work with
+trainer_02: Your trainer.
+trainer_03: BM
+trainer_04: Ben Mellaerts
+trainer_05: Strategy, adoption and change
+trainer_06: From data analyst at Telenet to leading AI adoption among some 2,000 journalists at Mediahuis.
+more_01: The other formats
+more_02: For everyone
+more_03: AI Foundations
+more_04: Two half-days
+more_05: For teams
+more_06: AI for your role
+more_07: Half a day to a day
+more_08: For teams
+more_09: AI Build Day
+more_10: One day
+more_11: For the organisation
+more_12: AI Champions Programme
+more_13: Two days, then six months

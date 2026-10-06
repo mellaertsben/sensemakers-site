@@ -1,0 +1,94 @@
+# ai-build-day: Nederlandse teksten. One line per text: key: text. HTML like <em> or <a> is allowed.
+meta_title: AI Build Day — Sensemakers Academy
+meta_desc: Een hackathon op je eigen problemen. Teams bouwen werkende prototypes zonder code, en elk prototype krijgt een eigenaar en een beslissingsdatum.
+og_title: AI Build Day — Sensemakers Academy
+og_desc: Een hackathon op je eigen problemen: werkende prototypes zonder code, elk met een eigenaar.
+top_attr_01: Kruimelpad
+top_01: <a href="academy.html">Academy</a> &nbsp;/&nbsp; Voor teams &nbsp;/&nbsp; AI Build Day
+top_02: Voor teams · format 4 van 5
+top_03: AI Build Day
+top_04: Een hackathon op je eigen problemen. Teams bouwen werkende prototypes zonder code, en elk prototype krijgt een eigenaar en een beslissingsdatum.
+top_05: Uitdagingen, toegang en spelregels weken op voorhand voorbereid
+top_06: Een korte bouwcursus, daarna bouwen met ons als coach
+top_07: Een pitch voor je directie, en een beslissing binnen 30 dagen
+subj_01: Sensemakers — AI Build Day
+top_08: Vraag informatie aan
+top_09: Bekijk het programma ↓
+top_attr_02: In een oogopslag
+top_10: In een oogopslag
+top_11: Voor wie
+top_12: Gemengde teams uit de hele organisatie
+top_13: Groepsgrootte
+top_14: 20 tot 40 deelnemers, in teams van vier of vijf
+top_15: Duur
+top_16: Eén dag, na enkele weken voorbereiding
+top_17: Vorm
+top_18: Bij jou ter plaatse
+top_19: Start
+top_20: Nu beschikbaar
+top_21: Trainer
+top_22: Uit het Sensemakers-team
+subj_02: Sensemakers — AI Build Day
+top_23: Vraag informatie aan
+outcomes_01: Na deze dag kunnen deelnemers
+outcomes_02: 1
+outcomes_03: Een werkend prototype bouwen zonder code
+outcomes_04: 2
+outcomes_05: Een probleem zo afbakenen dat je het in één dag kunt testen
+outcomes_06: 3
+outcomes_07: Een prototype pitchen voor de directie, met een duidelijke vraag
+outcomes_08: 4
+outcomes_09: Eigenaar zijn van de volgende stap: verdergaan, overdragen of stoppen
+programme_01: Het programma
+programme_02: Klik op een onderdeel voor meer uitleg.
+programme_03: 01
+programme_04: Weken op voorhand
+programme_05: Voorbereiding
+programme_06: Uitdagingen, toegang en spelregels, samen met je team.
+programme_07: 2–4 weken
+programme_08: 02
+programme_09: Voormiddag
+programme_10: Bouwcursus
+programme_11: Een korte cursus zodat elk team kan beginnen bouwen.
+programme_12: 60 min
+programme_13: 03
+programme_14: Overdag
+programme_15: Bouwen, met coaches
+programme_16: Teams bouwen; wij coachen.
+programme_17: 5 uur
+programme_18: 04
+programme_19: Eind van de namiddag
+programme_20: Pitch voor de directie
+programme_21: Elk team toont wat werkt.
+programme_22: 60 min
+programme_23: 05
+programme_24: Binnen 30 dagen
+programme_25: Beslissing
+programme_26: Verdergaan, overdragen of stoppen, voor elk prototype.
+programme_27: 30 dagen
+leave_01: Wat je eraan overhoudt
+leave_02: 01
+leave_03: Werkende prototypes
+leave_04: 02
+leave_05: Een eigenaar per prototype
+leave_06: 03
+leave_07: Een beslissingsdatum voor elk ervan
+trainer_01: Met wie je werkt
+trainer_02: Je trainer.
+trainer_03: S
+trainer_04: Het Sensemakers-team
+trainer_05: Mensen die zelf nog in de praktijk staan
+trainer_06: Wie je sessie begeleidt, hangt af van het traject en de tools. Maak kennis met de mensen achter Sensemakers.
+more_01: De andere formats
+more_02: Voor iedereen
+more_03: AI Foundations
+more_04: Twee halve dagen
+more_05: Voor iedereen
+more_06: Thinking with AI
+more_07: Eén dag
+more_08: Voor teams
+more_09: AI for your role
+more_10: Een halve tot een hele dag
+more_11: Voor de organisatie
+more_12: AI Champions Programme
+more_13: Twee dagen, daarna zes maanden

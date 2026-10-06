@@ -1,0 +1,89 @@
+# ai-champions: English texts. One line per text: key: text. HTML like <em> or <a> is allowed.
+meta_title: AI Champions Programme — Sensemakers Academy
+meta_desc: We train a small group of your people to run the basics themselves, then meet them monthly for half a year, so it keeps running without us.
+og_title: AI Champions Programme — Sensemakers Academy
+og_desc: We train a few of your people to run the basics themselves, then meet them monthly for half a year.
+top_attr_01: Breadcrumb
+top_01: <a href="academy.html">Academy</a> &nbsp;/&nbsp; For the organisation &nbsp;/&nbsp; AI Champions Programme
+top_02: For the organisation &middot; format 5 of 5
+top_03: AI Champions Programme
+top_04: We train a small group of your people to run the basics themselves, then meet them monthly for half a year, so it keeps running without us.
+top_05: Champions learn to give AI Foundations themselves
+top_06: Coaching colleagues and collecting use cases for leadership
+top_07: The material under licence, plus a monthly session
+subj_01: Sensemakers — AI Champions Programme
+top_08: Request information
+top_09: See the programme &darr;
+top_attr_02: At a glance
+top_10: At a glance
+top_11: Audience
+top_12: Six to twelve future champions
+top_13: Group size
+top_14: 6 to 12 people
+top_15: Duration
+top_16: Two days, then six monthly sessions
+top_17: Format
+top_18: On site, then online every month
+top_19: Start
+top_20: Available now
+top_21: Trainer
+top_22: Ben Mellaerts
+subj_02: Sensemakers — AI Champions Programme
+top_23: Request information
+outcomes_01: After this course, participants can
+outcomes_02: 1
+outcomes_03: Give AI Foundations to colleagues themselves
+outcomes_04: 2
+outcomes_05: Coach colleagues on their own tasks
+outcomes_06: 3
+outcomes_07: Collect use cases and bring them to leadership
+outcomes_08: 4
+outcomes_09: Keep the material current with a shared library
+programme_01: The programme
+programme_02: Click a module for more.
+programme_03: 01
+programme_04: Day 1
+programme_05: Train the trainer: AI Foundations
+programme_06: Learn to give the course, with the material under licence.
+programme_07: 1 day
+programme_08: 02
+programme_09: Day 2
+programme_10: Coaching and use cases
+programme_11: How to coach colleagues and collect cases for leadership.
+programme_12: 1 day
+programme_13: 03
+programme_14: Months 1&ndash;6
+programme_15: Monthly session
+programme_16: What worked, what didn't, what changed in the tools.
+programme_17: 6 &times; 2 h
+programme_18: 04
+programme_19: Ongoing
+programme_20: Shared case library
+programme_21: Cases from your champions and from other organisations.
+programme_22: 6 months
+leave_01: What you leave with
+leave_02: 01
+leave_03: Trained champions
+leave_04: 02
+leave_05: AI Foundations material under licence
+leave_06: 03
+leave_07: A shared case library
+trainer_01: Who you'll work with
+trainer_02: Your trainer.
+trainer_03: BM
+trainer_04: Ben Mellaerts
+trainer_05: Strategy, adoption and change
+trainer_06: From data analyst at Telenet to leading AI adoption among some 2,000 journalists at Mediahuis.
+more_01: The other formats
+more_02: For everyone
+more_03: AI Foundations
+more_04: Two half-days
+more_05: For everyone
+more_06: Thinking with AI
+more_07: One day
+more_08: For teams
+more_09: AI for your role
+more_10: Half a day to a day
+more_11: For teams
+more_12: AI Build Day
+more_13: One day

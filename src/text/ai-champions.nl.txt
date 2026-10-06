@@ -1,0 +1,89 @@
+# ai-champions: Nederlandse teksten. One line per text: key: text. HTML like <em> or <a> is allowed.
+meta_title: AI Champions Programme — Sensemakers Academy
+meta_desc: We leiden een kleine groep van je mensen op om de basis zelf te geven, en zien hen daarna een half jaar lang elke maand. Zo blijft het lopen, ook zonder ons.
+og_title: AI Champions Programme — Sensemakers Academy
+og_desc: We leiden enkele van je mensen op om de basis zelf te geven, en zien hen daarna een half jaar lang elke maand.
+top_attr_01: Kruimelpad
+top_01: <a href="academy.html">Academy</a> &nbsp;/&nbsp; Voor de organisatie &nbsp;/&nbsp; AI Champions Programme
+top_02: Voor de organisatie · format 5 van 5
+top_03: AI Champions Programme
+top_04: We leiden een kleine groep van je mensen op om de basis zelf te geven, en zien hen daarna een half jaar lang elke maand. Zo blijft het lopen, ook zonder ons.
+top_05: Champions leren AI Foundations zelf te geven
+top_06: Collega's coachen en use cases verzamelen voor de directie
+top_07: Het lesmateriaal onder licentie, plus een maandelijkse sessie
+subj_01: Sensemakers — AI Champions Programme
+top_08: Vraag informatie aan
+top_09: Bekijk het programma ↓
+top_attr_02: In een oogopslag
+top_10: In een oogopslag
+top_11: Voor wie
+top_12: Zes tot twaalf toekomstige champions
+top_13: Groepsgrootte
+top_14: 6 tot 12 deelnemers
+top_15: Duur
+top_16: Twee dagen, daarna zes maandelijkse sessies
+top_17: Vorm
+top_18: Eerst bij jou ter plaatse, daarna elke maand online
+top_19: Start
+top_20: Nu beschikbaar
+top_21: Trainer
+top_22: Ben Mellaerts
+subj_02: Sensemakers — AI Champions Programme
+top_23: Vraag informatie aan
+outcomes_01: Na dit programma kunnen deelnemers
+outcomes_02: 1
+outcomes_03: AI Foundations zelf geven aan collega's
+outcomes_04: 2
+outcomes_05: Collega's coachen op hun eigen taken
+outcomes_06: 3
+outcomes_07: Use cases verzamelen en voorleggen aan de directie
+outcomes_08: 4
+outcomes_09: Het lesmateriaal actueel houden met een gedeelde bibliotheek
+programme_01: Het programma
+programme_02: Klik op een onderdeel voor meer uitleg.
+programme_03: 01
+programme_04: Dag 1
+programme_05: Train de trainer: AI Foundations
+programme_06: Leren hoe je de opleiding geeft, met het lesmateriaal onder licentie.
+programme_07: 1 dag
+programme_08: 02
+programme_09: Dag 2
+programme_10: Coaching en use cases
+programme_11: Hoe je collega's coacht en cases verzamelt voor de directie.
+programme_12: 1 dag
+programme_13: 03
+programme_14: Maand 1&ndash;6
+programme_15: Maandelijkse sessie
+programme_16: Wat werkte, wat niet, en wat er veranderde in de tools.
+programme_17: 6 × 2 u
+programme_18: 04
+programme_19: Doorlopend
+programme_20: Gedeelde casebibliotheek
+programme_21: Cases van je champions en van andere organisaties.
+programme_22: 6 maanden
+leave_01: Wat je eraan overhoudt
+leave_02: 01
+leave_03: Opgeleide champions
+leave_04: 02
+leave_05: Lesmateriaal van AI Foundations onder licentie
+leave_06: 03
+leave_07: Een gedeelde casebibliotheek
+trainer_01: Met wie je werkt
+trainer_02: Je trainer.
+trainer_03: BM
+trainer_04: Ben Mellaerts
+trainer_05: Strategie, adoptie en verandering
+trainer_06: Van data-analist bij Telenet tot drijvende kracht achter de AI-adoptie bij zo'n 2.000 journalisten van Mediahuis.
+more_01: De andere formats
+more_02: Voor iedereen
+more_03: AI Foundations
+more_04: Twee halve dagen
+more_05: Voor iedereen
+more_06: Thinking with AI
+more_07: Eén dag
+more_08: Voor teams
+more_09: AI for your role
+more_10: Een halve tot een hele dag
+more_11: Voor teams
+more_12: AI Build Day
+more_13: Eén dag
