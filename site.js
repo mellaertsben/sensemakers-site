@@ -63,13 +63,12 @@ var ANALYTICS = "";
   function wireLegal() {
     var L = LEGAL || {};
     if (!L.company) return;
-    var nl = (document.documentElement.lang || '').indexOf('nl') === 0;
     var own = /^sensemakers\b/i.test(L.company);
-    var parts = [own ? L.company : (nl ? 'Sensemakers is een handelsnaam van ' : 'Sensemakers is a trade name of ') + L.company];
+    var parts = [own ? L.company : 'Sensemakers is a trade name of ' + L.company];
     if (L.office) parts.push(L.office);
-    if (L.enterprise) parts.push((nl ? 'Ondernemingsnummer ' : 'Enterprise number ') + L.enterprise);
+    if (L.enterprise) parts.push('Enterprise number ' + L.enterprise);
     if (L.rpr) parts.push(/^RPR\b/i.test(L.rpr) ? L.rpr : 'RPR ' + L.rpr);
-    if (L.vat) parts.push((nl ? 'Btw ' : 'VAT ') + L.vat);
+    if (L.vat) parts.push('VAT ' + L.vat);
     all('[data-legal]').forEach(function (slot) {
       parts.forEach(function (p) {
         var s = document.createElement('span');

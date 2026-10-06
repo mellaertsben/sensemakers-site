@@ -28,22 +28,6 @@ Since 5 Oct 2026 (Round 13) every Academy format and the AI Accelerator have the
 | `.nojekyll` | Tells GitHub Pages to serve files as-is. |
 | `robots.txt`, `sitemap.xml` | Search-engine housekeeping. |
 
-## Two languages (EN · NL)
-
-Since 6 Oct 2026 the site can be in English and Dutch. Pages that are converted have one layout and two text files:
-
-| Where | What |
-|---|---|
-| `src/pages/<page>.html` | The layout of a page, with `{{key}}` where a text goes |
-| `src/partials/` | `head`, `header` and `footer`, shared by every converted page |
-| `src/text/<page>.en.txt`, `src/text/<page>.nl.txt` | The texts, one line per text: `key: text` (HTML like `<em>` is allowed) |
-| `src/text/common.en.txt`, `common.nl.txt` | Texts in the header and footer |
-| `tools/build.py` | Builds the English pages in the site root and the Dutch pages in `nl/` |
-
-To change a text: edit the line in both text files, then run `python3 tools/build.py` and push. The build stops with a list if a text exists in one language but not the other, so a half-translated page never goes live. Never edit `index.html` or `nl/index.html` directly: they are rebuilt from `src/`.
-
-Converted so far: the homepage. The other pages are still hand-written in English; Dutch links to them go to the English page until they are converted.
-
 ## The logo and the S
 
 The logo is the designer's: an S in two halves with SENSEMAKERS beside it. Since Round 12 the site uses the single-colour version (`…-mono.svg`: pine S, ink word; `…-mono-on-dark.svg` on the dark homepage header); the two-tone files stay for reference. The shapes on the site are traced from the designer's logo PDF until the final SVG files arrive.
