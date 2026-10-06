@@ -1477,3 +1477,6 @@ body:has(main.c-guide) .nav .logo{content:url(assets/logo/sensemakers-lockup-tra
 .journey-line i{background:var(--pine)}
 .stage-dot,html.js .journey.drawn .stage.lit .stage-dot{background:var(--pine);border-color:var(--pine)}
 html.js .journey.drawn .stage.lit .stage-dot{box-shadow:0 0 0 6px var(--tint)}
+/* Round 14f: dropdown items keep black text, but hover in the product's tint */
+.menu .menu-link:hover{background:var(--lt,var(--tint-2))}
+.menu .menu-overview:hover{border-color:var(--lb,var(--ink));background:var(--lt,var(--tint-2))}
