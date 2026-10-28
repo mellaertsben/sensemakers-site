@@ -324,7 +324,7 @@ var ANALYTICS = "";
     });
   }
 
-  // Round 13: programme modules open on click; phase tabs; marquee loop
+  // Round 13: program modules open on click; phase tabs; marquee loop
   function subpages() {
     all('.mod').forEach(function (m) {
       m.setAttribute('tabindex', '0'); m.setAttribute('role', 'button');

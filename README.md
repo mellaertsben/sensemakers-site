@@ -6,6 +6,21 @@ Since 28 Sep 2026 the site follows three products: **Frontier Watch** (for the l
 
 Since 5 Oct 2026 (Round 13) every Academy format and the AI Accelerator have their own page, and the product pages share one lively style: a title that rises in, a "demo" window that plays short scenes, count-up numbers, a sideways rail of cards and a tools marquee. Sub-pages open on a dark band in the product colour with an "At a glance" box.
 
+## Round 15 (28 Oct 2026): Academy as the front door
+
+After the founders session of 26 Oct: start with the Academy, validate Frontier Watch with AI leads.
+
+- **Homepage**: the hero leads with the Academy, with Thinking with AI as the flagship and the four other formats beside it. "Three ways in" and the journey now start with the Academy.
+- **Menu and footer** on every page: Academy · Frontier Watch · Transformation · About us. Thinking with AI is marked as the flagship in the Academy menu, rail and format numbering (format 1 of 5).
+- **Frontier Watch**: repositioned for AI and data leads (no longer the leadership team). The single action is "Become a founding member" (email). No prices; the three parts (monthly update, quarterly peer session, direct line) are shown as what we're testing. Old `#briefing` links land on the founding-members section.
+- **AI Accelerator**: shortened to the roadmap only (about three months). We don't build; a partner is introduced if the client wants it built. The partner stays unnamed.
+- **AI info** (`ai-info.html`) and `llms.txt`: facts for AI assistants and search engines. Keep both in sync when products change. Linked in the footer.
+- The readiness check's "start" result now points to Thinking with AI.
+- Niels Rogge and Tim Leers are on About us, the homepage and Frontier Watch (bios from their LinkedIn profiles, with photos). Niels is the trainer on AI for your role, which now also covers one tool in depth (Copilot, Claude, Claude Code, agents).
+- AI info and llms.txt say: based in Belgium, working in Belgium and the Netherlands.
+- The site uses American spelling (organization, program, license, practice). The format is now called the AI Champions Program.
+- No client names anywhere on the site, the page source included.
+
 ## Files
 
 | File | What it is |
@@ -13,7 +28,7 @@ Since 5 Oct 2026 (Round 13) every Academy format and the AI Accelerator have the
 | `index.html` | The homepage: hero with three tiles (leadership · people · the transformation itself), Frontier Watch, Academy, Transformation, Why now, values, contact. |
 | `frontier-watch.html` | Frontier Watch: the sample monthly note, what you get, the Executive Briefing (`#briefing`), who it's for, questions. |
 | `academy.html` | The Academy: demo hero (the three scenes are the JSON inside `.demo`), numbers, the five formats as a rail, why it sticks, tools, where most start. Old anchors (`#foundations`, `#tracks`, `#briefing`, …) forward to their new page. |
-| `ai-foundations.html`, `thinking-with-ai.html`, `ai-for-your-role.html`, `ai-build-day.html`, `ai-champions.html` | One page per Academy format: At a glance (audience, group size, duration, format, start, trainer), outcomes, the programme (click a module), what you leave with, trainer, other formats. Group sizes and module timings are first proposals. Trainer shows Ben, or "the Sensemakers team" until Niels and Tim are on About us. |
+| `ai-foundations.html`, `thinking-with-ai.html`, `ai-for-your-role.html`, `ai-build-day.html`, `ai-champions.html` | One page per Academy format: At a glance (audience, group size, duration, format, start, trainer), outcomes, the program (click a module), what you leave with, trainer, other formats. Group sizes and module timings are first proposals. Trainer shows Ben, or "the Sensemakers team" until Niels and Tim are on About us. |
 | `transformation.html` | Transformation: demo hero (what we hear → where we'd start), six examples, the AI Accelerator as a featured path, how it starts. |
 | `ai-accelerator.html` | AI Accelerator for SMEs: about six months, Roadmap (months 1–3) then Live (months 4–6) as tabs, who does what, questions. The implementation partner stays unnamed until confirmed. "AI Accelerator" is a working name. |
 | `about.html` | About us. Shows Ben only; Niels' and Tim's profiles are ready in the file as a comment, to switch on once they agree. |
@@ -23,21 +38,19 @@ Since 5 Oct 2026 (Round 13) every Academy format and the AI Accelerator have the
 | `guidance.html`, `scan.html`, `audit.html`, `offers.html` | Old pages, kept only as redirects to `transformation.html` so old links keep working. |
 | `styles.css` | All styling. Brand tokens are the CSS variables at the top (`:root`). Each product keeps one colour: Frontier Watch = mint, Academy = sky, Transformation = field, About us = gold. New components since 28 Sep 2026 are in the last block of the file. |
 | `site.js` | The settings (see below), mobile menu, dropdown, "Read more" from links, reveal animation, count-up numbers, the slow turn of the hero S, footer year. |
-| `assets/` | `logo/` (the logo files, see below), favicons and app icons made from the S, `og.png` share image (5 Oct 2026: evergreen, single-colour logo, the three product colours), `fonts/` (Work Sans, OFL licence; the Newsreader and Figtree files are no longer used and can be deleted), `people/` (team photos go here), `logos/` (the tool logos in the Academy's tools strip: Claude, Copilot, ChatGPT, Gemini, Cursor, Codex, Lovable; replace a file to update a logo). |
+| `assets/` | `logo/` (the logo files, see below), favicons and app icons made from the S, `og.png` share image (5 Oct 2026: evergreen, single-colour logo, the three product colours), `fonts/` (Work Sans, OFL license; the Newsreader and Figtree files are no longer used and can be deleted), `people/` (team photos go here), `logos/` (the tool logos in the Academy's tools strip: Claude, Copilot, ChatGPT, Gemini, Cursor, Codex, Lovable; replace a file to update a logo). |
 | `CNAME` | Tells GitHub Pages the custom domain is `sensemakers.be`. Don't rename. |
 | `.nojekyll` | Tells GitHub Pages to serve files as-is. |
 | `robots.txt`, `sitemap.xml` | Search-engine housekeeping. |
 
 ## The logo and the S
 
-The logo is the designer's: an S in two halves with SENSEMAKERS beside it. Since Round 12 the site uses the single-colour version (`…-mono.svg`: pine S, ink word; `…-mono-on-dark.svg` on the dark homepage header); the two-tone files stay for reference. The shapes on the site are traced from the designer's logo PDF until the final SVG files arrive.
+The logo is the designer's: an S in two halves with SENSEMAKERS beside it. Since Round 12 the site uses the single-colour version (`…-mono.svg`: pine S, ink word; `…-mono-on-dark.svg` on the dark homepage header); the two-tone files were removed on 18 Oct 2026. The S was checked against the designer's final SVG (Atelier Angèle, Oct 2026) and matches it; colours and font follow our own branding kit, not the designer's.
 
 | File | Use |
 |---|---|
 | `assets/logo/sensemakers-lockup-mono.svg` | Header and footer of every page. |
 | `assets/logo/sensemakers-lockup-mono-on-dark.svg` | Header of the homepage (dark). |
-| `assets/logo/sensemakers-lockup.svg`, `…-on-dark.svg` | The two-tone version, kept for reference. |
-| `assets/logo/sensemakers-mark.svg`, `…-mark-on-dark.svg` | The S on its own. |
 | `assets/favicon.svg`, `favicon-32.png`, `favicon-256.png`, `apple-touch-icon.png`, `icon-192.png`, `icon-512.png` | Browser tab and phone home screen: the S in one colour (pine), since 5 Oct 2026. |
 
 How the S is used, following one rule (one big moment, one moving moment, a few small marks with a job):
@@ -89,9 +102,6 @@ GitHub Pages redeploys in about a minute.
 
 - The Calendly link, the company details, the LinkedIn page and (if wanted) Plausible: the settings above.
 - Ben's photo: save it as `assets/people/ben-mellaerts.jpg` and follow the comment in `about.html`.
-- The client names in Ben's bio, once each client agrees: the sentence is ready as a comment in `about.html`.
-- Niels and Tim on About us, once they agree: fill in the surname, their past role and one result each, then remove the comment marks around their cards in `about.html`.
 - The designer's final logo SVGs: see "The logo and the S" above. Colours and fonts, if the kit changes them, go in the tokens at the top of `styles.css`.
 - The header and footer are the same on every page (the Academy and Transformation menus list every sub-page); when you change them, change them everywhere.
-- Naming Niels and Tim as trainers: the format pages say "From the Sensemakers team" with a comment where their name goes.
 - The AI Accelerator: name the partner once confirmed, and pick a final name for the path.
