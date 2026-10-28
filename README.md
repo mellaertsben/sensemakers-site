@@ -18,7 +18,7 @@ After the founders session of 26 Oct: start with the Academy, validate Frontier 
 - **Readiness check** (`readiness.html`): five questions that point to one of the three pillars (Academy, Frontier Watch, Transformation). It is the homepage hero's one action. The Academy result links to the course finder.
 - **Course finder** (`academy.html#finder`): three questions that suggest one Academy format, with a second one when it combines well. Scores are in the script at the end of `academy.html`.
 - **Academy hero**: before and after a session (one row lights up at a time) instead of the chat window.
-- Niels Rogge and Tim Leers are on About us, the homepage and Frontier Watch (bios from their LinkedIn profiles, with photos). AI for your role now also covers one tool in depth (Copilot, Claude, Claude Code, agents).
+- Niels Rogge and Tim Leers are on About us, the homepage and Frontier Watch (bios from their LinkedIn profiles, with photos; Ben's photo too). AI for your role now also covers one tool in depth (Copilot, Claude, Claude Code, agents).
 - AI info and llms.txt say: based in Belgium, working in Belgium and the Netherlands.
 - The site uses American spelling (organization, program, license, practice). The format is now called the AI Champions Program.
 - No client names anywhere on the site, the page source included.
@@ -104,7 +104,6 @@ GitHub Pages redeploys in about a minute.
 ## Still to add when you have them
 
 - The Calendly link, the company details, the LinkedIn page and (if wanted) Plausible: the settings above.
-- Ben's photo: save it as `assets/people/ben-mellaerts.jpg` and follow the comment in `about.html`.
 - The designer's final logo SVGs: see "The logo and the S" above. Colours and fonts, if the kit changes them, go in the tokens at the top of `styles.css`.
 - The header and footer are the same on every page (the Academy and Transformation menus list every sub-page); when you change them, change them everywhere.
 - The AI Accelerator: name the partner once confirmed, and pick a final name for the path.
