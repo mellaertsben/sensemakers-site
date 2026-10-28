@@ -1481,39 +1481,12 @@ html.js .journey.drawn .stage.lit .stage-dot{box-shadow:0 0 0 6px var(--tint)}
 .menu .menu-link:hover{background:var(--lt,var(--tint-2))}
 .menu .menu-overview:hover{border-color:var(--lb,var(--ink));background:var(--lt,var(--tint-2))}
 
-/* ---------- Round 14 (28 Oct 2026): Academy as the front door ---------- */
-.h-ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
-.btn-light{background:var(--canvas);color:var(--evergreen)}
-.btn-light:hover{background:var(--white)}
-.btn-line{background:transparent;color:var(--canvas);border-color:rgba(251,250,247,.35)}
-.btn-line:hover{border-color:var(--canvas)}
-.h-cat{margin-top:40px;display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:16px;background:var(--white);color:var(--ink);border-radius:20px;padding:16px;box-shadow:0 30px 80px rgba(0,0,0,.25)}
-.h-cat-k{display:flex;align-items:center;gap:8px;font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--sky-deep)}
-.h-cat-k::before{content:"";width:12px;height:12px;flex:none;background:var(--sky);-webkit-mask:var(--cres) center/contain no-repeat;mask:var(--cres) center/contain no-repeat}
-.h-cat-flag{position:relative;overflow:hidden;isolation:isolate;display:flex;flex-direction:column;gap:10px;border-radius:14px;padding:28px;background:var(--sky);color:var(--white);transition:transform .2s ease,box-shadow .2s ease}
-.h-cat-flag::after{content:"";position:absolute;z-index:-1;right:-70px;bottom:-80px;width:280px;height:280px;background:rgba(255,255,255,.16);-webkit-mask:var(--cres) center/contain no-repeat;mask:var(--cres) center/contain no-repeat;transition:transform .8s ease}
-.h-cat-flag:hover{transform:translateY(-2px);box-shadow:0 16px 36px rgba(31,114,179,.35)}
-.h-cat-flag:hover::after{transform:rotate(-12deg)}
-.h-cat-flag .h-cat-k{color:rgba(255,255,255,.85)}
-.h-cat-flag .h-cat-k::before{background:var(--white)}
-.h-cat-badge{align-self:flex-start;font-size:11.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;background:var(--white);color:var(--sky-deep);border-radius:999px;padding:4px 10px}
-.h-cat-flag b{font-size:clamp(26px,3vw,34px);font-weight:600;letter-spacing:-.025em;line-height:1.1;margin-top:4px}
-.h-cat-flag .h-cat-t{font-size:15.5px;line-height:1.5;color:rgba(255,255,255,.9);max-width:44ch}
-.h-cat-meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:4px}
-.h-cat-meta span{font-size:13px;border:1px solid rgba(255,255,255,.4);border-radius:999px;padding:3px 10px}
-.h-cat-go{margin-top:auto;padding-top:14px;font-weight:600;font-size:15px}
-.h-cat-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
-.h-cat-item{display:flex;flex-direction:column;gap:6px;border-radius:14px;padding:18px;background:var(--sky-tint);transition:transform .2s ease,box-shadow .2s ease}
-.h-cat-item:hover{transform:translateY(-2px);box-shadow:0 12px 28px rgba(17,24,21,.10)}
-.h-cat-item b{font-size:18px;font-weight:600;letter-spacing:-.01em;line-height:1.25;color:var(--ink);margin-top:4px}
-.h-cat-item .h-cat-t{font-size:14px;line-height:1.45;color:var(--muted)}
-.h-cat-item .h-cat-k{font-size:10.5px;letter-spacing:.1em}
-@media (max-width:900px){.h-cat{grid-template-columns:1fr}}
-@media (max-width:560px){.h-cat-list{grid-template-columns:1fr}.h-cat{padding:10px}.h-cat-flag{padding:22px}}
-@media (prefers-reduced-motion:reduce){.h-cat-flag,.h-cat-item,.h-cat-flag::after{transition:none}}
+/* ---------- Round 15 (28 Oct 2026) ---------- */
 .r-card.r-flag{width:360px;box-shadow:0 0 0 3px var(--white),0 0 0 5px var(--sky)}
 @media (min-width:1101px){.rail{grid-template-columns:1.3fr repeat(4,1fr)}.r-card.r-flag{width:auto}}
 .r-card.r-flag .k{background:var(--white);color:var(--sky-deep);border-radius:999px;padding:3px 10px;align-self:flex-start}
 @media (max-width:700px){.r-card.r-flag{width:auto}}
 .mate-ini{overflow:hidden}
 .mate-ini img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+/* People are shown in the brand green, never in a product colour */
+.pframe .accent,.pframe--sky .accent,.pframe--mint .accent{fill:var(--brand-mint)}

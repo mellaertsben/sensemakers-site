@@ -10,16 +10,17 @@ Since 5 Oct 2026 (Round 13) every Academy format and the AI Accelerator have the
 
 After the founders session of 26 Oct: start with the Academy, validate Frontier Watch with AI leads.
 
-- **Homepage**: the hero leads with the Academy, with Thinking with AI as the flagship and the four other formats beside it. "Three ways in" and the journey now start with the Academy.
+- **Homepage**: the original header (For leaders and their teams · Building the human capability…) without the situation picker; "Three ways in" follows straight after and starts with the Academy, as does the journey.
 - **Menu and footer** on every page: Academy · Frontier Watch · Transformation · About us. Thinking with AI is marked as the flagship in the Academy menu, rail and format numbering (format 1 of 5).
 - **Frontier Watch**: repositioned for AI and data leads (no longer the leadership team). The single action is "Become a founding member" (email). No prices; the three parts (monthly update, quarterly peer session, direct line) are shown as what we're testing. Old `#briefing` links land on the founding-members section.
 - **AI Accelerator**: shortened to the roadmap only (about three months). We don't build; a partner is introduced if the client wants it built. The partner stays unnamed.
 - **AI info** (`ai-info.html`) and `llms.txt`: facts for AI assistants and search engines. Keep both in sync when products change. Linked in the footer.
 - The readiness check's "start" result now points to Thinking with AI.
-- Niels Rogge and Tim Leers are on About us, the homepage and Frontier Watch (bios from their LinkedIn profiles, with photos). Niels is the trainer on AI for your role, which now also covers one tool in depth (Copilot, Claude, Claude Code, agents).
+- Niels Rogge and Tim Leers are on About us, the homepage and Frontier Watch (bios from their LinkedIn profiles, with photos). AI for your role now also covers one tool in depth (Copilot, Claude, Claude Code, agents).
 - AI info and llms.txt say: based in Belgium, working in Belgium and the Netherlands.
 - The site uses American spelling (organization, program, license, practice). The format is now called the AI Champions Program.
 - No client names anywhere on the site, the page source included.
+- People are never tied to a product: team cards and portrait frames are all brand green, roles name no product, and course pages always say "From the Sensemakers team".
 
 ## Files
 
