@@ -39,7 +39,7 @@
           <a class="menu-overview" href="academy.html"><span>The Academy · five formats</span><i class="arr" aria-hidden="true">→</i></a>
           <div class="menu-group">For everyone</div>
           <a class="menu-link" href="ai-foundations.html"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 6l7-3 7 3-7 3z"/><path d="M6 8v4c0 1.5 2 2.5 4 2.5s4-1 4-2.5V8"/><path d="M17 6v5"/></svg><span>AI Foundations · two half-days</span><i class="arr" aria-hidden="true">→</i></a>
-          <a class="menu-link" href="thinking-with-ai.html"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 3v14M7 17h6M4 6h12"/><path d="M6 6l-2.5 6a2.5 2.5 0 0 0 5 0z"/><path d="M14 6l-2.5 6a2.5 2.5 0 0 0 5 0z"/></svg><span>Thinking with AI · our flagship, one day</span><i class="arr" aria-hidden="true">→</i></a>
+          <a class="menu-link" href="thinking-with-ai.html"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 3v14M7 17h6M4 6h12"/><path d="M6 6l-2.5 6a2.5 2.5 0 0 0 5 0z"/><path d="M14 6l-2.5 6a2.5 2.5 0 0 0 5 0z"/></svg><span>Thinking with AI · one day</span><i class="arr" aria-hidden="true">→</i></a>
           <div class="menu-group">For teams</div>
           <a class="menu-link" href="ai-for-your-role.html"><svg viewBox="0 0 20 20" aria-hidden="true"><rect x="3" y="4" width="14" height="9" rx="1.5"/><path d="M2 16h16"/></svg><span>AI for your role · per team</span><i class="arr" aria-hidden="true">→</i></a>
           <a class="menu-link" href="ai-build-day.html"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M12.5 3.5a3.5 3.5 0 0 0-3.6 4.9L3 14.3V17h2.7l5.9-5.9a3.5 3.5 0 0 0 4.9-3.6l-2.3 2.3-2.1-.6-.6-2.1z"/></svg><span>AI Build Day · one day</span><i class="arr" aria-hidden="true">→</i></a>
@@ -83,18 +83,18 @@
   <div class="container">
     <div class="kicker">Readiness check</div>
     <h1>Where are you with AI, really?</h1>
-    <p class="lead">Five quick situations. Pick the one that rings true each time, and we'll point you to the right starting place. No wrong answers, and nothing to sign up for.</p>
+    <p class="lead">Five quick questions. Pick the answer that rings true, and we'll tell you where to start: the Academy, Frontier Watch or Transformation. Nothing to sign up for.</p>
   </div>
 </section>
 
 <section>
   <div class="container">
-    <div class="quiz-wrap">
+    <div class="quiz-wrap quiz--pine">
       <div class="quiz-card">
 
         <div id="intro" class="fade">
           <h2 style="font-size:30px">Ninety seconds, one straight answer.</h2>
-          <div class="intro-facts"><span>5 situations</span><span>~90 seconds</span><span>A real recommendation at the end</span></div>
+          <div class="intro-facts"><span>5 questions</span><span>About 90 seconds</span><span>One clear place to start</span></div>
           <button class="btn btn-primary" id="startbtn" type="button">Start</button>
         </div>
 
@@ -124,7 +124,6 @@
               <a class="btn btn-ghost" id="recLink" href="academy.html">See what that involves</a>
             </div>
           </div>
-          <p class="note hidden" id="buildNote"></p>
           <p class="note accent">Want this in writing, with a tailored next step? <a class="inline-link" id="mailAnswers" href="mailto:hello@sensemakers.be">Email us your answers</a> and we'll reply personally.</p>
           <button class="restart" id="restartbtn" type="button">↺ Start over</button>
         </div>
@@ -163,48 +162,39 @@
 <script src="site.js?v=19"></script>
 <script>
 (function () {
-  // each option: [label, category]
+  // each option: [label, pillar]. Pillars: academy, frontier, transformation.
   var questions = [
-    { q: "Which sounds most like where you are?", o: [
-      ["We keep talking about AI but haven't really started.", "start"],
-      ["We've rolled out tools, but not much has actually changed.", "capability"],
-      ["We've built a few workflows or agents already.", "own"],
-      ["AI is spreading across teams on its own.", "own"]
+    { q: "Which sounds most like your organization today?", o: [
+      ["People use AI, but few know how to use it well.", "academy"],
+      ["Our tech team builds with AI and can't keep up with what changes.", "frontier"],
+      ["We have tools and pilots, but no clear plan or owner.", "transformation"]
     ]},
     { q: "Which frustration is most familiar?", o: [
-      ["We tried some tooling but it didn't land.", "capability"],
-      ["We don't know where to start, but feel we must do something.", "start"],
-      ["We built workflows but they didn't get adopted.", "capability"],
-      ["We get impressive demos but can't tell what's real.", "start"],
-      ["Agents are multiplying and no one clearly owns them.", "own"]
+      ["People trust AI output without checking it.", "academy"],
+      ["Every week there's a new model or tool, and we can't test them all.", "frontier"],
+      ["Pilots everywhere, nothing scales.", "transformation"]
     ]},
-    { q: "What's leadership most uneasy about?", o: [
-      ["We can't show it's actually delivering value.", "redesign"],
-      ["Costs are creeping and nobody watches the total.", "own"],
-      ["We're not even aligned on how far to go.", "start"],
-      ["People trust AI output without really checking it.", "capability"]
+    { q: "Who needs help most right now?", o: [
+      ["Our employees and teams.", "academy"],
+      ["Our AI, data or engineering leads.", "frontier"],
+      ["Our leadership team, to set the course.", "transformation"]
     ]},
     { q: "If you could fix one thing first?", o: [
-      ["One specific workflow that's slow, costly, or risky.", "redesign"],
-      ["A clear plan and priorities.", "start"],
-      ["Who owns what, now AI is everywhere.", "own"],
-      ["Our people's ability to work with AI well.", "capability"]
+      ["Our people's ability to work with AI.", "academy"],
+      ["Knowing which new tools and models are worth it for us.", "frontier"],
+      ["A plan with priorities and owners.", "transformation"]
     ]},
-    { q: "How would you want a partner to help?", o: [
-      ["Show us where to start.", "start"],
-      ["Redesign one real workflow with us.", "redesign"],
-      ["Get ownership and costs under control.", "own"],
-      ["Build our team's capability.", "capability"],
-      ["Honestly, just build it for us.", "build"]
+    { q: "What would help most?", o: [
+      ["Hands-on training on our own work.", "academy"],
+      ["An independent, tested view on what's new.", "frontier"],
+      ["Someone to plan and run the change with us.", "transformation"]
     ]}
   ];
 
   var results = {
-    start: { label: "You need a clear place to start.", text: "There's energy and pressure, but no obvious first move, so the risk is doing a bit of everything and proving nothing. The fix is choosing where AI actually changes the work, and what to leave alone.", recHead: "Start with Thinking with AI", recText: "One day for your leadership team, in a closed session, on decisions from your own work: how to frame them, where AI helps and where it misleads. If you want a full plan after that, we help you make one your leadership owns.", link: "thinking-with-ai.html", linkLabel: "See Thinking with AI" },
-    redesign: { label: "You've got a team or a workflow worth starting with.", text: "You can point at where cost, time or risk lives. That's the ideal place to start: one team taken from decision to daily practice, rather than tools sprinkled on top.", recHead: "Start with that team", recText: "AI for your role: one team, its real work, hands-on in its own tool, with a playbook that stays with the team. Then you measure what changed.", link: "ai-for-your-role.html", linkLabel: "See AI for your role" },
-    own: { label: "AI is spreading faster than anyone can keep track of.", text: "Tools and agents are multiplying across teams, but ownership and cost haven't caught up. Left alone, that becomes shadow AI: if everyone owns it, no one does.", recHead: "Get tools and spend under control", recText: "Every AI tool you pay for on one list, with an owner and a clear call on what to keep, merge or stop. Then a usage policy people can name, and the skills to follow it.", link: "transformation.html", linkLabel: "See how we help" },
-    capability: { label: "The tools are in, but they haven't landed.", text: "You've rolled out AI, but the work didn't really change and adoption stalled. That's rarely a tooling problem: the people and the way of working never moved with it.", recHead: "Teach your people to work with AI", recText: "Hands-on courses on your own tasks, in the tools you already use, starting with AI Foundations and Thinking with AI. Your leadership team can take the same courses in a closed session.", link: "academy.html", linkLabel: "See the Academy" },
-    build: { label: "You mainly want it built.", text: "You know what you want and you'd like someone to build it. Before anything gets built, make sure it's the right build and that someone in your organization owns it.", recHead: "Pick the right build first", recText: "We help you choose the use cases worth doing, each with an owner and a first step, and help you run the project around them.", link: "transformation.html", linkLabel: "See how we help" }
+    academy: { label: "Your people are the place to start.", text: "The tools are there. What's missing is the skill and the judgment to use them well, safely and on real work.", recHead: "Start with the Academy", recText: "Hands-on courses on your own work, in the tools you already use. Our course finder picks the right format in three questions.", link: "academy.html#finder", linkLabel: "Find the right course" },
+    frontier: { label: "Your AI team needs to keep up.", text: "Your people already build with AI. The hard part is knowing which new models, tools and agents are worth their time, without testing everything themselves.", recHead: "Talk to us about Frontier Watch", recText: "An independent, tested view on what's new, written for your setup. We're building it with a small group of founding members.", link: "frontier-watch.html#founding", linkLabel: "See Frontier Watch" },
+    transformation: { label: "You need a plan, and someone to run it with you.", text: "There's a lot of AI activity, but no shared picture yet of what matters, who owns it and what it costs.", recHead: "Start with a plan your leadership owns", recText: "We help you pick the use cases worth doing, get tools and spend under control and run the change with your own team.", link: "transformation.html", linkLabel: "See Transformation" }
   };
 
   var idx = 0;
@@ -215,7 +205,7 @@
   function render() {
     var total = questions.length;
     $('bar').style.width = (idx / total * 100) + '%';
-    $('qcount').textContent = 'Situation ' + (idx + 1) + ' of ' + total;
+    $('qcount').textContent = 'Question ' + (idx + 1) + ' of ' + total;
     var qt = $('qtext'); qt.textContent = questions[idx].q; qt.classList.remove('fade'); void qt.offsetWidth; qt.classList.add('fade');
     var box = $('options'); box.innerHTML = '';
     questions[idx].o.forEach(function (opt) {
@@ -241,26 +231,17 @@
   function revealResult() {
     var res = $('result'); res.classList.remove('hidden'); res.classList.add('fade');
     var tally = {}; answers.forEach(function (c) { if (c) { tally[c] = (tally[c] || 0) + 1; } });
-    var order = ['build', 'redesign', 'own', 'capability', 'start'];
+    // most answers wins; a tie goes to the answer on the last question ("What would help most?")
     var best = null, bestN = -1;
-    order.forEach(function (c) { if ((tally[c] || 0) > bestN) { bestN = tally[c] || 0; best = c; } });
-    // "build" only wins outright when it is the clear top pick; otherwise it becomes a note
-    if (best === 'build' && bestN < 2) {
-      var alt = null, altN = -1;
-      ['redesign', 'own', 'capability', 'start'].forEach(function (c) { if ((tally[c] || 0) > altN) { altN = tally[c] || 0; alt = c; } });
-      if (alt && altN > 0) best = alt;
-    }
+    ['academy', 'transformation', 'frontier'].forEach(function (c) { if ((tally[c] || 0) > bestN) { bestN = tally[c] || 0; best = c; } });
+    var tied = Object.keys(tally).filter(function (c) { return tally[c] === bestN; });
+    if (tied.length > 1 && tied.indexOf(answers[answers.length - 1]) !== -1) best = answers[answers.length - 1];
     var r = results[best];
     $('situLabel').textContent = r.label;
     $('situText').textContent = r.text;
     $('recHead').textContent = r.recHead;
     $('recText').textContent = r.recText;
     var link = $('recLink'); link.href = r.link; link.textContent = r.linkLabel;
-    var n = $('buildNote');
-    if (best !== 'build' && answers.indexOf('build') !== -1) {
-      n.classList.remove('hidden');
-      n.textContent = "You also mentioned you'd like it built for you. We don't build systems ourselves. We help you pick what's worth building, give each build an owner, and help run the project around it.";
-    } else { n.classList.add('hidden'); }
     // mail link with the answers in the body
     var lines = questions.map(function (q, i) {
       var sel = q.o.filter(function (o) { return o[1] === answers[i]; })[0];
@@ -272,7 +253,7 @@
   }
   function restart() {
     idx = 0; for (var i = 0; i < answers.length; i++) answers[i] = null;
-    $('result').classList.add('hidden'); if ($('loading')) $('loading').classList.add('hidden'); $('intro').classList.remove('hidden'); $('buildNote').classList.add('hidden');
+    $('result').classList.add('hidden'); if ($('loading')) $('loading').classList.add('hidden'); $('intro').classList.remove('hidden');
   }
 
   $('startbtn').addEventListener('click', startQuiz);

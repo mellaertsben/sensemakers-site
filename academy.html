@@ -40,7 +40,7 @@
           <a class="menu-overview" href="academy.html"><span>The Academy · five formats</span><i class="arr" aria-hidden="true">→</i></a>
           <div class="menu-group">For everyone</div>
           <a class="menu-link" href="ai-foundations.html"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 6l7-3 7 3-7 3z"/><path d="M6 8v4c0 1.5 2 2.5 4 2.5s4-1 4-2.5V8"/><path d="M17 6v5"/></svg><span>AI Foundations · two half-days</span><i class="arr" aria-hidden="true">→</i></a>
-          <a class="menu-link" href="thinking-with-ai.html"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 3v14M7 17h6M4 6h12"/><path d="M6 6l-2.5 6a2.5 2.5 0 0 0 5 0z"/><path d="M14 6l-2.5 6a2.5 2.5 0 0 0 5 0z"/></svg><span>Thinking with AI · our flagship, one day</span><i class="arr" aria-hidden="true">→</i></a>
+          <a class="menu-link" href="thinking-with-ai.html"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 3v14M7 17h6M4 6h12"/><path d="M6 6l-2.5 6a2.5 2.5 0 0 0 5 0z"/><path d="M14 6l-2.5 6a2.5 2.5 0 0 0 5 0z"/></svg><span>Thinking with AI · one day</span><i class="arr" aria-hidden="true">→</i></a>
           <div class="menu-group">For teams</div>
           <a class="menu-link" href="ai-for-your-role.html"><svg viewBox="0 0 20 20" aria-hidden="true"><rect x="3" y="4" width="14" height="9" rx="1.5"/><path d="M2 16h16"/></svg><span>AI for your role · per team</span><i class="arr" aria-hidden="true">→</i></a>
           <a class="menu-link" href="ai-build-day.html"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M12.5 3.5a3.5 3.5 0 0 0-3.6 4.9L3 14.3V17h2.7l5.9-5.9a3.5 3.5 0 0 0 4.9-3.6l-2.3 2.3-2.1-.6-.6-2.1z"/></svg><span>AI Build Day · one day</span><i class="arr" aria-hidden="true">→</i></a>
@@ -81,7 +81,7 @@
 
 <main id="main" class="c-work">
 
-<!-- HERO: the title rises in; the demo plays three short scenes (edit them in the JSON below) -->
+<!-- HERO: the title rises in; on the right, what changes before and after a session -->
 <section class="hero p-hero" id="top">
   <div class="container">
     <div class="hero-grid">
@@ -90,19 +90,23 @@
         <h1 class="rise"><span class="ln"><span>Everyone has AI now.</span></span><span class="ln"><span><em>Few use it well.</em></span></span></h1>
         <p class="lead">Hands-on courses for every employee, every team and your leadership team, on your real work and in the tools you already use.</p>
         <div class="hero-cta">
-          <a class="btn btn-primary" href="thinking-with-ai.html">Start with our flagship: Thinking with AI →</a>
+          <a class="btn btn-primary" href="#finder">Find the right course →</a>
           <a class="btn btn-ghost" href="#formats">See the five formats</a>
         </div>
         <p class="hero-note">On site or online, in-company.</p>
       </div>
       <div>
-        <div class="demo" aria-label="A short example, playing on a loop">
-          <div class="demo-top" aria-hidden="true"><i></i><i></i><i></i><span class="demo-label">Where it fails</span></div>
-          <div class="demo-body" aria-live="off"><div class="msg u">Which Belgian law sets the rules for working from home?</div><div class="msg a">Working from home is regulated by the <mark>Act of 3 March 2017 on telework</mark>, article 12…</div><div class="flag">Sounds sure. Check the source: the reference may not exist.</div></div>
-          <div class="demo-steps" aria-hidden="true"><i></i><i></i><i></i></div>
-          <script type="application/json">[{"label": "Where it fails", "u": "Which Belgian law sets the rules for working from home?", "a": "Working from home is regulated by the <mark>Act of 3 March 2017 on telework<\/mark>, article 12…", "f": "Sounds sure. Check the source: the reference may not exist."}, {"label": "What never goes in", "u": "Summarize this customer complaint: [name, address, contract number…]", "a": "Here is a summary of the complaint by…", "f": "Personal data in a public tool. Your policy says: never."}, {"label": "Your own work", "u": "Draft three subject lines for our newsletter to SME clients.", "a": "1. Your year-end AI check · 2. Three tools worth keeping · 3. What changed this quarter", "f": "A good start. You rewrite it, you own it.", "ok": true}]</script>
-        </div>
-        <p class="demo-cap">What participants learn to spot, live in the course.</p>
+        <!-- Before / after: the "after" of one row lights up at a time (script at the end of this page). Typical lines, not quotes from named people. -->
+        <figure class="ba" aria-label="Before and after a session">
+          <div class="ba-head" aria-hidden="true"><span>Before</span><span>After</span></div>
+          <ul class="ba-rows">
+            <li class="on"><span class="ba-b">“I paste everything in.”</span><span class="ba-arrow" aria-hidden="true">→</span><span class="ba-a">“I know what never goes in.”</span></li>
+            <li><span class="ba-b">“It sounds right, so…”</span><span class="ba-arrow" aria-hidden="true">→</span><span class="ba-a">“I check before I trust it.”</span></li>
+            <li><span class="ba-b">“AI writes my emails.”</span><span class="ba-arrow" aria-hidden="true">→</span><span class="ba-a">“AI drafts. I decide.”</span></li>
+            <li><span class="ba-b">“I don't know where to start.”</span><span class="ba-arrow" aria-hidden="true">→</span><span class="ba-a">“I know which tasks to hand over.”</span></li>
+          </ul>
+        </figure>
+        <p class="demo-cap">What typically changes after a session.</p>
       </div>
     </div>
     <div class="p-stats">
@@ -120,13 +124,13 @@
   <div class="container rail-head">
     <div class="section-head" style="margin-bottom:0">
       <div class="kicker">The formats</div>
-      <h2>Five ways to learn it. Start with the flagship.</h2>
+      <h2>Five ways to learn it.</h2>
       <p class="sub">Every course runs on real tasks from your organization. Both courses for everyone also run as a closed session for one leadership team.</p>
     </div>
     <div class="rail-nav"><button type="button" data-rail="prev" aria-label="Previous formats">←</button><button type="button" data-rail="next" aria-label="Next formats">→</button></div>
   </div>
   <div class="rail" tabindex="0" aria-label="The five formats">
-      <a class="r-card r-flag" href="thinking-with-ai.html" style="--rc:#2479BA"><span class="n" aria-hidden="true">01</span><span class="k">Flagship · for everyone</span><h3>Thinking with AI</h3><p>Better decisions with AI, not faster mistakes, practiced on your own decisions.</p><span class="row"><span>One day</span><i aria-hidden="true">→</i></span></a>
+      <a class="r-card r-flag" href="thinking-with-ai.html" style="--rc:#2479BA"><span class="n" aria-hidden="true">01</span><span class="k">For everyone</span><h3>Thinking with AI</h3><p>Better decisions with AI, not faster mistakes, practiced on your own decisions.</p><span class="row"><span>One day</span><i aria-hidden="true">→</i></span></a>
       <a class="r-card" href="ai-foundations.html" style="--rc:#2A86C9"><span class="n" aria-hidden="true">02</span><span class="k">For everyone</span><h3>AI Foundations</h3><p>How AI works, where it fails, what never goes in, and how to use it in your own tool.</p><span class="row"><span>Two half-days</span><i aria-hidden="true">→</i></span></a>
       <a class="r-card" href="ai-for-your-role.html" style="--rc:#1F6DAB"><span class="n" aria-hidden="true">03</span><span class="k">For teams</span><h3>AI for your role</h3><p>One team, its real work: where AI helps, where it doesn't, and who checks what.</p><span class="row"><span>Half a day to a day</span><i aria-hidden="true">→</i></span></a>
       <a class="r-card" href="ai-build-day.html" style="--rc:#1B649F"><span class="n" aria-hidden="true">04</span><span class="k">For teams</span><h3>AI Build Day</h3><p>A hackathon on your own problems: working prototypes without code, each with an owner.</p><span class="row"><span>One day</span><i aria-hidden="true">→</i></span></a>
@@ -134,6 +138,37 @@
       <a class="r-end c-keep" href="frontier-watch.html"><span class="eyebrow">To keep up after the training</span><b>Frontier Watch →</b><p>Keep up with what changes, every month.</p></a>
   </div>
   <div class="container"><div class="rail-progress" aria-hidden="true"><i></i></div></div>
+
+  <!-- COURSE FINDER: three questions, one suggestion. The scores are in the script at the end of this page. -->
+  <div class="container finder" id="finder">
+    <div class="finder-head">
+      <div class="kicker">Course finder</div>
+      <h2>Not sure which one fits?</h2>
+      <p class="sub">Three questions, and we point you to a format. Two formats also combine well.</p>
+    </div>
+    <div class="quiz-card finder-card">
+      <div id="f-quiz">
+        <div class="progress"><div class="progress-bar" id="f-bar"></div></div>
+        <div class="q-count" id="f-count"></div>
+        <div class="q-text" id="f-q"></div>
+        <div class="options" id="f-opts"></div>
+        <div class="q-nav"><button class="back" id="f-back" type="button">← Back</button></div>
+      </div>
+      <div id="f-result" class="hidden" aria-live="polite">
+        <div class="kicker">Our suggestion</div>
+        <h3 class="f-name" id="f-name"></h3>
+        <p class="f-meta" id="f-meta"></p>
+        <p class="f-why" id="f-why"></p>
+        <p class="f-also" id="f-also"></p>
+        <div class="actions">
+          <a class="btn btn-primary" id="f-link" href="academy.html">See the course</a>
+          <a class="btn btn-ghost js-book" href="mailto:hello@sensemakers.be?subject=Sensemakers%20%E2%80%94%20Academy">Talk to us</a>
+        </div>
+        <button class="restart" id="f-restart" type="button">↺ Start over</button>
+      </div>
+      <noscript><p class="f-why">Not sure which course fits? Write to hello@sensemakers.be and we'll help you choose.</p></noscript>
+    </div>
+  </div>
 </section>
 
 <!-- WHY IT STICKS -->
@@ -159,6 +194,83 @@
 
 
 </main>
+<script>
+(function () {
+  // Before / after: light up one "after" at a time
+  var rows = [].slice.call(document.querySelectorAll('.ba-rows li'));
+  var still = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (rows.length && !still) {
+    var i = 0;
+    setInterval(function () { rows[i].classList.remove('on'); i = (i + 1) % rows.length; rows[i].classList.add('on'); }, 3200);
+  } else { rows.forEach(function (r) { r.classList.add('on'); }); }
+
+  // Course finder. Each answer adds points to formats: T = Thinking with AI, F = AI Foundations,
+  // R = AI for your role, B = AI Build Day, C = AI Champions Program. Ties go to the order in ORDER.
+  var ORDER = ['T', 'F', 'R', 'B', 'C'];
+  var FORMATS = {
+    T: { name: 'Thinking with AI', meta: 'One day · up to 16 people · on site', why: 'Better decisions with AI, practiced on decisions from your own work. Also as a closed session for one leadership team.', link: 'thinking-with-ai.html' },
+    F: { name: 'AI Foundations', meta: 'Two half-days · up to 20 people · on site or online', why: 'A safe, practical start for everyone: how AI works, where it fails and what never goes in. Covers the AI literacy duty of the EU AI Act.', link: 'ai-foundations.html' },
+    R: { name: 'AI for your role', meta: 'Half a day to a day · one team · in its own tool', why: 'One team, its real work, in its own tool. Tracks per role, or one tool in depth.', link: 'ai-for-your-role.html' },
+    B: { name: 'AI Build Day', meta: 'One day · 20 to 40 people · on site', why: 'A hackathon on your own problems. Teams build working prototypes, each with an owner and a decision date.', link: 'ai-build-day.html' },
+    C: { name: 'AI Champions Program', meta: 'Two days, then six monthly sessions · 6 to 12 people', why: 'We train a few of your people to run the basics themselves, then meet them monthly for half a year.', link: 'ai-champions.html' }
+  };
+  var QS = [
+    { q: 'Who is it for?', o: [
+      ['Everyone in the organization', { F: 2, T: 1 }],
+      ['One team, on its own work', { R: 3, B: 1 }],
+      ['Our leadership team', { T: 3 }],
+      ['A few people who will keep it going', { C: 3 }]
+    ]},
+    { q: 'Where do they stand today?', o: [
+      ['Little or no experience with AI', { F: 3 }],
+      ['They use AI, but not always well', { T: 2, R: 1 }],
+      ['They use it every day and want to build', { B: 2, R: 1 }]
+    ]},
+    { q: 'What should they leave with?', o: [
+      ['A safe, shared foundation', { F: 3 }],
+      ['Better decisions with AI', { T: 3 }],
+      ['AI in their own daily work', { R: 3 }],
+      ['A working prototype', { B: 3 }],
+      ['People who keep it going after we leave', { C: 3 }]
+    ]}
+  ];
+  var $ = function (id) { return document.getElementById(id); };
+  if (!$('f-quiz')) return;
+  var idx = 0, picks = [];
+  function render() {
+    $('f-bar').style.width = (idx / QS.length * 100) + '%';
+    $('f-count').textContent = 'Question ' + (idx + 1) + ' of ' + QS.length;
+    $('f-q').textContent = QS[idx].q;
+    var box = $('f-opts'); box.innerHTML = '';
+    QS[idx].o.forEach(function (opt, n) {
+      var b = document.createElement('button'); b.type = 'button'; b.className = 'option'; b.textContent = opt[0];
+      b.onclick = function () { picks[idx] = n; if (idx < QS.length - 1) { idx++; render(); } else { result(); } };
+      box.appendChild(b);
+    });
+    $('f-back').style.visibility = idx === 0 ? 'hidden' : 'visible';
+  }
+  function result() {
+    var score = { T: 0, F: 0, R: 0, B: 0, C: 0 };
+    picks.forEach(function (n, q) { var pts = QS[q].o[n][1]; for (var k in pts) score[k] += pts[k]; });
+    var ranked = ORDER.slice().sort(function (a, b) { return (score[b] - score[a]) || (ORDER.indexOf(a) - ORDER.indexOf(b)); });
+    var best = FORMATS[ranked[0]], second = ranked[1];
+    $('f-name').textContent = best.name;
+    $('f-meta').textContent = best.meta;
+    $('f-why').textContent = best.why;
+    var also = $('f-also');
+    if (score[second] >= 3) { also.textContent = 'Combines well with ' + FORMATS[second].name + '.'; also.classList.remove('hidden'); }
+    else { also.textContent = ''; also.classList.add('hidden'); }
+    $('f-link').href = best.link;
+    $('f-link').textContent = 'See ' + best.name;
+    $('f-quiz').classList.add('hidden');
+    $('f-result').classList.remove('hidden'); $('f-result').classList.add('fade');
+  }
+  $('f-back').addEventListener('click', function () { if (idx > 0) { idx--; render(); } });
+  $('f-restart').addEventListener('click', function () { idx = 0; picks = []; $('f-result').classList.add('hidden'); $('f-quiz').classList.remove('hidden'); render(); });
+  render();
+})();
+</script>
+
 
 <footer class="f-strong">
   <div class="container">
