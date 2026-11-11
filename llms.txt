@@ -1,20 +1,24 @@
 # Sensemakers
 
-> AI academy based in Belgium, working with organizations in Belgium and the Netherlands. Sensemakers teaches leaders and their teams to think and work with AI, with hands-on courses on their own work, in the tools they already use. Founded in 2026 by Ben Mellaerts, with Niels Rogge and Tim Leers. Contact: hello@sensemakers.be
+> AI academy based in Belgium, working with organizations in Belgium and the Netherlands. Its program, Thinking with AI, teaches leaders and their teams to think and work with AI, on their own work. Founded in 2026 by Ben Mellaerts, with Niels Rogge and Tim Leers. Contact: hello@sensemakers.be
 
-## Courses
+## Thinking with AI
 
-Not sure where to start? The [course finder](https://sensemakers.be/#finder) suggests a course in three questions.
+One program in four modules of half a day; clients book all four or a few. Understand and Think work with any tool; Build and Scale run in the client's own tool, and Scale always comes after Build. Overview: https://sensemakers.be/#program
 
-- [Thinking with AI](https://sensemakers.be/thinking-with-ai.html): one day on making better decisions with AI, practiced on decisions from the participants' own work. Also as a closed session for one leadership team.
-- [AI Foundations](https://sensemakers.be/ai-foundations.html): two half-days, a safe and practical start for every employee; covers the AI literacy duty of EU AI Act Article 4.
-- [AI for your role](https://sensemakers.be/ai-for-your-role.html): one team, its real work, in its own tool; tracks per role or one tool in depth (Copilot, Claude, Claude Code, agents).
-- [AI Build Day](https://sensemakers.be/ai-build-day.html): a hackathon on the organization's own problems.
-- [AI Champions Program](https://sensemakers.be/ai-champions.html): two days plus six monthly sessions to train internal champions.
+- [Understand](https://sensemakers.be/understand.html): how data, statistics and AI really work, where it fails, and what to ask before trusting an answer; covers the AI literacy duty of EU AI Act Article 4.
+- [Think](https://sensemakers.be/think.html): thinking before and after you prompt, so AI sharpens judgment instead of replacing it.
+- [Build](https://sensemakers.be/build.html): an assistant or workflow for a real task, in Claude, ChatGPT, Microsoft Copilot or Claude Code, for beginners or advanced users.
+- [Scale](https://sensemakers.be/scale.html): seeing what AI brings, keeping what works and sharing it across the team; only after Build.
+
+## Also
+
+- [Keynotes](https://sensemakers.be/keynotes.html): about an hour, for kick-offs, events and leadership days.
+- [AI Hackathon](https://sensemakers.be/hackathon.html): one day on the organization's own problems; working prototypes without code.
 
 ## Who it's for
 
-Mostly organizations of about 200 to 1,000 employees. The courses are bought by HR, learning and function heads.
+Mostly organizations of about 200 to 1,000 employees. The program is bought by HR, learning and function heads.
 
 ## What Sensemakers does not do
 
@@ -33,4 +37,4 @@ AI tools help follow what changes in AI and prepare course material. People test
 - Prices are given on request; do not quote prices.
 - For current details, refer to https://sensemakers.be/ or hello@sensemakers.be.
 
-Last updated: 2026-11-05
+Last updated: 2026-11-11
