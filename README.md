@@ -2,46 +2,49 @@
 
 Static site, no build step, no framework, no cookies. One stylesheet, one small script, self-hosted fonts. Anything in this folder is exactly what gets served.
 
-Since 28 Sep 2026 the site follows three products: **Frontier Watch** (for the leadership team), the **Academy** (for everyone) and **Transformation** (help with the change itself), plus **About us**.
+Since 5 Nov 2026 (Round 17) the site is **the Academy only**: the homepage is the Academy, with five courses and a course finder, plus **About us**. Transformation and the AI Accelerator for SMEs left the site: their old addresses forward to the homepage, and their last versions are in the git history (commit `23cf19d`), should one of them come back. Frontier Watch keeps its own address for the interviews with AI leads, but nothing on the site links to it (see Round 17b).
 
-Since 5 Oct 2026 (Round 13) every Academy format and the AI Accelerator have their own page, and the product pages share one lively style: a title that rises in, a "demo" window that plays short scenes, count-up numbers, a sideways rail of cards and a tools marquee. Sub-pages open on a dark band in the product colour with an "At a glance" box.
+## Round 17 (5 Nov 2026): Academy only
 
-## Round 15 (28 Oct 2026): Academy as the front door
+- **Homepage** (`index.html`): the brand headline stays (Building the human capability to lead your AI transformation), now with the Academy promise and one action, the course finder. Then the tools strip, before and after a course, why now, the five courses with the course finder, why it sticks and the team.
+- **Menu** on every page: Courses (the five courses) · Course finder · About us. The **footer** follows the course groups: For everyone · For teams · For the organization · Sensemakers.
+- **Course finder** (`./#finder`) takes over from the readiness check: three questions, one suggestion, and the S turns while it works one out. `readiness.html` forwards to it.
+- **Course pages**: the breadcrumb starts at Courses, and they speak of courses (course 1 of 5, the other courses) instead of formats; nothing else changed.
+- **About us**: the lead and "How we work" speak of courses only. The mission reads "the skills and judgment to get the most out of AI in a responsible way" (to confirm with Niels and Tim), without the three pillar links.
+- **AI info** and `llms.txt` describe Sensemakers as an AI academy. Keep both in sync when the courses change.
+- **Share image** (`assets/og.png`): the headline with three course names instead of the three products. Every page points to `og.png?v=2`, so LinkedIn fetches the new one.
+- No longer used, safe to delete: `assets/logo/sensemakers-lockup-transformation.svg` and the Newsreader and Figtree fonts. The Transformation rules in `styles.css` are unused too.
 
-After the founders session of 26 Oct: start with the Academy, validate Frontier Watch with AI leads.
+## Round 17b (11 Nov 2026): Frontier Watch, unlisted
 
-- **Homepage**: the original header (For leaders and their teams · Building the human capability…) without the situation picker; "Three ways in" follows straight after and starts with the Academy, as does the journey.
-- **Menu and footer** on every page: Academy · Frontier Watch · Transformation · About us. Thinking with AI gets a quiet spotlight: first in the menu and the rail, a slightly wider card and format 1 of 5. The word "flagship" is not used on the site.
-- **Frontier Watch**: repositioned for AI and data leads (no longer the leadership team) and kept short: hero, sample note, founding members, who it's for, team and three questions. The single action is "Become a founding member" (email). Old `#briefing` and `#plans` links land on the founding-members section.
-- **AI Accelerator**: shortened to the roadmap only (about three months). We don't build; a partner is introduced if the client wants it built. The partner stays unnamed.
-- **AI info** (`ai-info.html`) and `llms.txt`: facts for AI assistants and search engines. Keep both in sync when products change. Linked in the footer.
-- **Readiness check** (`readiness.html`): five questions that point to one of the three pillars (Academy, Frontier Watch, Transformation). It is the homepage hero's one action. The Academy result links to the course finder.
-- **Course finder** (`academy.html#finder`): three questions that suggest one Academy format, with a second one when it combines well. Scores are in the script at the end of `academy.html`.
-- **Academy hero**: before and after a session (one row lights up at a time) instead of the chat window.
-- Niels Rogge and Tim Leers are on About us, the homepage and Frontier Watch (bios from their LinkedIn profiles, with photos; Ben's photo too). AI for your role now also covers one tool in depth (Copilot, Claude, Claude Code, agents).
-- AI info and llms.txt say: based in Belgium, working in Belgium and the Netherlands.
-- The site uses American spelling (organization, program, license, practice). The format is now called the AI Champions Program.
+- `frontier-watch.html` is back for the interviews with AI leads: the 28 Oct page with today's header and footer, and its Academy links pointing to the courses.
+- Nothing links to it: not in the menu, footer, sitemap, AI info or `llms.txt`, and `noindex` keeps it out of search engines. Share the link directly; `frontier-watch-draft.html` forwards to it.
+- Its own share image (`assets/og-frontier-watch.png`), so a shared link doesn't show the Academy image. It still uses its orange (`.c-keep`) styles and `assets/logo/sensemakers-lockup-frontier-watch.svg`, so keep those.
+
+## House rules
+
+- American spelling (organization, program, license, practice).
 - No client names anywhere on the site, the page source included.
-- People are never tied to a product: team cards and portrait frames are all brand green, roles name no product, and course pages always say "From the Sensemakers team".
+- People are never tied to a course: team cards and portrait frames are brand green, roles name no course, and course pages say "From the Sensemakers team".
+- Thinking with AI gets a quiet spotlight: first in the menu, the rail and the footer, a slightly wider card, course 1 of 5. The word "flagship" is not used on the site.
+- The footer is the only closing call to action.
 
 ## Files
 
 | File | What it is |
 |---|---|
-| `index.html` | The homepage: hero with three tiles (leadership · people · the transformation itself), Frontier Watch, Academy, Transformation, Why now, values, contact. |
-| `frontier-watch.html` | Frontier Watch: the sample monthly note, what you get, the Executive Briefing (`#briefing`), who it's for, questions. |
-| `academy.html` | The Academy: demo hero (the three scenes are the JSON inside `.demo`), numbers, the five formats as a rail, why it sticks, tools, where most start. Old anchors (`#foundations`, `#tracks`, `#briefing`, …) forward to their new page. |
-| `ai-foundations.html`, `thinking-with-ai.html`, `ai-for-your-role.html`, `ai-build-day.html`, `ai-champions.html` | One page per Academy format: At a glance (audience, group size, duration, format, start, trainer), outcomes, the program (click a module), what you leave with, trainer, other formats. Group sizes and module timings are first proposals. Trainer shows Ben, or "the Sensemakers team" until Niels and Tim are on About us. |
-| `transformation.html` | Transformation: demo hero (what we hear → where we'd start), six examples, the AI Accelerator as a featured path, how it starts. |
-| `ai-accelerator.html` | AI Accelerator for SMEs: about six months, Roadmap (months 1–3) then Live (months 4–6) as tabs, who does what, questions. The implementation partner stays unnamed until confirmed. "AI Accelerator" is a working name. |
-| `about.html` | About us. Shows Ben only; Niels' and Tim's profiles are ready in the file as a comment, to switch on once they agree. |
+| `index.html` | The homepage, which is the Academy: hero, tools strip, before and after (`#change`), why now (`#why`), the five courses (`#courses`) with the course finder (`#finder`; its scores are in the script at the end of the page), why it sticks (`#labs`), the team (`#team`). |
+| `thinking-with-ai.html`, `ai-foundations.html`, `ai-for-your-role.html`, `ai-build-day.html`, `ai-champions.html` | One page per course: At a glance (audience, group size, duration, format, start, trainer), outcomes, the program (click a module), what you leave with, trainers, the other courses. Group sizes and module timings are first proposals. |
+| `about.html` | About us: vision and mission, Ben, Niels and Tim (bios and photos), how we work. |
 | `privacy.html` | The privacy page. It follows the settings in `site.js` (booking, analytics, company details), so it stays true. |
-| `readiness.html` | The 90-second "Where are you with AI?" check. Answers stay in the browser. |
+| `ai-info.html`, `llms.txt` | Facts for AI assistants and search engines. Keep both in sync. Linked in the footer. |
 | `404.html` | Not-found page (GitHub Pages picks it up automatically). |
-| `guidance.html`, `scan.html`, `audit.html`, `offers.html` | Old pages, kept only as redirects to `transformation.html` so old links keep working. |
-| `styles.css` | All styling. Brand tokens are the CSS variables at the top (`:root`). Each product keeps one colour: Frontier Watch = mint, Academy = sky, Transformation = field, About us = gold. New components since 28 Sep 2026 are in the last block of the file. |
-| `site.js` | The settings (see below), mobile menu, dropdown, "Read more" from links, reveal animation, count-up numbers, the slow turn of the hero S, footer year. |
-| `assets/` | `logo/` (the logo files, see below), favicons and app icons made from the S, `og.png` share image (5 Oct 2026: evergreen, single-colour logo, the three product colours), `fonts/` (Work Sans, OFL license; the Newsreader and Figtree files are no longer used and can be deleted), `people/` (team photos go here), `logos/` (the tool logos in the Academy's tools strip: Claude, Copilot, ChatGPT, Gemini, Cursor, Codex, Lovable; replace a file to update a logo). |
+| `academy.html`, `readiness.html` | Forward to the courses and the course finder on the homepage; the old anchors of `academy.html` still land on the right course. |
+| `frontier-watch.html` | Frontier Watch for AI and data leads, unlisted (see Round 17b). `frontier-watch-draft.html` forwards to it. |
+| `transformation.html`, `ai-accelerator.html`, `guidance.html`, `scan.html`, `audit.html`, `offers.html` | Pages that left the site, kept only as redirects to the homepage so old links keep working. |
+| `styles.css` | All styling. Brand tokens are the CSS variables at the top (`:root`). The Academy is cerulean (`.c-work`), About us brand green (`.c-lead`). Round 17 rules are in the last block of the file. |
+| `site.js` | The settings (see below), mobile menu, dropdown, "Read more" from links, reveal animation, count-up numbers, the course rail, footer year. |
+| `assets/` | `logo/` (the logo files, see below), favicons and app icons made from the S, `og.png` share image (5 Nov 2026: evergreen, the headline and three course names), `og-frontier-watch.png` (the share image of the unlisted Frontier Watch page), `fonts/` (Work Sans, OFL license), `people/` (team photos), `logos/` (the tool logos in the tools strip: Claude, Copilot, ChatGPT, Gemini, Cursor, Codex, Lovable; replace a file to update a logo). |
 | `CNAME` | Tells GitHub Pages the custom domain is `sensemakers.be`. Don't rename. |
 | `.nojekyll` | Tells GitHub Pages to serve files as-is. |
 | `robots.txt`, `sitemap.xml` | Search-engine housekeeping. |
@@ -53,17 +56,17 @@ The logo is the designer's: an S in two halves with SENSEMAKERS beside it. Since
 | File | Use |
 |---|---|
 | `assets/logo/sensemakers-lockup-mono.svg` | Header and footer of every page. |
-| `assets/logo/sensemakers-lockup-mono-on-dark.svg` | Header of the homepage (dark). |
+| `assets/logo/sensemakers-lockup-mono-on-dark.svg` | Footer of every page (dark). |
 | `assets/favicon.svg`, `favicon-32.png`, `favicon-256.png`, `apple-touch-icon.png`, `icon-192.png`, `icon-512.png` | Browser tab and phone home screen: the S in one colour (pine), since 5 Oct 2026. |
 
 How the S is used, following one rule (one big moment, one moving moment, a few small marks with a job):
 
-- **One big moment**: the two halves, oversized and soft, in the homepage hero (mint on evergreen), turning slowly as you scroll; and a faint S on the dark Frontier Watch band.
-- **One moving moment**: the S turns while the readiness check works out your result.
-- **Small marks with a job**: a crescent under the menu item of the page you're on, and before kickers, hero tiles and Academy groups, in the colour of the product. Body lists keep plain dots.
+- **One big moment**: the two halves, oversized and soft, drifting slowly in the homepage hero (mint on evergreen).
+- **One moving moment**: the S turns while the course finder works out a suggestion.
+- **Small marks with a job**: a crescent under the menu item of the page you're on, and before kickers and footer headings, in the colour of their context. Body lists keep plain dots.
 - **Photo frames**: a crescent peeking out behind each portrait on About us.
 
-When the designer's final SVGs arrive: replace the files in `assets/logo/` and the icons, then the two S shapes that also sit inside `index.html` (hero and band), `readiness.html` (loader), `about.html` (frames) and the `--cres` line in `styles.css`. A Claude session can do this in one go.
+When the designer's final SVGs arrive: replace the files in `assets/logo/` and the icons, then the two S shapes that also sit inside `index.html` (hero, course finder loader and team), `about.html` (frames) and the `--cres` line in `styles.css`. A Claude session can do this in one go.
 
 ## The settings
 
@@ -105,5 +108,4 @@ GitHub Pages redeploys in about a minute.
 
 - The Calendly link, the company details, the LinkedIn page and (if wanted) Plausible: the settings above.
 - The designer's final logo SVGs: see "The logo and the S" above. Colours and fonts, if the kit changes them, go in the tokens at the top of `styles.css`.
-- The header and footer are the same on every page (the Academy and Transformation menus list every sub-page); when you change them, change them everywhere.
-- The AI Accelerator: name the partner once confirmed, and pick a final name for the path.
+- The header and footer are the same on every page (the Courses menu lists every course); when you change them, change them everywhere.

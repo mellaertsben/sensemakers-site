@@ -1532,3 +1532,29 @@ html:not(.js) .ba-a{opacity:1}
 html:not(.js) #f-quiz{display:none}
 @media (max-width:860px){.finder{grid-template-columns:1fr;gap:24px;padding-top:56px}}
 .team-grid--top{margin-top:28px}
+
+/* =====================================================================
+   Round 17 (5 Nov 2026): Academy only. The homepage is the Academy;
+   Frontier Watch and Transformation left the site (their rules above are unused).
+   ===================================================================== */
+/* the Courses menu opens to the right of its label */
+#menu-courses{left:0;right:auto}
+/* homepage: the tools we teach in, right under the hero */
+.tools-strip{padding:30px 0 34px;border-bottom:1px solid var(--hair-2)}
+.tools-k{max-width:var(--maxw);margin:0 auto 18px;padding:0 28px;text-align:center;font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:var(--muted)}
+/* homepage: the claim beside the before/after card */
+.change-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:64px;align-items:center}
+.change-grid h2{margin-top:4px;font-size:clamp(32px,3.7vw,46px);line-height:1.05;max-width:none}
+.change-grid h2 em{display:block}
+.change-grid .sub{margin-top:18px;max-width:38ch}
+/* course cards: the duration never runs into the arrow, and on phones the first card is as wide as the others */
+.r-card .row{gap:10px}
+@media (max-width:700px){.r-card.r-flag{width:min(82vw,340px)}}
+@media (max-width:860px){.change-grid{grid-template-columns:1fr;gap:32px}}
+/* course finder: the S turns in the course colour while it works out a suggestion */
+.finder .spin .s1{fill:var(--sky)}
+.finder .spin .s2{fill:var(--pine)}
+.finder .progress-bar{background:var(--sky-deep)}
+.finder .progress{background:var(--sky-tint)}
+/* About us: one way on from the mission */
+.mv-cta{margin-top:30px}
