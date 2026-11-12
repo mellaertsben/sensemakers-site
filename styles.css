@@ -1653,8 +1653,8 @@ html:not(.js) .mr-toggle,html:not(.js) .prog-starts{display:none}
 .mate-pf svg,.pframe .accent,.pframe--sky .accent,.pframe--mint .accent{fill:#8EC3EC}
 
 /* =====================================================================
-   Round 19 (11 Nov 2026): Dutch (root) and English (/en/); on the homepage
-   proof, pain points, prices, how it works and questions.
+   Round 19 (11–12 Nov 2026): Dutch (root) and English (/en/); on the homepage
+   pain points, prices, how it works and questions.
    ===================================================================== */
 [hidden]{display:none !important}
 .nw{white-space:nowrap}
@@ -1670,12 +1670,6 @@ html[lang="nl"] .h-title{font-size:clamp(38px,5vw,66px);max-width:19ch}
 /* hero: the free call as a second, quieter way in */
 .h-link{display:inline-flex;align-items:center;min-height:44px;color:#fff;font-size:15px;font-weight:600;text-decoration:underline;text-underline-offset:4px}
 .h-link:hover{color:#DCEFFC}
-/* proof under the hero */
-.proof{padding:0;background:var(--white);border-bottom:1px solid var(--hair-2)}
-.proof-list{list-style:none;max-width:var(--maxw);margin:0 auto;padding:22px 28px;display:flex;flex-wrap:wrap;justify-content:center;gap:10px 30px;font-size:15px;font-weight:600}
-.proof-list li{display:flex;align-items:center;gap:10px}
-.proof-list li::before{content:"";flex:none;width:8px;height:8px;border-radius:50%;background:var(--sky)}
-@media (max-width:640px){.proof-list{flex-direction:column;align-items:flex-start;gap:8px;padding:20px}}
 /* pain points */
 .pains h2{margin-top:4px}
 .pain-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:36px}

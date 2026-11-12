@@ -7,8 +7,9 @@ Since 11 Nov 2026 (Round 19) the site is in **Dutch** (at the root) and **Englis
 ## Round 19 (11 Nov 2026): Dutch and English, and lessons from ai.nl and Rozet
 
 - **Two languages.** Dutch at the root (`index.html`, `understand.html`, …), English under `en/` with the same file names. Every page has a NL | EN switch in the header (a link in the phone menu), `hreflang` links in its head, and both versions are in `sitemap.xml`. Frontier Watch stays English only. `404.html` is one page with both languages.
-- **Homepage, new sections:** a proof strip under the hero (facts, no client names), pain points (`#pains`, each linking to the module that solves it), prices in the program rows and the summary, how it works (`#how`: a free 30-minute call, a proposal, the sessions) and questions with visible answers (`#faq`). The free call is also the button in the header.
-- **New settings** in `site.js`: prices, people trained, average score and proposal time. Empty, they stay hidden (see "The settings").
+- **Homepage, new sections:** pain points (`#pains`, each linking to the module that solves it), prices in the program rows and the summary, how it works (`#how`: a free 30-minute call, a proposal, the sessions) and questions with visible answers (`#faq`). The free call is also the button in the header.
+- **New settings** in `site.js`: prices and the proposal time. Empty, they stay hidden (see "The settings").
+- A strip of facts under the hero (12 Nov) was taken out again at Ben's request.
 - The program picker moved from the end of `index.html` into `site.js` (`program()`); its words come from the `data-i18n` attribute of `#program`.
 - **Share images:** `assets/og-nl.png` for the Dutch pages, `assets/og.png` for the English ones.
 - `llms.txt` stays English and links to the English pages.
@@ -43,7 +44,7 @@ Since 11 Nov 2026 (Round 19) the site is in **Dutch** (at the root) and **Englis
 
 | File | What it is |
 |---|---|
-| `index.html` | The homepage in Dutch (`en/index.html` in English): hero, proof strip, pain points (`#pains`), the program (`#program`: one row per module, matching its module page; the add/remove logic and the request email are `program()` in `site.js`), how it works (`#how`), tools strip, why now (`#why`), before and after (`#change`), keynotes and hackathon (`#more`), the team (`#team`), questions (`#faq`). |
+| `index.html` | The homepage in Dutch (`en/index.html` in English): hero, pain points (`#pains`), the program (`#program`: one row per module, matching its module page; the add/remove logic and the request email are `program()` in `site.js`), how it works (`#how`), tools strip, why now (`#why`), before and after (`#change`), keynotes and hackathon (`#more`), the team (`#team`), questions (`#faq`). |
 | `en/` | The English site: the same pages and file names as the Dutch root. |
 | `understand.html`, `think.html`, `build.html`, `scale.html` | One page per module, in both languages: At a glance (audience, group size, duration, format, tool, price once set, trainer), outcomes, how the half-day runs (click a part), what you leave with, trainers, the other modules. |
 | `keynotes.html`, `hackathon.html` | The two side products, in the same layout. |
@@ -54,7 +55,7 @@ Since 11 Nov 2026 (Round 19) the site is in **Dutch** (at the root) and **Englis
 | `frontier-watch.html` | Frontier Watch for AI and data leads, unlisted and English only (see Round 17b). `frontier-watch-draft.html` forwards to it. |
 | `thinking-with-ai.html`, `ai-foundations.html`, `ai-for-your-role.html`, `ai-build-day.html`, `ai-champions.html`, `academy.html`, `readiness.html` | Former course pages, now forwarding to the program, a module or the hackathon (the old anchors of `academy.html` too). |
 | `transformation.html`, `ai-accelerator.html`, `guidance.html`, `scan.html`, `audit.html`, `offers.html` | Pages that left the site, kept only as redirects to the homepage so old links keep working. |
-| `styles.css` | All styling. Brand tokens are the CSS variables at the top (`:root`). The Round 18 rules (program rows, keynote and hackathon cards, blue hero) and Round 19 rules (language switch, proof, pain points, prices, how it works, questions) are the last two blocks of the file. |
+| `styles.css` | All styling. Brand tokens are the CSS variables at the top (`:root`). The Round 18 rules (program rows, keynote and hackathon cards, blue hero) and Round 19 rules (language switch, pain points, prices, how it works, questions) are the last two blocks of the file. |
 | `site.js` | The settings (see below), the program picker, mobile menu, dropdown, "Read more" from links, reveal animation, count-up numbers, footer year. |
 | `assets/` | `logo/` (the logo files, see below), favicons and app icons made from the S, `og.png` and `og-nl.png` share images (English and Dutch: blue, the headline and Thinking with AI), `og-frontier-watch.png` (the share image of the unlisted Frontier Watch page), `fonts/` (Work Sans, OFL license), `people/` (team photos), `logos/` (the tool logos in the tools strip; replace a file to update a logo). |
 | `CNAME` | Tells GitHub Pages the custom domain is `sensemakers.be`. Don't rename. |
@@ -91,8 +92,6 @@ var LINKEDIN_URL = "";     // company page → "LinkedIn" appears in the footer
 var LEGAL = { company: "", office: "", enterprise: "", rpr: "", vat: "" };
 var PRICE_MODULE = "";     // from-price of one half-day module for one group, whole euros excl. VAT, e.g. "3500"
 var PRICE_PROGRAM = "";    // optional: all four modules together; empty = four times PRICE_MODULE
-var PEOPLE_TRAINED = "";   // people trained so far, e.g. "400+"
-var AVERAGE_SCORE = "";    // the average score participants give, out of 10, e.g. "8.7"
 var PROPOSAL_DAYS = "";    // working days between the free call and the proposal, e.g. "2"
 var ANALYTICS = "";        // Plausible: the script link it gives you, or just "sensemakers.be"
 ```
@@ -100,7 +99,6 @@ var ANALYTICS = "";        // Plausible: the script link it gives you, or just "
 - **LEGAL**: the company details Belgian law asks for on a business website. Filled in, they appear in the footer of every page and in "Who we are" on the privacy page. If the company is called "Sensemakers BV", the line reads "Sensemakers BV"; otherwise "Sensemakers is a trade name of … BV".
 - **BOOKING_URL**: when set, the privacy page also shows the paragraph about Calendly. If you use another booking tool, change the name in that paragraph of `privacy.html`.
 - **PRICE_MODULE / PRICE_PROGRAM**: filled in, prices appear in the program rows and total on the homepage, on the module pages and in the questions, written the way each language writes them (€ 3.500 and €3,500). Empty: no prices anywhere, and the questions say the price depends on the modules.
-- **PEOPLE_TRAINED / AVERAGE_SCORE**: the last two items of the strip under the homepage hero. A score like "8.7" shows as "8,7" on the Dutch site.
 - **PROPOSAL_DAYS**: step 2 of how it works then reads "Een voorstel binnen 2 werkdagen" / "A proposal within 2 working days"; empty, it reads "Een voorstel op maat" / "A tailored proposal".
 - **ANALYTICS**: when set, Plausible loads and the privacy page says so. Keep it cookie-free: no Google Analytics, and link out to Calendly rather than embedding it, or the site needs a cookie banner.
 
@@ -127,6 +125,6 @@ GitHub Pages redeploys in about a minute.
 ## Still to add when you have them
 
 - The Calendly link, the company details, the LinkedIn page and (if wanted) Plausible: the settings above.
-- Prices, people trained, the average score and the proposal time: the settings above.
+- Prices and the proposal time: the settings above.
 - The designer's final logo SVGs: see "The logo and the S" above. Colours and fonts, if the kit changes them, go in the tokens at the top of `styles.css`.
 - The header and footer are the same on every page, in both languages (the Thinking with AI menu lists every module); when you change them, change them everywhere.

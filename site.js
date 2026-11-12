@@ -31,10 +31,6 @@ var LEGAL = {
 var PRICE_MODULE = "";    // from-price of one half-day module for one group or team
 var PRICE_PROGRAM = "";   // optional: from-price of all four modules together; empty = four times PRICE_MODULE
 
-// Numbers in the strip under the homepage hero. Empty: that item stays hidden.
-var PEOPLE_TRAINED = "";  // people trained so far, e.g. "400+"
-var AVERAGE_SCORE = "";   // participants' average score out of 10, e.g. "8.7"
-
 // Working days between the free call and our proposal, e.g. "2".
 // Empty: the step reads "A tailored proposal" ("Een voorstel op maat").
 var PROPOSAL_DAYS = "";
@@ -66,12 +62,9 @@ var ANALYTICS = "";
   // Round 19: settings shown on the page. [data-if] shows when a setting is filled in,
   // [data-unless] when it is empty, [data-fill] takes its value.
   function wireSettings() {
-    var days = whole(PROPOSAL_DAYS), score = String(AVERAGE_SCORE || '').trim();
-    if (NL) score = score.replace('.', ',');
+    var days = whole(PROPOSAL_DAYS);
     var V = {
       PRICE_MODULE: whole(PRICE_MODULE) ? money(whole(PRICE_MODULE)) : '',
-      PEOPLE_TRAINED: String(PEOPLE_TRAINED || '').trim(),
-      AVERAGE_SCORE: score,
       PROPOSAL_TEXT: !days ? '' : NL ? 'Een voorstel binnen ' + days + (days === 1 ? ' werkdag' : ' werkdagen')
         : 'A proposal within ' + days + (days === 1 ? ' working day' : ' working days')
     };
