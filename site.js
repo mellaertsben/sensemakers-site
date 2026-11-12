@@ -25,6 +25,20 @@ var LEGAL = {
   vat: "BE 1021.275.881"                 // VAT number
 };
 
+// Prices, in euro, excluding VAT, whole numbers only (e.g. "3500").
+// Filled in: they show on the homepage, the module pages and in the questions,
+// in both languages. Empty: no prices anywhere on the site.
+var PRICE_MODULE = "";    // from-price of one half-day module for one group or team
+var PRICE_PROGRAM = "";   // optional: from-price of all four modules together; empty = four times PRICE_MODULE
+
+// Numbers in the strip under the homepage hero. Empty: that item stays hidden.
+var PEOPLE_TRAINED = "";  // people trained so far, e.g. "400+"
+var AVERAGE_SCORE = "";   // participants' average score out of 10, e.g. "8.7"
+
+// Working days between the free call and our proposal, e.g. "2".
+// Empty: the step reads "A tailored proposal" ("Een voorstel op maat").
+var PROPOSAL_DAYS = "";
+
 // Plausible analytics (no cookies). Paste the script link Plausible gives you
 // (https://plausible.io/js/pa-....js), or just the domain ("sensemakers.be").
 // Empty: no analytics, and the privacy page says so.
@@ -35,6 +49,79 @@ var ANALYTICS = "";
   var reduced = !!(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches);
   function all(sel) { return Array.prototype.slice.call(document.querySelectorAll(sel)); }
   function show(sel, on) { all(sel).forEach(function (el) { el.hidden = !on; }); }
+  // Round 19: the page's language (nl or en) picks the words this script writes
+  var NL = (document.documentElement.lang || '').slice(0, 2) === 'nl';
+  function whole(v) { var n = parseInt(String(v || '').replace(/[^0-9]/g, ''), 10); return n > 0 ? n : 0; }
+  function money(n) {
+    try { return new Intl.NumberFormat(NL ? 'nl-BE' : 'en-US', { style: 'currency', currency: 'EUR', maximumFractionDigits: 0 }).format(n); }
+    catch (e) { return '€' + n; }
+  }
+  function priceFor(n) {
+    var m = whole(PRICE_MODULE), p = whole(PRICE_PROGRAM);
+    if (!n) return '';
+    if (n === 4 && p) return money(p);
+    return m ? money(m * n) : '';
+  }
+
+  // Round 19: settings shown on the page. [data-if] shows when a setting is filled in,
+  // [data-unless] when it is empty, [data-fill] takes its value.
+  function wireSettings() {
+    var days = whole(PROPOSAL_DAYS), score = String(AVERAGE_SCORE || '').trim();
+    if (NL) score = score.replace('.', ',');
+    var V = {
+      PRICE_MODULE: whole(PRICE_MODULE) ? money(whole(PRICE_MODULE)) : '',
+      PEOPLE_TRAINED: String(PEOPLE_TRAINED || '').trim(),
+      AVERAGE_SCORE: score,
+      PROPOSAL_TEXT: !days ? '' : NL ? 'Een voorstel binnen ' + days + (days === 1 ? ' werkdag' : ' werkdagen')
+        : 'A proposal within ' + days + (days === 1 ? ' working day' : ' working days')
+    };
+    all('[data-if]').forEach(function (el) { el.hidden = !V[el.getAttribute('data-if')]; });
+    all('[data-unless]').forEach(function (el) { el.hidden = !!V[el.getAttribute('data-unless')]; });
+    all('[data-fill]').forEach(function (el) { var v = V[el.getAttribute('data-fill')]; if (v) el.textContent = v; });
+  }
+
+  // Round 19: the program on the homepage. Add or remove modules; Scale only comes with Build
+  // (adding Scale adds Build, removing Build removes Scale). The request button writes an email
+  // with the chosen modules; the words come from the section's data-i18n.
+  function program() {
+    var sec = document.getElementById('program');
+    var rows = all('.mod-row'), chips = all('.prog-starts .chip');
+    var nameEl = document.getElementById('ps-name'), durEl = document.getElementById('ps-dur'), go = document.getElementById('ps-go');
+    var priceEl = document.getElementById('ps-price'), priceV = document.getElementById('ps-price-v');
+    if (!sec || !rows.length || !nameEl) return;
+    var t = {};
+    try { t = JSON.parse(sec.getAttribute('data-i18n') || '{}'); } catch (e) {}
+    var mods = rows.map(function (r) { return [r.getAttribute('data-mod'), r.querySelector('h3').textContent.trim()]; });
+    var picked = mods.map(function (m) { return m[0]; });
+    function has(id) { return picked.indexOf(id) !== -1; }
+    function render() {
+      rows.forEach(function (r, i) {
+        var on = has(mods[i][0]), b = r.querySelector('.mr-toggle');
+        r.classList.toggle('on', on);
+        b.setAttribute('aria-pressed', on ? 'true' : 'false');
+        b.textContent = on ? t.added : t.add;
+        b.setAttribute('aria-label', String(on ? t.in_prog : t.add_to).replace('{name}', mods[i][1]));
+      });
+      var chosen = mods.filter(function (m) { return has(m[0]); });
+      var key = chosen.map(function (m) { return m[0]; }).join(','), names = chosen.map(function (m) { return m[1]; }), n = names.length;
+      chips.forEach(function (c) { c.setAttribute('aria-pressed', c.getAttribute('data-pick') === key ? 'true' : 'false'); });
+      nameEl.textContent = n === 0 ? t.none : (n === mods.length ? t.full : names.join(' + '));
+      durEl.textContent = (t.dur || [])[n] || '';
+      var subject = t.subj + (n === mods.length ? t.subj_full : (n ? names.join(' + ') : t.subj_none));
+      go.href = 'mailto:' + CONTACT_EMAIL + '?subject=' + encodeURIComponent(subject);
+      if (priceEl && priceV) { var p = priceFor(n); priceEl.hidden = !p; priceV.textContent = p; }
+    }
+    rows.forEach(function (r) {
+      r.querySelector('.mr-toggle').addEventListener('click', function () {
+        var id = r.getAttribute('data-mod');
+        if (has(id)) { picked = picked.filter(function (x) { return x !== id && !(id === 'b' && x === 's'); }); }
+        else { picked.push(id); if (id === 's' && !has('b')) { picked.push('b'); } }
+        render();
+      });
+    });
+    chips.forEach(function (c) { c.addEventListener('click', function () { picked = c.getAttribute('data-pick').split(','); render(); }); });
+    render();
+  }
 
   // Book-a-call buttons: use the booking page if one is configured
   function wireBooking() {
@@ -64,11 +151,12 @@ var ANALYTICS = "";
     var L = LEGAL || {};
     if (!L.company) return;
     var own = /^sensemakers\b/i.test(L.company);
-    var parts = [own ? L.company : 'Sensemakers is a trade name of ' + L.company];
+    var trade = NL ? 'Sensemakers is een handelsnaam van ' : 'Sensemakers is a trade name of ';
+    var parts = [own ? L.company : trade + L.company];
     if (L.office) parts.push(L.office);
-    if (L.enterprise) parts.push('Enterprise number ' + L.enterprise);
+    if (L.enterprise) parts.push((NL ? 'Ondernemingsnummer ' : 'Enterprise number ') + L.enterprise);
     if (L.rpr) parts.push(/^RPR\b/i.test(L.rpr) ? L.rpr : 'RPR ' + L.rpr);
-    if (L.vat) parts.push('VAT ' + L.vat);
+    if (L.vat) parts.push((NL ? 'btw ' : 'VAT ') + L.vat);
     all('[data-legal]').forEach(function (slot) {
       parts.forEach(function (p) {
         var s = document.createElement('span');
@@ -77,10 +165,10 @@ var ANALYTICS = "";
       });
       slot.parentNode.removeChild(slot);
     });
-    var who = (own ? 'We are ' + L.company : 'Sensemakers is a trade name of ' + L.company) +
+    var who = (own ? (NL ? 'Wij zijn ' : 'We are ') + L.company : trade + L.company) +
       (L.office ? ', ' + L.office : '') +
-      (L.enterprise ? ', enterprise number ' + L.enterprise : '') +
-      '. We decide how your data is used.';
+      (L.enterprise ? (NL ? ', ondernemingsnummer ' : ', enterprise number ') + L.enterprise : '') +
+      (NL ? '. Wij bepalen hoe je gegevens gebruikt worden.' : '. We decide how your data is used.');
     all('[data-legal-who]').forEach(function (el) { el.textContent = who; });
   }
 
@@ -112,13 +200,13 @@ var ANALYTICS = "";
     toggle.addEventListener('click', function () {
       var open = toggle.getAttribute('aria-expanded') === 'true';
       toggle.setAttribute('aria-expanded', open ? 'false' : 'true');
-      toggle.setAttribute('aria-label', open ? 'Open menu' : 'Close menu');
+      toggle.setAttribute('aria-label', open ? (NL ? 'Menu openen' : 'Open menu') : (NL ? 'Menu sluiten' : 'Close menu'));
       panel.classList.toggle('open', !open);
     });
     all('#nav-mobile a').forEach(function (a) {
       a.addEventListener('click', function () {
         toggle.setAttribute('aria-expanded', 'false');
-        toggle.setAttribute('aria-label', 'Open menu');
+        toggle.setAttribute('aria-label', NL ? 'Menu openen' : 'Open menu');
         panel.classList.remove('open');
       });
     });
@@ -363,6 +451,6 @@ var ANALYTICS = "";
     if (y) y.textContent = String(new Date().getFullYear());
   }
 
-  function init() { wireBooking(); wireLinkedIn(); wireLegal(); analytics(); wireMenu(); wireMenus(); openFromHash(); reveal(); counters(); heroTurn(); home(); demos(); rails(); subpages(); stickyCta(); year(); }
+  function init() { wireBooking(); wireLinkedIn(); wireLegal(); wireSettings(); program(); analytics(); wireMenu(); wireMenus(); openFromHash(); reveal(); counters(); heroTurn(); home(); demos(); rails(); subpages(); stickyCta(); year(); }
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init); else init();
 })();
