@@ -1706,3 +1706,89 @@ html[lang="nl"] .h-title{font-size:clamp(38px,5vw,66px);max-width:19ch}
 @media (max-width:860px){.faq-grid{grid-template-columns:1fr}}
 /* 404: the English line under the Dutch one */
 .lost-en{margin-top:26px;padding-top:18px;border-top:1px solid var(--hair)}
+
+/* =====================================================================
+   Round 20 (13 Nov 2026): Making Sense of AI.
+   One program in two parts: Thinking with AI (Understand, Think) and Building with AI
+   (Build, with its follow-up session). People first in the hero. On the module pages:
+   a real agenda, tangible take-homes and one link to About us for the trainers.
+   ===================================================================== */
+/* the flagship mark on the Think row */
+.mr-flag{align-self:flex-start;display:inline-flex;align-items:center;gap:6px;margin-top:6px;padding:4px 11px;border-radius:999px;background:var(--pine);color:#fff;font-size:11.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;line-height:1.4}
+.mr-flag::before{content:"★";font-size:11px;letter-spacing:0}
+@media (max-width:860px){.mr-flag{margin-top:0}}
+/* agenda: time, a question, what people do and what they keep (module pages); message and moment (keynotes) */
+.agenda{list-style:none;margin-top:30px;border-top:1px solid var(--hair)}
+.ag{display:grid;grid-template-columns:96px minmax(0,1fr);gap:8px 24px;align-items:start;padding:22px 0;border-bottom:1px solid var(--hair)}
+.ag-t{font-size:24px;font-weight:300;line-height:1.15;letter-spacing:-.02em;color:var(--lb);font-variant-numeric:tabular-nums}
+.ag h3{font-size:20px;line-height:1.3}
+.ag-rows{display:grid;gap:8px;margin-top:12px;max-width:80ch}
+.ag-rows p{display:grid;grid-template-columns:104px minmax(0,1fr);gap:16px;margin:0;font-size:15.5px;line-height:1.5;color:var(--muted)}
+.ag-rows p+p{margin-top:0}
+.ag-rows b{padding-top:3px;font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;font-weight:700;color:var(--faint)}
+.ag-rows .ag-keep{color:var(--ink);font-weight:600}
+.ag--break{padding:12px 0;align-items:center;font-size:14px;font-weight:600;color:var(--faint)}
+.ag--break .ag-t{font-size:15px;font-weight:600;letter-spacing:0;color:var(--faint)}
+@media (max-width:640px){
+  .ag{grid-template-columns:1fr;gap:4px}
+  .ag-t{font-size:18px}
+  .ag-rows p{grid-template-columns:1fr;gap:2px}
+  .ag--break{grid-template-columns:64px minmax(0,1fr)}
+}
+/* Build: the follow-up session, a few weeks after the half-day (it replaced the module Scale) */
+.followup{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:28px 44px;align-items:start;margin-top:40px;padding:30px 32px;border-radius:20px;background:var(--tint-2);border:1px solid rgba(31,109,171,.18)}
+.followup .eyebrow{color:var(--pine)}
+.followup h3{font-size:24px;margin-top:6px}
+.followup p{margin-top:10px;font-size:15.5px;line-height:1.55;color:var(--muted)}
+.fu-points{list-style:none;display:grid;gap:14px}
+.fu-points li{display:grid;grid-template-columns:118px minmax(0,1fr);gap:14px;padding-bottom:14px;border-bottom:1px solid rgba(31,109,171,.15)}
+.fu-points li:last-child{border-bottom:0;padding-bottom:0}
+.fu-points b{font-size:15.5px}
+.fu-points span{font-size:15.5px;line-height:1.5;color:var(--muted)}
+@media (max-width:860px){.followup{grid-template-columns:1fr;padding:24px 22px}.fu-points li{grid-template-columns:1fr;gap:2px}}
+/* what you leave with: the card as participants get it, next to the list */
+.take{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:56px;align-items:start;margin-top:36px}
+.tcard{margin:0;background:var(--white);border:1px solid var(--hair);border-radius:20px;padding:28px 30px 24px;box-shadow:0 30px 70px rgba(17,24,21,.10);transform:rotate(-1.2deg)}
+.tcard figcaption{font-size:11.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--lc)}
+.tc-h{display:block;margin-top:12px;font-size:21px;line-height:1.25;letter-spacing:-.015em}
+.tc-l + .tc-h{margin-top:20px}
+.tc-q{list-style:none;counter-reset:tq;display:grid;gap:14px;margin-top:16px}
+.tc-q li{counter-increment:tq;display:grid;grid-template-columns:30px minmax(0,1fr);column-gap:14px}
+.tc-q li::before{content:counter(tq);grid-row:1 / span 2;width:30px;height:30px;border-radius:9px;background:var(--lt);color:var(--lc);font-size:14px;font-weight:700;display:flex;align-items:center;justify-content:center}
+.tc-q b{font-size:16.5px;line-height:1.35}
+.tc-q span{font-size:14.5px;line-height:1.45;color:var(--muted)}
+.tc-l{list-style:none;display:grid;gap:6px;margin-top:10px}
+.tc-l li{position:relative;padding-left:20px;font-size:16px;line-height:1.4}
+.tc-l li::before{content:"";position:absolute;left:0;top:.45em;width:9px;height:9px;background:var(--lb);-webkit-mask:var(--cres) center/contain no-repeat;mask:var(--cres) center/contain no-repeat}
+.tc-d{display:grid;gap:10px;margin-top:14px}
+.tc-d div{display:grid;grid-template-columns:118px minmax(0,1fr);gap:12px}
+.tc-d dt{padding-top:3px;font-size:11.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--faint)}
+.tc-d dd{font-size:15.5px;line-height:1.45}
+.tc-foot{margin-top:18px;padding-top:14px;border-top:1px dashed var(--hair);font-size:14px;line-height:1.45;color:var(--muted)}
+.take-list{list-style:none}
+.take-list li{display:grid;gap:4px;padding:18px 0;border-bottom:1px solid var(--hair)}
+.take-list li:first-child{padding-top:4px}
+.take-list b{font-size:18px;line-height:1.3;letter-spacing:-.01em}
+.take-list span{font-size:15.5px;line-height:1.5;color:var(--muted)}
+@media (max-width:900px){.take{grid-template-columns:1fr;gap:28px}.tcard{transform:none}}
+@media (max-width:480px){.tc-d div{grid-template-columns:1fr;gap:0}}
+/* keynotes: a line of explanation under each thing you get */
+.lv .d{display:block;margin-top:8px;font-size:14.5px;line-height:1.45;font-weight:400;color:rgba(255,255,255,.92)}
+/* trainers and speakers: one link to About us */
+.tr-link{display:flex;flex-wrap:wrap;align-items:center;gap:16px 24px;margin-top:28px;padding:22px 26px;border-radius:18px;background:var(--canvas);border:1px solid var(--hair);transition:border-color .2s,transform .2s}
+.tr-link:hover{border-color:var(--sky);transform:translateY(-2px)}
+.tr-faces{display:flex;flex:none}
+.tr-faces img{width:56px;height:56px;border-radius:50%;object-fit:cover;border:3px solid var(--white);background:#C9D5E2}
+.tr-faces img+img{margin-left:-14px}
+.tr-txt{flex:1 1 320px;display:grid;gap:2px}
+.tr-txt b{font-size:18px;line-height:1.3}
+.tr-txt span{font-size:15px;line-height:1.5;color:var(--muted)}
+.tr-link .go{font-weight:600;color:var(--pine);white-space:nowrap}
+@media (prefers-reduced-motion:reduce){.tr-link{transition:none}}
+/* About us: the title in two sentences, the second on its own line */
+.hero h1.h1-2{max-width:21ch}
+.hero h1.h1-2 em{display:block}
+/* the other modules: three cards on a module page */
+.others--3{grid-template-columns:repeat(3,1fr)}
+@media (max-width:900px){.others--3{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.others--3{grid-template-columns:1fr}}

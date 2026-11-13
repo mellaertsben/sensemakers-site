@@ -29,7 +29,7 @@ var LEGAL = {
 // Filled in: they show on the homepage, the module pages and in the questions,
 // in both languages. Empty: no prices anywhere on the site.
 var PRICE_MODULE = "";    // from-price of one half-day module for one group or team
-var PRICE_PROGRAM = "";   // optional: from-price of all four modules together; empty = four times PRICE_MODULE
+var PRICE_PROGRAM = "";   // optional: from-price of all three modules together; empty = three times PRICE_MODULE
 
 // Working days between the free call and our proposal, e.g. "2".
 // Empty: the step reads "A tailored proposal" ("Een voorstel op maat").
@@ -52,10 +52,10 @@ var ANALYTICS = "";
     try { return new Intl.NumberFormat(NL ? 'nl-BE' : 'en-US', { style: 'currency', currency: 'EUR', maximumFractionDigits: 0 }).format(n); }
     catch (e) { return '€' + n; }
   }
-  function priceFor(n) {
+  function priceFor(n, all) {
     var m = whole(PRICE_MODULE), p = whole(PRICE_PROGRAM);
     if (!n) return '';
-    if (n === 4 && p) return money(p);
+    if (n === all && p) return money(p);
     return m ? money(m * n) : '';
   }
 
@@ -73,9 +73,10 @@ var ANALYTICS = "";
     all('[data-fill]').forEach(function (el) { var v = V[el.getAttribute('data-fill')]; if (v) el.textContent = v; });
   }
 
-  // Round 19: the program on the homepage. Add or remove modules; Scale only comes with Build
-  // (adding Scale adds Build, removing Build removes Scale). The request button writes an email
-  // with the chosen modules; the words come from the section's data-i18n.
+  // Round 20: the program on the homepage, Making Sense of AI, in three modules. Add or remove
+  // modules; the request button writes an email with the chosen modules. The words come from the
+  // section's data-i18n: "dur" is the duration without Build, "dur_b" with Build, which brings
+  // its follow-up session (the follow-up is part of Build, not a module of its own).
   function program() {
     var sec = document.getElementById('program');
     var rows = all('.mod-row'), chips = all('.prog-starts .chip');
@@ -99,16 +100,16 @@ var ANALYTICS = "";
       var key = chosen.map(function (m) { return m[0]; }).join(','), names = chosen.map(function (m) { return m[1]; }), n = names.length;
       chips.forEach(function (c) { c.setAttribute('aria-pressed', c.getAttribute('data-pick') === key ? 'true' : 'false'); });
       nameEl.textContent = n === 0 ? t.none : (n === mods.length ? t.full : names.join(' + '));
-      durEl.textContent = (t.dur || [])[n] || '';
+      durEl.textContent = ((has('b') && t.dur_b ? t.dur_b : t.dur) || [])[n] || '';
       var subject = t.subj + (n === mods.length ? t.subj_full : (n ? names.join(' + ') : t.subj_none));
       go.href = 'mailto:' + CONTACT_EMAIL + '?subject=' + encodeURIComponent(subject);
-      if (priceEl && priceV) { var p = priceFor(n); priceEl.hidden = !p; priceV.textContent = p; }
+      if (priceEl && priceV) { var p = priceFor(n, mods.length); priceEl.hidden = !p; priceV.textContent = p; }
     }
     rows.forEach(function (r) {
       r.querySelector('.mr-toggle').addEventListener('click', function () {
         var id = r.getAttribute('data-mod');
-        if (has(id)) { picked = picked.filter(function (x) { return x !== id && !(id === 'b' && x === 's'); }); }
-        else { picked.push(id); if (id === 's' && !has('b')) { picked.push('b'); } }
+        if (has(id)) { picked = picked.filter(function (x) { return x !== id; }); }
+        else { picked.push(id); }
         render();
       });
     });

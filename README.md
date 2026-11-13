@@ -2,7 +2,21 @@
 
 Static site, no build step, no framework, no cookies. One stylesheet, one small script, self-hosted fonts. Anything in this folder is exactly what gets served.
 
-Since 11 Nov 2026 (Round 19) the site is in **Dutch** (at the root) and **English** (under `en/`), with a language switch in the header. Since Round 18 it sells **one program, Thinking with AI**, in four modules of half a day, plus **keynotes** and an **AI hackathon**, all in **blue**. Since 5 Nov 2026 (Round 17) it is the Academy only: Transformation and the AI Accelerator for SMEs left the site (their old addresses forward to the homepage; their last versions are in the git history, commit `23cf19d`). Frontier Watch keeps its own address for the interviews with AI leads, but nothing on the site links to it (Round 17b).
+Since 13 Nov 2026 (Round 20) the site sells **one program, Making Sense of AI**, in three modules of half a day and two parts: **Thinking with AI** (Understand, Think) and **Building with AI** (Build, with a follow-up session), plus **keynotes** and an **AI hackathon**, all in **blue** (Round 18). Since 11 Nov 2026 (Round 19) the site is in **Dutch** (at the root) and **English** (under `en/`), with a language switch in the header. Since 5 Nov 2026 (Round 17) it is the Academy only: Transformation and the AI Accelerator for SMEs left the site (their old addresses forward to the homepage; their last versions are in the git history, commit `23cf19d`). Frontier Watch keeps its own address for the interviews with AI leads, but nothing on the site links to it (Round 17b).
+
+## Round 20 (13 Nov 2026): Making Sense of AI, people first
+
+Ben's feedback on the whole site, and three choices he made: the program name, Scale and the main title.
+
+- **The program is Making Sense of AI.** "Thinking with AI" only fitted Think. It now names the first part (Understand + Think, any tool, for everyone); the second part is **Building with AI** (Build, in the client's own tool, for teams). The menu, the footer, titles, crumbs, email subjects, AI info and `llms.txt` follow.
+- **Three modules.** Scale is no longer a module: it is the **follow-up session** of Build, a few weeks later (`build.html#followup`): look back, share what works, agree who owns and checks what. No business cases. `scale.html` forwards there, in both languages, and left the sitemap. The picker in `site.js` has three rows; with Build in the selection, the duration line adds the follow-up (`dur_b` in the section's `data-i18n`).
+- **People first.** The main title is "Zet je mensen centraal in je AI-transformatie." / "Put your people at the center of your AI transformation." (hero, footer claim, share images). The line under it is about control and confidence, not about the format.
+- **Homepage.** Think carries a **Flagship** mark. The "why now" band with three statistics is gone (an empty `#why` span keeps old links working). New before-and-after rows (thinking errors, risks, a tangible picture of digital, fundamentals that outlast the tool). Keynotes and the hackathon sit under "Laat je inspireren" / "Get inspired". New team lines. Two rewritten answers (we already did an AI training; how many people per session).
+- **Module pages.** Outcomes rewritten. "How the half-day runs" is a real agenda with clock times: per part a question, what people do and the sentence they keep (Understand follows the run sheet, Think the trainer deck; Build is a proposal). "What you leave with" shows the card itself next to the list of what each participant and HR or L&D get. The trainers block is one link to About us. Groups are up to 20 people everywhere.
+- **Keynotes.** About inspiring: three keynotes, each with its message and the moment the audience remembers; no fixed length.
+- **About us.** New title ("De technologie is er. Je mensen maken het verschil.") and new texts for Ben, Niels and Tim.
+- **AI Act wording.** Since 27 July 2026 Article 4 asks employers to take measures that support AI literacy. The site says Understand "supports the AI literacy the EU AI Act asks for"; it no longer says it "covers the duty".
+- **New in `styles.css`** (last block): `.mr-flag`, `.agenda`, `.followup`, `.take` and `.tcard`, `.tr-link`, `.others--3`. `styles.css` and `site.js` are at `?v=23`; share images at `og-nl.png?v=2` and `og.png?v=4`.
 
 ## Round 19 (11 Nov 2026): Dutch and English, and lessons from ai.nl and Rozet
 
@@ -35,8 +49,13 @@ Since 11 Nov 2026 (Round 19) the site is in **Dutch** (at the root) and **Englis
 - American spelling (organization, program, license, practice).
 - No client names anywhere on the site, the page source included.
 - People are never tied to a module: team cards and portrait frames are in the brand colour, roles name no module, and module pages say "From the Sensemakers team".
-- Thinking with AI is the program and the hero of the site.
-- Scale is never offered on its own.
+- Making Sense of AI is the program and the hero of the site. Thinking with AI (Understand, Think) and Building with AI (Build) are its two parts. Think is the flagship and may be labeled so.
+- Scale is not a module anymore: what it did is the follow-up session of Build. Never sell business cases to participants.
+- Words we don't use in Dutch: "haltes" (never, in any document), "flessenhals", "menselijk vermogen", "de hele zaal". Don't give a keynote a fixed length.
+- Groups are up to 20 people per session; anything is possible, larger groups get several sessions.
+- The AI Act: Understand supports the AI literacy the Act asks for. Never call it a duty to reach a level, and never say a module "covers the duty".
+- Bias belongs to Think. Understand is about digital, data and statistics.
+- The agenda on a module page is the program as it is given, with something to do in every part. Not a list of titles.
 - The footer is the only closing call to action.
 - Every page exists in Dutch and English, with the same file name (Dutch at the root, English in `en/`): change both. Dutch copy uses "je".
 
@@ -44,20 +63,21 @@ Since 11 Nov 2026 (Round 19) the site is in **Dutch** (at the root) and **Englis
 
 | File | What it is |
 |---|---|
-| `index.html` | The homepage in Dutch (`en/index.html` in English): hero, pain points (`#pains`), the program (`#program`: one row per module, matching its module page; the add/remove logic and the request email are `program()` in `site.js`), how it works (`#how`), tools strip, why now (`#why`), before and after (`#change`), keynotes and hackathon (`#more`), the team (`#team`), questions (`#faq`). |
+| `index.html` | The homepage in Dutch (`en/index.html` in English): hero, pain points (`#pains`), the program (`#program`: one row per module in two parts, matching its module page; the add/remove logic and the request email are `program()` in `site.js`), how it works (`#how`), tools strip, before and after (`#change`), keynotes and hackathon (`#more`), the team (`#team`), questions (`#faq`). |
 | `en/` | The English site: the same pages and file names as the Dutch root. |
-| `understand.html`, `think.html`, `build.html`, `scale.html` | One page per module, in both languages: At a glance (audience, group size, duration, format, tool, price once set, trainer), outcomes, how the half-day runs (click a part), what you leave with, trainers, the other modules. |
+| `understand.html`, `think.html`, `build.html` | One page per module, in both languages: At a glance (audience, group size, duration, format, tool, price once set, trainer), outcomes, how the half-day runs (an agenda with clock times), what you leave with (the card and the list), a link to About us for the trainers, the other modules. `build.html` also holds the follow-up session (`#followup`) and the tool editions. |
+| `scale.html` | Forwards to `build.html#followup`, in both languages (Scale was a module until 13 Nov 2026). |
 | `keynotes.html`, `hackathon.html` | The two side products, in the same layout. |
 | `about.html` | About us: vision and mission, Ben, Niels and Tim (bios and photos), how we work. |
 | `privacy.html` | The privacy page. It follows the settings in `site.js` (booking, analytics, company details), so it stays true. |
 | `ai-info.html`, `en/ai-info.html`, `llms.txt` | Facts for AI assistants and search engines. Keep all three in sync. Linked in the footer. |
 | `404.html` | Not-found page in Dutch, with an English line (GitHub Pages shows it for any missing address). |
 | `frontier-watch.html` | Frontier Watch for AI and data leads, unlisted and English only (see Round 17b). `frontier-watch-draft.html` forwards to it. |
-| `thinking-with-ai.html`, `ai-foundations.html`, `ai-for-your-role.html`, `ai-build-day.html`, `ai-champions.html`, `academy.html`, `readiness.html` | Former course pages, now forwarding to the program, a module or the hackathon (the old anchors of `academy.html` too). |
+| `thinking-with-ai.html`, `ai-foundations.html`, `ai-for-your-role.html`, `ai-build-day.html`, `ai-champions.html`, `academy.html`, `readiness.html` | Former course pages, now forwarding to the program, a module or the hackathon (the old anchors of `academy.html` too). `thinking-with-ai.html` forwards to the program, of which Thinking with AI is now the first part. |
 | `transformation.html`, `ai-accelerator.html`, `guidance.html`, `scan.html`, `audit.html`, `offers.html` | Pages that left the site, kept only as redirects to the homepage so old links keep working. |
-| `styles.css` | All styling. Brand tokens are the CSS variables at the top (`:root`). The Round 18 rules (program rows, keynote and hackathon cards, blue hero) and Round 19 rules (language switch, pain points, prices, how it works, questions) are the last two blocks of the file. |
+| `styles.css` | All styling. Brand tokens are the CSS variables at the top (`:root`). The Round 18 rules (program rows, keynote and hackathon cards, blue hero), Round 19 rules (language switch, pain points, prices, how it works, questions) and Round 20 rules (flagship mark, agenda, follow-up session, take-home card, trainers link) are the last three blocks of the file. |
 | `site.js` | The settings (see below), the program picker, mobile menu, dropdown, "Read more" from links, reveal animation, count-up numbers, footer year. |
-| `assets/` | `logo/` (the logo files, see below), favicons and app icons made from the S, `og.png` and `og-nl.png` share images (English and Dutch: blue, the headline and Thinking with AI), `og-frontier-watch.png` (the share image of the unlisted Frontier Watch page), `fonts/` (Work Sans, OFL license), `people/` (team photos), `logos/` (the tool logos in the tools strip; replace a file to update a logo). |
+| `assets/` | `logo/` (the logo files, see below), favicons and app icons made from the S, `og.png` and `og-nl.png` share images (English and Dutch: blue, the headline and Making Sense of AI), `og-frontier-watch.png` (the share image of the unlisted Frontier Watch page), `fonts/` (Work Sans, OFL license), `people/` (team photos), `logos/` (the tool logos in the tools strip; replace a file to update a logo). |
 | `CNAME` | Tells GitHub Pages the custom domain is `sensemakers.be`. Don't rename. |
 | `.nojekyll` | Tells GitHub Pages to serve files as-is. |
 | `robots.txt`, `sitemap.xml` | Search-engine housekeeping. |
@@ -91,7 +111,7 @@ var CONTACT_EMAIL = "hello@sensemakers.be";
 var LINKEDIN_URL = "";     // company page → "LinkedIn" appears in the footer
 var LEGAL = { company: "", office: "", enterprise: "", rpr: "", vat: "" };
 var PRICE_MODULE = "";     // from-price of one half-day module for one group, whole euros excl. VAT, e.g. "3500"
-var PRICE_PROGRAM = "";    // optional: all four modules together; empty = four times PRICE_MODULE
+var PRICE_PROGRAM = "";    // optional: all three modules together; empty = three times PRICE_MODULE
 var PROPOSAL_DAYS = "";    // working days between the free call and the proposal, e.g. "2"
 var ANALYTICS = "";        // Plausible: the script link it gives you, or just "sensemakers.be"
 ```
@@ -127,4 +147,6 @@ GitHub Pages redeploys in about a minute.
 - The Calendly link, the company details, the LinkedIn page and (if wanted) Plausible: the settings above.
 - Prices and the proposal time: the settings above.
 - The designer's final logo SVGs: see "The logo and the S" above. Colours and fonts, if the kit changes them, go in the tokens at the top of `styles.css`.
-- The header and footer are the same on every page, in both languages (the Thinking with AI menu lists every module); when you change them, change them everywhere.
+- The header and footer are the same on every page, in both languages (the Making Sense of AI menu lists every module, grouped in its two parts); when you change them, change them everywhere.
+- Build: its agenda is a proposal, and the length and price of the follow-up session are not set. Align both with whoever delivers Build.
+- The three keynotes are drafts.
