@@ -75,8 +75,8 @@ var ANALYTICS = "";
 
   // Round 20: the program on the homepage, Making Sense of AI, in three modules. Add or remove
   // modules; the request button writes an email with the chosen modules. The words come from the
-  // section's data-i18n: "dur" is the duration without Build, "dur_b" with Build, which brings
-  // its follow-up session (the follow-up is part of Build, not a module of its own).
+  // section's data-i18n. The follow-up session after Build is an option, not a module: it is not
+  // in the picker and goes into the proposal.
   function program() {
     var sec = document.getElementById('program');
     var rows = all('.mod-row'), chips = all('.prog-starts .chip');
@@ -100,7 +100,7 @@ var ANALYTICS = "";
       var key = chosen.map(function (m) { return m[0]; }).join(','), names = chosen.map(function (m) { return m[1]; }), n = names.length;
       chips.forEach(function (c) { c.setAttribute('aria-pressed', c.getAttribute('data-pick') === key ? 'true' : 'false'); });
       nameEl.textContent = n === 0 ? t.none : (n === mods.length ? t.full : names.join(' + '));
-      durEl.textContent = ((has('b') && t.dur_b ? t.dur_b : t.dur) || [])[n] || '';
+      durEl.textContent = (t.dur || [])[n] || '';
       var subject = t.subj + (n === mods.length ? t.subj_full : (n ? names.join(' + ') : t.subj_none));
       go.href = 'mailto:' + CONTACT_EMAIL + '?subject=' + encodeURIComponent(subject);
       if (priceEl && priceV) { var p = priceFor(n, mods.length); priceEl.hidden = !p; priceV.textContent = p; }

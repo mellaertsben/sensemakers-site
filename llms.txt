@@ -10,7 +10,7 @@ One program in three modules of half a day; clients book the full program or a p
 
 - [Understand](https://sensemakers.be/en/understand.html): how digital, data, statistics and AI really work, where it fails, and what to ask before trusting an answer; counts as a measure to support AI literacy, as Article 4 of the EU AI Act asks of employers.
 - [Think](https://sensemakers.be/en/think.html): the flagship module. Critical thinking with AI, before and after you prompt, so AI sharpens judgment instead of replacing it.
-- [Build](https://sensemakers.be/en/build.html): an assistant or workflow for a real task, in Claude, ChatGPT, Microsoft Copilot or Claude Code, for beginners or advanced users; a follow-up session comes a few weeks later, where the team shares what works and agrees how to use it.
+- [Build](https://sensemakers.be/en/build.html): an assistant or workflow for a real task, in Claude, ChatGPT, Microsoft Copilot or Claude Code, for beginners or advanced users; as an option, a follow-up session a few weeks later lets the team share what works and agree how to use it.
 
 ## Inspiration
 
