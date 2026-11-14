@@ -29,7 +29,7 @@
 <link rel="icon" href="assets/favicon.svg?v=14" type="image/svg+xml">
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=14">
 <link rel="preload" href="assets/fonts/work-sans-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="styles.css?v=23">
+<link rel="stylesheet" href="styles.css?v=24">
 <script>(function(){var h=location.hash;if(h==="#people"||h==="#about")location.replace("about.html");})();</script>
 <script type="application/ld+json">
 {
@@ -169,15 +169,31 @@
   <div class="marquee marquee--logos"><ul><li class="lg"><img src="assets/logos/claude.svg" alt="Claude" width="103" height="22" loading="lazy"></li><li class="lg"><img src="assets/logos/copilot.png" alt="Microsoft Copilot" width="54" height="34" loading="lazy"></li><li class="lg"><img src="assets/logos/chatgpt.png" alt="ChatGPT" width="101" height="24" loading="lazy"></li><li class="lg"><img src="assets/logos/gemini.svg" alt="Gemini" width="106" height="24" loading="lazy"></li><li class="lg"><img src="assets/logos/cursor.svg" alt="Cursor" width="103" height="26" loading="lazy"></li><li class="lg"><img src="assets/logos/codex.png" alt="Codex" width="26" height="26" loading="lazy"><span>Codex</span></li><li class="lg"><img src="assets/logos/lovable.svg" alt="Lovable" width="118" height="20" loading="lazy"></li></ul></div>
 </section>
 
-<!-- H6 · What changes: one "after" lights up at a time. Typical lines, not quotes from named people.
-     (The "why now" band with three statistics sat above this section until 13 Nov 2026; the empty span keeps old #why links working.) -->
+<!-- H6 · What the research says: three figures, each with its source, year and sample, linked to the original.
+     The figures and their caveats are in sales/evidence-activation.md (Sensemakers project): change them there first,
+     then here, in both languages. No count-up on these numbers (the script counts in whole numbers). -->
+<section class="ev-band" id="why">
+  <div class="container">
+    <div class="ev-head">
+      <div class="kicker">Wat het onderzoek zegt</div>
+      <h2>Gebruik komt niet vanzelf. <em>Oordeel ook niet.</em></h2>
+    </div>
+    <div class="ev-grid">
+      <div class="stat"><div class="ev-k">De drempel</div><div class="num">72,5%</div><p>van de Vlaamse bedrijven die AI gebruiken, noemt een gebrek aan kennis, vaardigheden en ervaring als drempel. Geen enkele andere drempel scoort hoger.</p><p class="src"><a href="https://publicaties.vlaanderen.be/view-file/82914" rel="noopener">AI-barometer 2025</a> · ECOOM (UGent) · 2.915 bedrijven</p></div>
+      <div class="stat"><div class="ev-k">De hefboom</div><div class="num">41% → 93%</div><p>Waar de werkgever niets onderneemt, gebruikt 41% van de medewerkers AI-chatbots. Waar die aanmoedigt, tools aanbiedt en opleidt: 93%.</p><p class="src"><a href="https://www.rfberlin.com/research-insights/still-waters-rapid-currents/" rel="noopener">Humlum &amp; Vestergaard, 2026</a> · Chicago en Kopenhagen · 25.000 Deense werknemers</p></div>
+      <div class="stat"><div class="ev-k">Het risico</div><div class="num">37%</div><p>van de Vlaamse AI-gebruikers zegt minder zelf na te denken dan vroeger.</p><p class="src"><a href="https://www.vrt.be/vrtnws/nl/2026/03/06/digimeter-2026-ai-in-vlaanderen-sterke-groei-vraagtekens/" rel="noopener">imec.digimeter 2025</a> · imec en UGent · 3.001 Vlamingen</p></div>
+    </div>
+    <p class="ev-close">Daarom werken we aan gebruik en aan oordeel, in hetzelfde programma.</p>
+  </div>
+</section>
+
+<!-- H7 · What changes: one "after" lights up at a time. Typical lines, not quotes from named people. -->
 <section class="c-work" id="change">
-  <span id="why"></span>
   <div class="container change-grid">
     <div>
       <div class="kicker">Wat er verandert</div>
       <h2>Iedereen heeft nu AI. <em>Weinigen gebruiken het goed.</em></h2>
-      <p class="sub">Toegang is het probleem niet meer. Vaardigheid en oordeel wel. We leren beide, op het eigen werk van je mensen.</p>
+      <p class="sub">Toegang alleen is niet genoeg. Je mensen hebben ook vaardigheid en oordeel nodig. We leren beide, op hun eigen werk.</p>
     </div>
     <div>
       <figure class="ba" aria-label="Voor en na het programma">
@@ -189,7 +205,7 @@
   </div>
 </section>
 
-<!-- H7 · Keynotes and the hackathon: inspiration -->
+<!-- H8 · Keynotes and the hackathon: inspiration -->
 <section class="band also c-work" id="more">
   <div class="container">
     <div class="kicker">Laat je inspireren</div>
@@ -198,7 +214,7 @@
   </div>
 </section>
 
-<!-- H8 · The team (people in the brand color, never tied to a module). The full texts are on About us. -->
+<!-- H9 · The team (people in the brand color, never tied to a module). The full texts are on About us. -->
 <section id="team">
   <div class="container">
     <div class="h-head">
@@ -209,7 +225,7 @@
   </div>
 </section>
 
-<!-- H9 · Questions: the objections buyers raise, with visible answers -->
+<!-- H10 · Questions: the objections buyers raise, with visible answers -->
 <section class="band hfaq" id="faq">
   <div class="container">
     <div class="kicker">Vragen</div>
@@ -256,6 +272,6 @@
 })();
 </script>
 
-<script src="site.js?v=23"></script>
+<script src="site.js?v=24"></script>
 </body>
 </html>

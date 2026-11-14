@@ -1792,3 +1792,30 @@ html[lang="nl"] .h-title{font-size:clamp(38px,5vw,66px);max-width:19ch}
 .others--3{grid-template-columns:repeat(3,1fr)}
 @media (max-width:900px){.others--3{grid-template-columns:1fr 1fr}}
 @media (max-width:560px){.others--3{grid-template-columns:1fr}}
+
+/* =====================================================================
+   Round 21 (14 Nov 2026): what the research says.
+   A band on the homepage (#why, above "What changes"): a heading, three figures with
+   their source, and one closing line. The figures reuse .stat, so they fade in like
+   the other numbers. No count-up: the script counts in whole numbers.
+   ===================================================================== */
+.ev-band{--lc:var(--brand-mint);background:var(--evergreen);color:var(--canvas);padding:72px 0}
+.ev-band .container{display:flex;flex-direction:column;gap:40px}
+.ev-head{max-width:720px}
+.ev-band .kicker{color:var(--brand-mint)}
+.ev-band h2{color:var(--canvas)}
+.ev-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:32px}
+.ev-band .stat{display:flex;flex-direction:column;gap:10px;padding-top:20px;border-top:1px solid rgba(246,249,252,.3)}
+.ev-k{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--brand-mint)}
+.ev-band .stat .num{font-size:52px;color:var(--brand-mint)}
+.ev-band .stat p{margin:0;max-width:none;font-size:15px;line-height:1.5;color:#EAF5FD}
+.ev-band .stat .src{font-size:13px;line-height:1.45;color:#D7ECFB}
+.ev-band .stat .src a{text-decoration:underline;text-underline-offset:2px}
+.ev-band .stat .src a:hover{color:var(--white)}
+.ev-close{max-width:54ch;font-size:20px;line-height:1.45;font-weight:600;color:var(--canvas)}
+@media (max-width:860px){
+  .ev-band{padding:56px 0}
+  .ev-band .container{gap:32px}
+  .ev-grid{grid-template-columns:1fr;gap:28px}
+}
+@media (max-width:560px){.ev-band .stat .num{font-size:44px}}

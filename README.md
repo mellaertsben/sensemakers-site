@@ -4,6 +4,16 @@ Static site, no build step, no framework, no cookies. One stylesheet, one small 
 
 Since 13 Nov 2026 (Round 20) the site sells **one program, Making Sense of AI**, in three modules of half a day and two parts: **Thinking with AI** (Understand, Think) and **Building with AI** (Build, with an optional follow-up session), plus **keynotes** and an **AI hackathon**, all in **blue** (Round 18). Since 11 Nov 2026 (Round 19) the site is in **Dutch** (at the root) and **English** (under `en/`), with a language switch in the header. Since 5 Nov 2026 (Round 17) it is the Academy only: Transformation and the AI Accelerator for SMEs left the site (their old addresses forward to the homepage; their last versions are in the git history, commit `23cf19d`). Frontier Watch keeps its own address for the interviews with AI leads, but nothing on the site links to it (Round 17b).
 
+## Round 21 (14 Nov 2026): what the research says
+
+Ben chose between two mockups: the research figures as a band on the homepage (A), or as a block in the questions (B). He went for A.
+
+- **A band in the old `#why` slot**, above "Wat er verandert" / "What changes": the kicker "Wat het onderzoek zegt", the heading "Gebruik komt niet vanzelf. Oordeel ook niet." and three figures. Each figure has a label (the barrier, the lever, the risk), its source with year and sample, and a link to the original: the AI-barometer 2025 (ECOOM, UGent), Humlum & Vestergaard 2026 and the imec.digimeter 2025. One closing line: use and judgment, in the same program. `#why` is a section again; the empty span in `#change` is gone.
+- **One sentence under "Wat er verandert" / "What changes"**: "Toegang is het probleem niet meer. Vaardigheid en oordeel wel." became "Toegang alleen is niet genoeg. Je mensen hebben ook vaardigheid en oordeel nodig." (EN: "Access alone isn't enough. Your people also need skill and judgment."), because the band above it shows tools as one of three things that raise use.
+- **The figures and their caveats** are in `sales/evidence-activation.md` in the Sensemakers project. Change a figure there first, then here, in both languages. The imec.digimeter is named after the year of its fieldwork: the 2025 edition came out in March 2026 (the VRT article links it as "digimeter 2026").
+- **No count-up** on these numbers: the script counts in whole numbers, and 72,5% has a decimal. The figures reuse `.stat`, so they fade in on scroll.
+- **New in `styles.css`** (last block): `.ev-band`, `.ev-head`, `.ev-grid`, `.ev-k`, `.ev-close`, and the `.stat` rules inside `.ev-band`. The older `.why-band` rules stay in the file, unused. `styles.css` and `site.js` are at `?v=24`.
+
 ## Round 20 (13 Nov 2026): Making Sense of AI, people first
 
 Ben's feedback on the whole site, and three choices he made: the program name, Scale and the main title.
@@ -57,13 +67,14 @@ Ben's feedback on the whole site, and three choices he made: the program name, S
 - Bias belongs to Think. Understand is about digital, data and statistics.
 - The agenda on a module page is the program as it is given, with something to do in every part. Not a list of titles.
 - The footer is the only closing call to action.
+- Every figure on the site shows its source, year and sample, and links to the original. No figure from a seller of AI training, and no return in euros.
 - Every page exists in Dutch and English, with the same file name (Dutch at the root, English in `en/`): change both. Dutch copy uses "je".
 
 ## Files
 
 | File | What it is |
 |---|---|
-| `index.html` | The homepage in Dutch (`en/index.html` in English): hero, pain points (`#pains`), the program (`#program`: one row per module in two parts, matching its module page; the add/remove logic and the request email are `program()` in `site.js`), how it works (`#how`), tools strip, before and after (`#change`), keynotes and hackathon (`#more`), the team (`#team`), questions (`#faq`). |
+| `index.html` | The homepage in Dutch (`en/index.html` in English): hero, pain points (`#pains`), the program (`#program`: one row per module in two parts, matching its module page; the add/remove logic and the request email are `program()` in `site.js`), how it works (`#how`), tools strip, what the research says (`#why`), before and after (`#change`), keynotes and hackathon (`#more`), the team (`#team`), questions (`#faq`). |
 | `en/` | The English site: the same pages and file names as the Dutch root. |
 | `understand.html`, `think.html`, `build.html` | One page per module, in both languages: At a glance (audience, group size, duration, format, tool, price once set, trainer), outcomes, how the half-day runs (an agenda with clock times), what you leave with (the card and the list), a link to About us for the trainers, the other modules. `build.html` also holds the optional follow-up session (`#followup`) and the tool editions. |
 | `scale.html` | Forwards to `build.html#followup`, in both languages (Scale was a module until 13 Nov 2026; it is now the optional follow-up session after Build). |
@@ -75,7 +86,7 @@ Ben's feedback on the whole site, and three choices he made: the program name, S
 | `frontier-watch.html` | Frontier Watch for AI and data leads, unlisted and English only (see Round 17b). `frontier-watch-draft.html` forwards to it. |
 | `thinking-with-ai.html`, `ai-foundations.html`, `ai-for-your-role.html`, `ai-build-day.html`, `ai-champions.html`, `academy.html`, `readiness.html` | Former course pages, now forwarding to the program, a module or the hackathon (the old anchors of `academy.html` too). `thinking-with-ai.html` forwards to the program, of which Thinking with AI is now the first part. |
 | `transformation.html`, `ai-accelerator.html`, `guidance.html`, `scan.html`, `audit.html`, `offers.html` | Pages that left the site, kept only as redirects to the homepage so old links keep working. |
-| `styles.css` | All styling. Brand tokens are the CSS variables at the top (`:root`). The Round 18 rules (program rows, keynote and hackathon cards, blue hero), Round 19 rules (language switch, pain points, prices, how it works, questions) and Round 20 rules (flagship mark, agenda, follow-up session, take-home card, trainers link) are the last three blocks of the file. |
+| `styles.css` | All styling. Brand tokens are the CSS variables at the top (`:root`). The Round 18 rules (program rows, keynote and hackathon cards, blue hero), Round 19 rules (language switch, pain points, prices, how it works, questions), Round 20 rules (flagship mark, agenda, follow-up session, take-home card, trainers link) and Round 21 rules (the research band) are the last four blocks of the file. |
 | `site.js` | The settings (see below), the program picker, mobile menu, dropdown, "Read more" from links, reveal animation, count-up numbers, footer year. |
 | `assets/` | `logo/` (the logo files, see below), favicons and app icons made from the S, `og.png` and `og-nl.png` share images (English and Dutch: blue, the headline and Making Sense of AI), `og-frontier-watch.png` (the share image of the unlisted Frontier Watch page), `fonts/` (Work Sans, OFL license), `people/` (team photos), `logos/` (the tool logos in the tools strip; replace a file to update a logo). |
 | `CNAME` | Tells GitHub Pages the custom domain is `sensemakers.be`. Don't rename. |
